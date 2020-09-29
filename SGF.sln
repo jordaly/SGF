@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGF", "SGF\SGF.csproj", "{8A4B4CF2-9D3C-482F-B020-98138AFB69B7}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Base de datos SGF", "Base de datos SGF\Base de datos SGF.sqlproj", "{713A6FCE-DD51-4EC5-8845-276A5EEE7307}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{8A4B4CF2-9D3C-482F-B020-98138AFB69B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A4B4CF2-9D3C-482F-B020-98138AFB69B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A4B4CF2-9D3C-482F-B020-98138AFB69B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713A6FCE-DD51-4EC5-8845-276A5EEE7307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713A6FCE-DD51-4EC5-8845-276A5EEE7307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713A6FCE-DD51-4EC5-8845-276A5EEE7307}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{713A6FCE-DD51-4EC5-8845-276A5EEE7307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713A6FCE-DD51-4EC5-8845-276A5EEE7307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713A6FCE-DD51-4EC5-8845-276A5EEE7307}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
