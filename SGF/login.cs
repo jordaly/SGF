@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
             this.tbNombre.Focus();
@@ -61,17 +61,18 @@ namespace SGF
                 ds = Utilidades.EjecutarDS(cmd);
                 if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
-                    //inventario2.Principal vj = new inventario2.Principal();
-                    //this.Hide();
+                    SGF.principal vj = new SGF.principal();
+                    this.Hide();
                     //vj.toolStripStatusLabel.Text = tbNombre.Text.Trim();
                     //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //vj.cambiarNiveles();
-                    //vj.Show();
-                    MessageBox.Show("Felicidades, has iniciado seción correctamente");
+                    MessageBox.Show("Bienvenido "+tbNombre.Text);
+                    vj.Show();
+                    //MessageBox.Show("Felicidades, has iniciado seción correctamente");
 
 
-                    //this.Visible = false;
+                    this.Visible = false;
                 }
                 else
                 {
