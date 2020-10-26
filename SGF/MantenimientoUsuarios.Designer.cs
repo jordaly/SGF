@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class Usuarios
+    partial class MantenimientoUsuarios
     {
         /// <summary>
         /// Required designer variable.

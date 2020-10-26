@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class Usuarios : Form
+    public partial class MantenimientoUsuarios : Form
     {
-        public Usuarios()
+        public MantenimientoUsuarios()
         {
             InitializeComponent();
             cbxNivel.SelectedIndex = 0;
