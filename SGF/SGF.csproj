@@ -46,6 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBarraBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarraBusqueda.Designer.cs">
+      <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcesos.Designer.cs">
+      <DependentUpon>FormProcesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClientes.Designer.cs">
+      <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PincipalMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PincipalMDI.Designer.cs">
+      <DependentUpon>PincipalMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroUsuarios.Designer.cs">
+      <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +103,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBarraBusqueda.resx">
+      <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcesos.resx">
+      <DependentUpon>FormProcesos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoClientes.resx">
+      <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PincipalMDI.resx">
+      <DependentUpon>PincipalMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.resx">
+      <DependentUpon>principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +136,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroUsuarios.resx">
+      <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

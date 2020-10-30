@@ -490,5 +490,16 @@ namespace SGF
             else
                 return "";
         }
+        public static int ValarCheckBox(bool i)
+        {
+            if (i)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

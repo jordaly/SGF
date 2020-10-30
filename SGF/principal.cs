@@ -16,5 +16,18 @@ namespace SGF
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SGF.RegistroUsuarios vj = new SGF.RegistroUsuarios();
+            this.Hide();
+            vj.Show();
+            this.Visible = false;
+        }
+
+        private void principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
