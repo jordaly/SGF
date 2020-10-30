@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class MantenimientoClientes
+    partial class FormBase
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // cbxBuscar
-            // 
-            this.cbxBuscar.Items.AddRange(new object[] {
-            "id",
-            "nombre",
-            "apellido",
-            "fecha_nacimiento",
-            "sexo",
-            "provincia",
-            "localidad",
-            "direccion",
-            "codigo_postal",
-            "indicaciones"});
-            // 
-            // MantenimientoClientes
+            // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 474);
-            this.Name = "MantenimientoClientes";
-            this.Text = "MantenimientoClientes";
-            this.Load += new System.EventHandler(this.MantenimientoClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormBase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormBase";
+            this.Load += new System.EventHandler(this.FormBase_Load);
             this.ResumeLayout(false);
 
         }

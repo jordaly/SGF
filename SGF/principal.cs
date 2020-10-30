@@ -19,7 +19,7 @@ namespace SGF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SGF.MantenimientoUsuarios vj = new SGF.MantenimientoUsuarios();
+            SGF.RegistroUsuarios vj = new SGF.RegistroUsuarios();
             this.Hide();
             vj.Show();
             this.Visible = false;
