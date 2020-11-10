@@ -11,12 +11,36 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class RegistroUsuarios : Form
+    public partial class RegistroUsuarios : FormRegistros
     {
         public RegistroUsuarios()
         {
             InitializeComponent();
             cbxNivel.SelectedIndex = 0;
+        }
+        public override void Guardar()
+        {
+            DataSet ds = new DataSet();
+
+
+            string cmdUsuario = string.Format("select * from usuario where usuario='{0}'",
+                tbxUsuario.Text.Trim());
+            ds = Utilidades.EjecutarDS(cmdUsuario);
+            if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0))
+            {
+                string cmd = String.Format("insert into usuario(id,usuario,password,nivel,estado) values(newid(),'{0}','{1}','{2}','{3}')",
+                   tbxUsuario.Text.Trim(), tbxContraseña.Text.Trim(), cbxNivel.SelectedIndex, chxEstado.Checked);
+                //MessageBox.Show(cmd);
+                ds = Utilidades.EjecutarDS(cmd);
+                Limpiar();
+
+
+            }
+            else
+            {
+                MessageBox.Show("El nombre de usuario " + tbxUsuario.Text + " ya esta en uso.");
+                Limpiar();
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

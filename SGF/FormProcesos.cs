@@ -17,6 +17,11 @@ namespace SGF
         {
             InitializeComponent();
         }
+        public void refrescarDatos(string Buscar)
+        {
+            ds = Utilidades.EjecutarDS(Buscar);
+            dgvPadre.DataSource = ds.Tables[0];
+        }
 
         private void FormProcesos_Load(object sender, EventArgs e)
         {
