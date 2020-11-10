@@ -36,10 +36,15 @@
             this.tbxContraseña = new System.Windows.Forms.TextBox();
             this.cbxNivel = new System.Windows.Forms.ComboBox();
             this.chxEstado = new System.Windows.Forms.CheckBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnGuardar1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(114, 207);
             // 
             // label1
             // 
@@ -116,15 +121,16 @@
             this.chxEstado.TabIndex = 9;
             this.chxEstado.UseVisualStyleBackColor = true;
             // 
-            // btnGuardar
+            // btnGuardar1
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(114, 224);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar1.Location = new System.Drawing.Point(205, 207);
+            this.btnGuardar1.Name = "btnGuardar1";
+            this.btnGuardar1.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar1.TabIndex = 10;
+            this.btnGuardar1.Text = "Guardar";
+            this.btnGuardar1.UseVisualStyleBackColor = true;
+            this.btnGuardar1.Visible = false;
+            this.btnGuardar1.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label5
             // 
@@ -148,10 +154,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 257);
+            this.ClientSize = new System.Drawing.Size(331, 259);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbxCodigo);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnGuardar1);
             this.Controls.Add(this.chxEstado);
             this.Controls.Add(this.cbxNivel);
             this.Controls.Add(this.tbxContraseña);
@@ -163,6 +169,19 @@
             this.Name = "RegistroUsuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.tbxUsuario, 0);
+            this.Controls.SetChildIndex(this.tbxContraseña, 0);
+            this.Controls.SetChildIndex(this.cbxNivel, 0);
+            this.Controls.SetChildIndex(this.chxEstado, 0);
+            this.Controls.SetChildIndex(this.btnGuardar1, 0);
+            this.Controls.SetChildIndex(this.tbxCodigo, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +197,7 @@
         private System.Windows.Forms.TextBox tbxContraseña;
         private System.Windows.Forms.ComboBox cbxNivel;
         private System.Windows.Forms.CheckBox chxEstado;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnGuardar1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbxCodigo;
     }

@@ -64,11 +64,47 @@
     <Compile Include="FormProcesos.Designer.cs">
       <DependentUpon>FormProcesos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistros.Designer.cs">
+      <DependentUpon>FormRegistros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoAlmacenes.Designer.cs">
+      <DependentUpon>MantenimientoAlmacenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MantenimientoClientes.Designer.cs">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoInventario.Designer.cs">
+      <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMovimientoArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMovimientoArticulos.Designer.cs">
+      <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoInventario.Designer.cs">
+      <DependentUpon>RegistoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroAlmanenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroAlmanenes.Designer.cs">
+      <DependentUpon>RegistroAlmanenes.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroClientes.cs">
       <SubType>Form</SubType>
@@ -81,6 +117,12 @@
     </Compile>
     <Compile Include="PincipalMDI.Designer.cs">
       <DependentUpon>PincipalMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroMovimientoArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroMovimientoArticulos.Designer.cs">
+      <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroUsuarios.cs">
       <SubType>Form</SubType>
@@ -112,11 +154,29 @@
     <EmbeddedResource Include="FormProcesos.resx">
       <DependentUpon>FormProcesos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistros.resx">
+      <DependentUpon>FormRegistros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAlmacenes.resx">
+      <DependentUpon>MantenimientoAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoClientes.resx">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoInventario.resx">
+      <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMovimientoArticulos.resx">
+      <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistoInventario.resx">
+      <DependentUpon>RegistoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroAlmanenes.resx">
+      <DependentUpon>RegistroAlmanenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
@@ -136,6 +196,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroMovimientoArticulos.resx">
+      <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>

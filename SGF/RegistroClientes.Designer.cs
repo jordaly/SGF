@@ -45,7 +45,6 @@
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.tbxLocalidad = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.tbxCodigo_postal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,8 +53,13 @@
             this.tbxCorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnGuardar1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(112, 492);
             // 
             // cbxProvincia
             // 
@@ -245,16 +249,6 @@
             this.tbxLocalidad.Size = new System.Drawing.Size(268, 20);
             this.tbxLocalidad.TabIndex = 5;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(128, 492);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // tbxCodigo_postal
             // 
             this.tbxCodigo_postal.Location = new System.Drawing.Point(128, 402);
@@ -321,6 +315,17 @@
             this.label12.TabIndex = 34;
             this.label12.Text = "Correo";
             // 
+            // btnGuardar1
+            // 
+            this.btnGuardar1.Location = new System.Drawing.Point(224, 492);
+            this.btnGuardar1.Name = "btnGuardar1";
+            this.btnGuardar1.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar1.TabIndex = 10;
+            this.btnGuardar1.Text = "Guardar";
+            this.btnGuardar1.UseVisualStyleBackColor = true;
+            this.btnGuardar1.Visible = false;
+            this.btnGuardar1.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,7 +339,7 @@
             this.Controls.Add(this.tbxCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxCodigo_postal);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnGuardar1);
             this.Controls.Add(this.tbxLocalidad);
             this.Controls.Add(this.cbxSexo);
             this.Controls.Add(this.dtFecha);
@@ -355,6 +360,33 @@
             this.Name = "RegistroClientes";
             this.Text = "MantenimientoClientes";
             this.Load += new System.EventHandler(this.MantenimientoClientes_Load);
+            this.Controls.SetChildIndex(this.cbxProvincia, 0);
+            this.Controls.SetChildIndex(this.tbxNombre, 0);
+            this.Controls.SetChildIndex(this.rtbxIndicaciones, 0);
+            this.Controls.SetChildIndex(this.chxEstado, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.tbxApellido, 0);
+            this.Controls.SetChildIndex(this.tbxDireccion, 0);
+            this.Controls.SetChildIndex(this.dtFecha, 0);
+            this.Controls.SetChildIndex(this.cbxSexo, 0);
+            this.Controls.SetChildIndex(this.tbxLocalidad, 0);
+            this.Controls.SetChildIndex(this.btnGuardar1, 0);
+            this.Controls.SetChildIndex(this.tbxCodigo_postal, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.tbxCodigo, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.tbxCorreo, 0);
+            this.Controls.SetChildIndex(this.tbxTelefono, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -380,7 +412,6 @@
         public System.Windows.Forms.DateTimePicker dtFecha;
         public System.Windows.Forms.ComboBox cbxSexo;
         public System.Windows.Forms.TextBox tbxLocalidad;
-        public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.TextBox tbxCodigo_postal;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
@@ -389,5 +420,6 @@
         public System.Windows.Forms.TextBox tbxCorreo;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Button btnGuardar1;
     }
 }

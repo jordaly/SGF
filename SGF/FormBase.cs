@@ -17,10 +17,13 @@ namespace SGF
             InitializeComponent();
         }
         public string cmd = "";
+        public string BuscarDatos = "";
         public virtual void Modificar() { }
         public virtual void Nuevo() { }
         public virtual void Borrar() { }
         public virtual void Buscar() { }
+        public virtual void Guardar() { }
+
 
         public DataSet ds = new DataSet();
         public bool PuedeModificar { set; get; }

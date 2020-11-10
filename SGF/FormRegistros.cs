@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class FormRegistros : Form
+    public partial class FormRegistros : FormBase
     {
         public FormRegistros()
         {
             InitializeComponent();
+        }
+
+        private void FormRegistros_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Guardar();
         }
     }
 }

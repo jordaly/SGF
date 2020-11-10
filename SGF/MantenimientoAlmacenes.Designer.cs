@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class FormRegistros
+    partial class MantenimientoAlmacenes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnGuardar
+            // cbxBuscar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(321, 383);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.cbxBuscar.Items.AddRange(new object[] {
+            "id",
+            "descripcion",
+            "capacidad",
+            "estado"});
             // 
-            // FormRegistros
+            // MantenimientoAlmacenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnGuardar);
-            this.Name = "FormRegistros";
-            this.Text = "FormRegistros";
-            this.Load += new System.EventHandler(this.FormRegistros_Load);
+            this.Name = "MantenimientoAlmacenes";
+            this.Text = "MantenimientoAlmacenes";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Button btnGuardar;
     }
 }
