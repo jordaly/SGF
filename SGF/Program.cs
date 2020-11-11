@@ -16,7 +16,7 @@ namespace SGF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MantenimientoMovimientoArticulos());
+            Application.Run(new MantenimientoUsuarios());
         }
     }
 }
