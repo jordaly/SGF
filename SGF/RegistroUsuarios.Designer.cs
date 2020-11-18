@@ -193,12 +193,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbxUsuario;
-        private System.Windows.Forms.TextBox tbxContraseña;
-        private System.Windows.Forms.ComboBox cbxNivel;
-        private System.Windows.Forms.CheckBox chxEstado;
         private System.Windows.Forms.Button btnGuardar1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbxCodigo;
+        public System.Windows.Forms.TextBox tbxUsuario;
+        public System.Windows.Forms.TextBox tbxContraseña;
+        public System.Windows.Forms.ComboBox cbxNivel;
+        public System.Windows.Forms.CheckBox chxEstado;
+        public System.Windows.Forms.TextBox tbxCodigo;
     }
 }
