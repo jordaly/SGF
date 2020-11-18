@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class PincipalMDI : Form
+    public partial class FrmMenu : Form
     {
         private int childFormNumber = 0;
 
-        public PincipalMDI()
+        public FrmMenu()
         {
             InitializeComponent();
         }
@@ -68,12 +68,12 @@ namespace SGF
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            //toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+           // statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,6 +105,21 @@ namespace SGF
         }
 
         private void fileMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
