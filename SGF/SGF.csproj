@@ -231,9 +231,41 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Recursos\Logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\LOGO-LA-FERRETERIA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\llaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\lapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\moneda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\herramientas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ventana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ayuda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
