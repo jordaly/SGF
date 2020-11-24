@@ -136,11 +136,13 @@
     <Compile Include="RegistroClientes.Designer.cs">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PincipalMDI.cs">
+    <Compile Include="PrincipalMDI.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="PincipalMDI.Designer.cs">
-      <DependentUpon>PincipalMDI.cs</DependentUpon>
+    <Compile Include="PrincipalMDI.Designer.cs">
+      <DependentUpon>PrincipalMDI.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="RegistroMovimientoArticulos.cs">
       <SubType>Form</SubType>
@@ -229,8 +231,9 @@
     <EmbeddedResource Include="RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PincipalMDI.resx">
-      <DependentUpon>PincipalMDI.cs</DependentUpon>
+    <EmbeddedResource Include="PrincipalMDI.resx">
+      <DependentUpon>PrincipalMDI.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.cs</DependentUpon>
