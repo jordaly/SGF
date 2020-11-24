@@ -74,7 +74,7 @@ namespace SGF
                         //ds = Utilidades.EjecutarDS(cmd);
                         MessageBox.Show("Modificado exitosamente");
                         //Limpiar();
-                        //this.Close();
+                        this.Close();
 
 
                     }

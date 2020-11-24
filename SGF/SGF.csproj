@@ -58,6 +58,12 @@
     <Compile Include="FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultas.Designer.cs">
+      <DependentUpon>FormConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProcesos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     <Compile Include="MantenimientoUsuarios.Designer.cs">
       <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="mantenimiento_fabricacion_inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento_fabricacion_inmuebles.Designer.cs">
+      <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,18 @@
     <Compile Include="principal.Designer.cs">
       <DependentUpon>principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="registro_fabricacion_inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registro_fabricacion_inmuebles.Designer.cs">
+      <DependentUpon>registro_fabricacion_inmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_taller_inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_taller_inmuebles.Designer.cs">
+      <DependentUpon>Consulta_taller_inmuebles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -157,11 +181,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Consulta_taller_inmuebles.resx">
+      <DependentUpon>Consulta_taller_inmuebles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarraBusqueda.resx">
       <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultas.resx">
+      <DependentUpon>FormConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProcesos.resx">
       <DependentUpon>FormProcesos.cs</DependentUpon>
@@ -186,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoUsuarios.resx">
       <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento_fabricacion_inmuebles.resx">
+      <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistoInventario.resx">
       <DependentUpon>RegistoInventario.cs</DependentUpon>
@@ -218,6 +251,9 @@
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="registro_fabricacion_inmuebles.resx">
+      <DependentUpon>registro_fabricacion_inmuebles.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -231,9 +267,43 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+
+  <ItemGroup>
+    <None Include="Recursos\Logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\LOGO-LA-FERRETERIA.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\llaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\lapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\moneda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\herramientas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ventana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ayuda.png" />
+  </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
