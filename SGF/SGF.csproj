@@ -270,6 +270,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+
   <ItemGroup>
     <None Include="Recursos\Logo.png" />
   </ItemGroup>
@@ -306,5 +307,6 @@
   <ItemGroup>
     <None Include="Recursos\ayuda.png" />
   </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

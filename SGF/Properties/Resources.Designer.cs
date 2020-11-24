@@ -63,6 +63,7 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap ayuda {
             get {
                 object obj = ResourceManager.GetObject("ayuda", resourceCulture);
@@ -123,12 +124,14 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap LOGO_LA_FERRETERIA {
             get {
                 object obj = ResourceManager.GetObject("LOGO-LA-FERRETERIA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
         
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -179,5 +182,6 @@ namespace SGF.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
     }
 }
