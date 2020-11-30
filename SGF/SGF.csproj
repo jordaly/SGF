@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPagos.Designer.cs">
+      <DependentUpon>ControlPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVacasiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlVacasiones.Designer.cs">
+      <DependentUpon>ControlVacasiones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBarraBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="MantenimientoClientes.Designer.cs">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoEmpleados.Designer.cs">
+      <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoInventario.cs">
       <SubType>Form</SubType>
@@ -144,6 +162,12 @@
       <DependentUpon>PrincipalMDI.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="RegistroEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroEmpleados.Designer.cs">
+      <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroMovimientoArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +185,12 @@
     </Compile>
     <Compile Include="principal.Designer.cs">
       <DependentUpon>principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVacaciones.Designer.cs">
+      <DependentUpon>RegistroVacaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="registro_fabricacion_inmuebles.cs">
       <SubType>Form</SubType>
@@ -186,6 +216,9 @@
     <EmbeddedResource Include="Consulta_taller_inmuebles.resx">
       <DependentUpon>Consulta_taller_inmuebles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlPagos.resx">
+      <DependentUpon>ControlPagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarraBusqueda.resx">
       <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoClientes.resx">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoEmpleados.resx">
+      <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoInventario.resx">
       <DependentUpon>MantenimientoInventario.cs</DependentUpon>
@@ -248,6 +284,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistroEmpleados.resx">
+      <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroMovimientoArticulos.resx">
       <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,7 +309,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="Recursos\Logo.png" />
   </ItemGroup>
@@ -307,6 +345,5 @@
   <ItemGroup>
     <None Include="Recursos\ayuda.png" />
   </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
