@@ -57,7 +57,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnbuscarcliente = new System.Windows.Forms.Button();
             this.lbnumfactura = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtrnc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbxtipofactura = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.dtfecha = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridarticulo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,9 +112,9 @@
             this.lbcodigo.AutoSize = true;
             this.lbcodigo.Location = new System.Drawing.Point(131, 159);
             this.lbcodigo.Name = "lbcodigo";
-            this.lbcodigo.Size = new System.Drawing.Size(39, 13);
+            this.lbcodigo.Size = new System.Drawing.Size(75, 13);
             this.lbcodigo.TabIndex = 54;
-            this.lbcodigo.Text = "codigo";
+            this.lbcodigo.Text = "Codigo Cliente";
             // 
             // txtcliente
             // 
@@ -338,12 +339,12 @@
             this.lbnumfactura.TabIndex = 42;
             this.lbnumfactura.Text = "000000001";
             // 
-            // textBox2
+            // txtrnc
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 41;
+            this.txtrnc.Location = new System.Drawing.Point(130, 209);
+            this.txtrnc.Name = "txtrnc";
+            this.txtrnc.Size = new System.Drawing.Size(200, 20);
+            this.txtrnc.TabIndex = 41;
             // 
             // label5
             // 
@@ -440,7 +441,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnbuscarcliente);
             this.Controls.Add(this.lbnumfactura);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtrnc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxtipofactura);
             this.Controls.Add(this.label3);
@@ -451,6 +452,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridarticulo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -490,7 +492,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnbuscarcliente;
         private System.Windows.Forms.Label lbnumfactura;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtrnc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxtipofactura;
         private System.Windows.Forms.Label label3;
