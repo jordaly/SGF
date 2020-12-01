@@ -49,6 +49,10 @@
             "codigo_postal",
             "indicaciones"});
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // MantenimientoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

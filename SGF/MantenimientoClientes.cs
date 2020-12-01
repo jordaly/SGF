@@ -76,6 +76,13 @@ namespace SGF
             refrescarDatos(BuscarDatos);
         }
 
+        public string codigo_cliente;
+        public override void Seleccionar()
+        {
+            codigo_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            this.Close();
+        }
+
         private void MantenimientoClientes_Load(object sender, EventArgs e)
         {
 
@@ -165,5 +172,9 @@ namespace SGF
             //dgvPadre.DataSource = ds.Tables[0];
         }
 
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
