@@ -64,10 +64,9 @@ namespace SGF.Properties {
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
 
-        internal static System.Drawing.Bitmap _073maximize_99951 {
+        internal static System.Drawing.Bitmap ayuda {
             get {
-                object obj = ResourceManager.GetObject("073maximize_99951", resourceCulture);
-
+                object obj = ResourceManager.GetObject("ayuda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,11 +74,9 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap _1487086345_cross_81577 {
+        internal static System.Drawing.Bitmap candado {
             get {
-                object obj = ResourceManager.GetObject("1487086345-cross_81577", resourceCulture);
-
+                object obj = ResourceManager.GetObject("candado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -87,11 +84,9 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap _4115230_cancel_close_cross_delete_114048 {
+        internal static System.Drawing.Bitmap herramientas {
             get {
-                object obj = ResourceManager.GetObject("4115230-cancel-close-cross-delete_114048", resourceCulture);
-
+                object obj = ResourceManager.GetObject("herramientas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -99,7 +94,36 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
+        internal static System.Drawing.Bitmap lapa {
+            get {
+                object obj = ResourceManager.GetObject("lapa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap llaves {
+            get {
+                object obj = ResourceManager.GetObject("llaves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
 
         internal static System.Drawing.Bitmap LOGO_LA_FERRETERIA {
             get {
@@ -112,10 +136,49 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap window_minimize_icon_144028 {
+        internal static System.Drawing.Bitmap maintenance {
             get {
-                object obj = ResourceManager.GetObject("window_minimize_icon_144028", resourceCulture);
+                object obj = ResourceManager.GetObject("maintenance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap moneda {
+            get {
+                object obj = ResourceManager.GetObject("moneda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salir {
+            get {
+                object obj = ResourceManager.GetObject("salir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ventana {
+            get {
+                object obj = ResourceManager.GetObject("ventana", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

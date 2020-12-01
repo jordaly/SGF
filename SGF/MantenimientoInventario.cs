@@ -13,7 +13,7 @@ namespace SGF
     public partial class MantenimientoInventario : FormProcesos
     {
         public string BuscarDatos = "select " +
-            "a.id, a.nombre_articulo, a.precio_compra, a.precio_venta, a.existencia, a.descripcion, a.cantidad_maxima, a.cantidad_minima," +
+            "a.id, a.nombre, a.precio_compra, a.precio_venta, a.existencia, a.descripcion, a.cantidad_maxima, a.cantidad_minima," +
             "a.fecha_renovacion, me.medida, ma.marca, t.categoria, a.estado " +
             "from articulo as a, marca as ma, medida as me, tipo_articulo as t " +
             "where a.idMedida=me.id and a.idMarca=ma.id and a.idTipo_articulo=t.id ";

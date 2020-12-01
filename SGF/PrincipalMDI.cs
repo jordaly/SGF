@@ -123,57 +123,5 @@ namespace SGF
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = 0;
-            }
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btncerrar_MouseLeave(object sender, EventArgs e)
-        {
-            btncerrar.BackColor = Color.White;
-        }
-
-        private void btncerrar_MouseHover(object sender, EventArgs e)
-        {
-            btncerrar.BackColor = Color.YellowGreen;
-        }
-
-        private void btnmaximizar_MouseHover(object sender, EventArgs e)
-        {
-            btnmaximizar.BackColor = Color.YellowGreen;
-        }
-
-        private void btnmaximizar_MouseLeave(object sender, EventArgs e)
-        {
-            btnmaximizar.BackColor = Color.White;
-        }
-
-        private void btnminimizar_MouseHover(object sender, EventArgs e)
-        {
-            btnminimizar.BackColor = Color.YellowGreen;
-        }
-
-        private void btnminimizar_MouseLeave(object sender, EventArgs e)
-        {
-            btnminimizar.BackColor = Color.White;
-        }
     }
 }
