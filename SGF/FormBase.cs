@@ -25,6 +25,7 @@ namespace SGF
         public virtual void Guardar() { }
         public virtual void Seleccionar() { }
 
+
         public DataSet ds = new DataSet();
         public bool PuedeModificar { set; get; }
         public bool PuedeNuevo { set; get; }

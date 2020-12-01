@@ -55,7 +55,7 @@ namespace SGF
             Buscar();
         }
 
-        private void btnseleccionar_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             Seleccionar();
         }

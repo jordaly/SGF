@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A4B4CF2-9D3C-482F-B020-98138AFB69B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SGF</RootNamespace>
+    <AssemblyName>SGF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPagos.Designer.cs">
+      <DependentUpon>ControlPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVacasiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlVacasiones.Designer.cs">
+      <DependentUpon>ControlVacasiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarraBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarraBusqueda.Designer.cs">
+      <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultas.Designer.cs">
+      <DependentUpon>FormConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProcesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProcesos.Designer.cs">
+      <DependentUpon>FormProcesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistros.Designer.cs">
+      <DependentUpon>FormRegistros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoAlmacenes.Designer.cs">
+      <DependentUpon>MantenimientoAlmacenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClientes.Designer.cs">
+      <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoEmpleados.Designer.cs">
+      <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoInventario.Designer.cs">
+      <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMovimientoArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMovimientoArticulos.Designer.cs">
+      <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios.Designer.cs">
+      <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento_fabricacion_inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento_fabricacion_inmuebles.Designer.cs">
+      <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoInventario.Designer.cs">
+      <DependentUpon>RegistoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroAlmanenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroAlmanenes.Designer.cs">
+      <DependentUpon>RegistroAlmanenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalMDI.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PrincipalMDI.Designer.cs">
+      <DependentUpon>PrincipalMDI.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RegistroEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroEmpleados.Designer.cs">
+      <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroMovimientoArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroMovimientoArticulos.Designer.cs">
+      <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroUsuarios.Designer.cs">
+      <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="principal.Designer.cs">
+      <DependentUpon>principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVacaciones.Designer.cs">
+      <DependentUpon>RegistroVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registro_fabricacion_inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registro_fabricacion_inmuebles.Designer.cs">
+      <DependentUpon>registro_fabricacion_inmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_taller_inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_taller_inmuebles.Designer.cs">
+      <DependentUpon>Consulta_taller_inmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Consulta_taller_inmuebles.resx">
+      <DependentUpon>Consulta_taller_inmuebles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPagos.resx">
+      <DependentUpon>ControlPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarraBusqueda.resx">
+      <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultas.resx">
+      <DependentUpon>FormConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProcesos.resx">
+      <DependentUpon>FormProcesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistros.resx">
+      <DependentUpon>FormRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAlmacenes.resx">
+      <DependentUpon>MantenimientoAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoClientes.resx">
+      <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoEmpleados.resx">
+      <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoInventario.resx">
+      <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMovimientoArticulos.resx">
+      <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios.resx">
+      <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento_fabricacion_inmuebles.resx">
+      <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistoInventario.resx">
+      <DependentUpon>RegistoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroAlmanenes.resx">
+      <DependentUpon>RegistroAlmanenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalMDI.resx">
+      <DependentUpon>PrincipalMDI.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.resx">
+      <DependentUpon>principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistroEmpleados.resx">
+      <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroMovimientoArticulos.resx">
+      <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroUsuarios.resx">
+      <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registro_fabricacion_inmuebles.resx">
+      <DependentUpon>registro_fabricacion_inmuebles.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\LOGO-LA-FERRETERIA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\llaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\lapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\moneda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\herramientas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ventana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ayuda.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

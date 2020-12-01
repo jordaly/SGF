@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-
-            this.btnseleccionar = new System.Windows.Forms.Button();
-
             this.label1 = new System.Windows.Forms.Label();
             this.cbxBuscar = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -39,6 +36,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dgvPadre = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPadre)).BeginInit();
@@ -46,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnseleccionar);
+            this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cbxBuscar);
             this.panel1.Controls.Add(this.btnBuscar);
@@ -55,29 +53,18 @@
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 82);
             this.panel1.TabIndex = 0;
-
-            // btnseleccionar
-            // 
-            this.btnseleccionar.Enabled = false;
-            this.btnseleccionar.Location = new System.Drawing.Point(21, 12);
-            this.btnseleccionar.Name = "btnseleccionar";
-            this.btnseleccionar.Size = new System.Drawing.Size(72, 42);
-            this.btnseleccionar.TabIndex = 6;
-            this.btnseleccionar.Text = "Seleccionar";
-            this.btnseleccionar.UseVisualStyleBackColor = true;
-            this.btnseleccionar.Click += new System.EventHandler(this.btnseleccionar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(429, 14);
+            this.label1.Location = new System.Drawing.Point(558, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-
+            this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Buscar por:";
             // 
@@ -85,18 +72,16 @@
             // 
             this.cbxBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxBuscar.FormattingEnabled = true;
-
-            this.cbxBuscar.Location = new System.Drawing.Point(429, 33);
+            this.cbxBuscar.Location = new System.Drawing.Point(558, 38);
+            this.cbxBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.cbxBuscar.Name = "cbxBuscar";
-            this.cbxBuscar.Size = new System.Drawing.Size(121, 21);
-
+            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             this.cbxBuscar.TabIndex = 4;
             // 
             // btnBuscar
             // 
-
-            this.btnBuscar.Location = new System.Drawing.Point(333, 12);
-
+            this.btnBuscar.Location = new System.Drawing.Point(430, 13);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(96, 52);
             this.btnBuscar.TabIndex = 3;
@@ -106,8 +91,8 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(255, 12);
-
+            this.btnBorrar.Location = new System.Drawing.Point(326, 13);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(96, 52);
             this.btnBorrar.TabIndex = 2;
@@ -117,9 +102,8 @@
             // 
             // btnNuevo
             // 
-
-            this.btnNuevo.Location = new System.Drawing.Point(177, 12);
-
+            this.btnNuevo.Location = new System.Drawing.Point(222, 13);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(96, 52);
             this.btnNuevo.TabIndex = 1;
@@ -129,9 +113,8 @@
             // 
             // btnModificar
             // 
-
-            this.btnModificar.Location = new System.Drawing.Point(99, 12);
-
+            this.btnModificar.Location = new System.Drawing.Point(118, 13);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(96, 52);
             this.btnModificar.TabIndex = 0;
@@ -149,13 +132,25 @@
             this.dgvPadre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPadre.Location = new System.Drawing.Point(0, 82);
-            this.dgvPadre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPadre.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPadre.Name = "dgvPadre";
             this.dgvPadre.ReadOnly = true;
             this.dgvPadre.RowHeadersWidth = 51;
             this.dgvPadre.Size = new System.Drawing.Size(1067, 493);
             this.dgvPadre.StandardTab = true;
             this.dgvPadre.TabIndex = 1;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Enabled = false;
+            this.btnSeleccionar.Location = new System.Drawing.Point(14, 13);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(96, 52);
+            this.btnSeleccionar.TabIndex = 6;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // FormProcesos
             // 
@@ -164,7 +159,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 575);
             this.Controls.Add(this.dgvPadre);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormProcesos";
             this.Text = "FormProcesos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -186,8 +181,7 @@
         public System.Windows.Forms.Button btnModificar;
         public System.Windows.Forms.DataGridView dgvPadre;
         public System.Windows.Forms.ComboBox cbxBuscar;
-
-        public System.Windows.Forms.Button btnseleccionar;
-
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnSeleccionar;
     }
 }

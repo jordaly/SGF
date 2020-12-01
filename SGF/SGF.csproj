@@ -136,6 +136,12 @@
     <Compile Include="mantenimiento_fabricacion_inmuebles.Designer.cs">
       <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarVacaciones.Designer.cs">
+      <DependentUpon>ModificarVacaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     <EmbeddedResource Include="ControlPagos.resx">
       <DependentUpon>ControlPagos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlVacasiones.resx">
+      <DependentUpon>ControlVacasiones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarraBusqueda.resx">
       <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,9 +242,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistros.resx">
       <DependentUpon>FormRegistros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmVentas.resx">
-      <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento_fabricacion_inmuebles.resx">
       <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarVacaciones.resx">
+      <DependentUpon>ModificarVacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistoInventario.resx">
       <DependentUpon>RegistoInventario.cs</DependentUpon>
@@ -313,23 +322,40 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-
-    <None Include="Recursos\1487086345-cross_81577.png" />
-
+    <None Include="Recursos\Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\LOGO-LA-FERRETERIA.jpg" />
   </ItemGroup>
   <ItemGroup>
-
-    <None Include="Recursos\window_minimize_icon_144028.png" />
+    <None Include="Recursos\salir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Recursos\4115230-cancel-close-cross-delete_114048.png" />
+    <None Include="Recursos\candado.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Recursos\073maximize_99951.png" />
-
+    <None Include="Recursos\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\llaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\lapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\moneda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\herramientas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ventana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ayuda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
