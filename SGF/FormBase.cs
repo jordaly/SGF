@@ -23,6 +23,7 @@ namespace SGF
         public virtual void Borrar() { }
         public virtual void Buscar() { }
         public virtual void Guardar() { }
+        public virtual void Seleccionar() { }
 
 
         public DataSet ds = new DataSet();

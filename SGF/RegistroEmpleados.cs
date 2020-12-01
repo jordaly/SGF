@@ -89,6 +89,8 @@ namespace SGF
                             "insert into telefono_vs_tercero(idTelefono,idTercero,estado)values(@idTelefono,@idTercero,'1');" +
                             "insert into correo(id,correo_electronico) values(@idCorreo,'" + tbxCorreo.Text.Trim() + "');" +
                             "insert into correo_vs_tercero(idCorreo,idTercero)values(@idCorreo,@idTercero);" +
+                            "insert into vacaciones(idEmpleado,fecha_inicio,fecha_fin,estado)values(@idTercero,'24/12/"+DateTime.Now.Year+"','1/1/"+(DateTime.Now.Year+1)+"','1');" +
+                            "insert into pagos(idEmpleado,fecha_ultimo_pago,estado)values(@idTercero,getdate(),'1');" +
                         "end";
                     //rtbxIndicaciones.Text = cmd;
                     //MessageBox.Show(cmd);
