@@ -234,6 +234,9 @@
     <EmbeddedResource Include="FormRegistros.resx">
       <DependentUpon>FormRegistros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,40 +313,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Recursos\Logo.png" />
+
+    <None Include="Recursos\1487086345-cross_81577.png" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\LOGO-LA-FERRETERIA.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Recursos\salir.png" />
+
+    <None Include="Recursos\window_minimize_icon_144028.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Recursos\candado.png" />
+    <None Include="Recursos\4115230-cancel-close-cross-delete_114048.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Recursos\usuario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\maintenance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\llaves.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\lapa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\moneda.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\herramientas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\ventana.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Recursos\ayuda.png" />
+    <None Include="Recursos\073maximize_99951.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
