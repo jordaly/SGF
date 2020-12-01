@@ -63,9 +63,49 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _073maximize_99951 {
+            get {
+                object obj = ResourceManager.GetObject("073maximize_99951", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1487086345_cross_81577 {
+            get {
+                object obj = ResourceManager.GetObject("1487086345-cross_81577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4115230_cancel_close_cross_delete_114048 {
+            get {
+                object obj = ResourceManager.GetObject("4115230-cancel-close-cross-delete_114048", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGO_LA_FERRETERIA {
             get {
                 object obj = ResourceManager.GetObject("LOGO-LA-FERRETERIA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_minimize_icon_144028 {
+            get {
+                object obj = ResourceManager.GetObject("window_minimize_icon_144028", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
