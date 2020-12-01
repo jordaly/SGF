@@ -28,10 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Enabled = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Enabled = false;
+            // 
+            // cbxBuscar
+            // 
+            this.cbxBuscar.Items.AddRange(new object[] {
+            "idEmpleado",
+            "nombre",
+            "apellido",
+            "fecha_inicio",
+            "fecha_fin",
+            "estado"});
+            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            // 
+            // ControlVacasiones
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1239, 549);
+            this.Name = "ControlVacasiones";
             this.Text = "ControlVacasiones";
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -34,20 +34,21 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(124, 16);
+            this.btnBuscar.Location = new System.Drawing.Point(117, 13);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(691, 14);
+            this.btnBorrar.Location = new System.Drawing.Point(1194, 13);
             this.btnBorrar.Visible = false;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(645, 13);
+            this.btnNuevo.Location = new System.Drawing.Point(1148, 12);
             this.btnNuevo.Visible = false;
             // 
             // btnModificar
             // 
+            this.btnModificar.Location = new System.Drawing.Point(13, 13);
             this.btnModificar.Text = "Pagar";
             // 
             // cbxBuscar
@@ -58,12 +59,17 @@
             "apellido",
             "puesto",
             "salario"});
-            this.cbxBuscar.Location = new System.Drawing.Point(228, 42);
+            this.cbxBuscar.Location = new System.Drawing.Point(221, 39);
             this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(228, 16);
+            this.label1.Location = new System.Drawing.Point(221, 13);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Location = new System.Drawing.Point(1044, 13);
+            this.btnSeleccionar.Visible = false;
             // 
             // tbxp
             // 
@@ -76,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1340, 617);
             this.Name = "ControlPagos";
             this.Text = "ControlPagos";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
