@@ -76,10 +76,13 @@ namespace SGF
             refrescarDatos(BuscarDatos);
         }
 
-        public string codigo_cliente;
+        public string codigo_cliente="";
+        public string nombre_cliente_apellido_cliente = "";
         public override void Seleccionar()
         {
             codigo_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            nombre_cliente_apellido_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString()+" "+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
             this.Close();
         }
 
