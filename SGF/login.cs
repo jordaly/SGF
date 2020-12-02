@@ -29,12 +29,12 @@ namespace SGF
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace SGF
                     //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //vj.cambiarNiveles();
-                    MessageBox.Show("Bienvenido "+tbNombre.Text);
+                    MessageBox.Show("Bienvenido " + tbNombre.Text);
                     vj.Show();
                     //MessageBox.Show("Felicidades, has iniciado seción correctamente");
 
@@ -115,6 +115,84 @@ namespace SGF
                     "\npara reactivarlo Contacte con el usuario administrador");
             }
 
+        }
+
+        private void btnEntrar_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbNombre.Text.Trim()) || String.IsNullOrEmpty(tbContraseña.Text.Trim()))
+                return;
+
+            DataSet ds = new DataSet();
+            string cmd = string.Format("select * from usuario where usuario = '{0}'",
+                tbNombre.Text.Trim());
+            ds = Utilidades.EjecutarDS(cmd);
+
+            //MessageBox.Show(ds.Tables[0].Rows[0]["Estatus"].ToString());
+            //nombre = tbNombre.Text;
+
+            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estado"]))
+            {
+
+                cmd = string.Format("select * from usuario where usuario = '{0}' and password = '{1}'",
+                tbNombre.Text.Trim(), tbContraseña.Text.Trim());
+                //MessageBox.Show(cmd);
+
+                ds = Utilidades.EjecutarDS(cmd);
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    SGF.principal vj = new SGF.principal();
+                    this.Hide();
+                    //vj.toolStripStatusLabel.Text = tbNombre.Text.Trim();
+                    //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
+                    //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
+                    //vj.cambiarNiveles();
+                    MessageBox.Show("Bienvenido " + tbNombre.Text);
+                    vj.Show();
+                    //MessageBox.Show("Felicidades, has iniciado seción correctamente");
+
+
+                    this.Visible = false;
+                }
+                else
+                {
+                    string mensaje = "El usuario o la contraseña son incorrectos.";
+                    if (nombre == tbNombre.Text)
+                    {
+                        intentos--;
+                    }
+                    else
+                    {
+                        nombre = tbNombre.Text;
+                        intentos = 9;
+                    }
+                    if (intentos <= 3)
+                    {
+                        mensaje += "\nSolo quedan " + intentos + " intentos antes de bloquear la cuenta.";
+                        if (intentos == 0)
+                        {
+                            cmd = string.Format("select * from usuario where usuario = '{0}'", tbNombre.Text.Trim());
+                            ds = Utilidades.EjecutarDS(cmd);
+                            if (ds.Tables[0].Rows[0]["Nivel"].ToString().Trim() != "0")
+                            {
+                                cmd = string.Format("Update usuarios Set usuario = '0' where id = '{0}'", ds.Tables[0].Rows[0]["id"].ToString().Trim());
+                                ds = Utilidades.EjecutarDS(cmd);
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario " + ds.Tables[0].Rows[0]["usuario"].ToString().Trim() + " no puede ser bloqueado.");
+                            }
+
+                        }
+                    }
+                    MessageBox.Show(mensaje);
+
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

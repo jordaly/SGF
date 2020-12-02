@@ -63,7 +63,36 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
+        internal static System.Drawing.Bitmap arrow_entrance_exit_internet_log_out_security_icon_127059 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_entrance_exit_internet_log_out_security_icon_127059", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_entrance_exit_internet_log_out_security_icon_127059__1_ {
+            get {
+                object obj = ResourceManager.GetObject("arrow_entrance_exit_internet_log_out_security_icon_127059 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_entrance_in_internet_log_login_security_icon_127060 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_entrance_in_internet_log_login_security_icon_127060", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ayuda {
             get {
                 object obj = ResourceManager.GetObject("ayuda", resourceCulture);
@@ -87,6 +116,26 @@ namespace SGF.Properties {
         internal static System.Drawing.Bitmap herramientas {
             get {
                 object obj = ResourceManager.GetObject("herramientas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_password_lock_800 {
+            get {
+                object obj = ResourceManager.GetObject("key_password_lock_800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_password_lock_8001 {
+            get {
+                object obj = ResourceManager.GetObject("key_password_lock_8001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -124,14 +173,12 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
         internal static System.Drawing.Bitmap LOGO_LA_FERRETERIA {
             get {
                 object obj = ResourceManager.GetObject("LOGO-LA-FERRETERIA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
         
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -166,9 +213,49 @@ namespace SGF.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sign_check_icon_34365 {
+            get {
+                object obj = ResourceManager.GetObject("sign-check-icon_34365", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user1 {
+            get {
+                object obj = ResourceManager.GetObject("user1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usuario {
             get {
                 object obj = ResourceManager.GetObject("usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario1 {
+            get {
+                object obj = ResourceManager.GetObject("usuario1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -182,6 +269,5 @@ namespace SGF.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
     }
 }

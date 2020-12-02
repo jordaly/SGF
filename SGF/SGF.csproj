@@ -360,5 +360,23 @@
   <ItemGroup>
     <None Include="Recursos\ayuda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\arrow_entrance_exit_internet_log_out_security_icon_127059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\arrow_entrance_exit_internet_log_out_security_icon_127059 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\arrow_entrance_in_internet_log_login_security_icon_127060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\sign-check-icon_34365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\key_password_lock_800.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
