@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
@@ -41,8 +42,6 @@
             this.btnagregararticulo = new System.Windows.Forms.Button();
             this.txtprecioventa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtpreciocompra = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.lbstock = new System.Windows.Forms.Label();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,9 +62,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnagregarrnc = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtfecha = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbfecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbcodigoarticulo = new System.Windows.Forms.Label();
+            this.txtitebis = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clitebis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridarticulo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,7 +80,7 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(708, 707);
+            this.btnsalir.Location = new System.Drawing.Point(747, 626);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(75, 23);
             this.btnsalir.TabIndex = 58;
@@ -82,7 +89,7 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(559, 707);
+            this.btnguardar.Location = new System.Drawing.Point(747, 505);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 57;
@@ -91,7 +98,7 @@
             // 
             // btnnuevo
             // 
-            this.btnnuevo.Location = new System.Drawing.Point(442, 707);
+            this.btnnuevo.Location = new System.Drawing.Point(747, 449);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(75, 23);
             this.btnnuevo.TabIndex = 56;
@@ -100,9 +107,11 @@
             // 
             // txttotal
             // 
+            this.txttotal.BackColor = System.Drawing.Color.White;
             this.txttotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txttotal.Location = new System.Drawing.Point(653, 670);
+            this.txttotal.Location = new System.Drawing.Point(573, 663);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(130, 13);
             this.txttotal.TabIndex = 55;
             this.txttotal.Text = "total";
@@ -126,7 +135,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(610, 670);
+            this.label15.Location = new System.Drawing.Point(530, 663);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(37, 13);
             this.label15.TabIndex = 52;
@@ -134,20 +143,38 @@
             // 
             // gridarticulo
             // 
+            this.gridarticulo.AllowUserToAddRows = false;
+            this.gridarticulo.AllowUserToDeleteRows = false;
+            this.gridarticulo.AllowUserToResizeColumns = false;
+            this.gridarticulo.AllowUserToResizeRows = false;
+            this.gridarticulo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridarticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridarticulo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColCodigo,
+            this.ColDescripcion,
+            this.ColPrecio,
+            this.clitebis,
+            this.ColCantidad,
+            this.ColImporte});
             this.gridarticulo.Location = new System.Drawing.Point(26, 438);
             this.gridarticulo.Name = "gridarticulo";
-            this.gridarticulo.Size = new System.Drawing.Size(757, 211);
+            this.gridarticulo.ReadOnly = true;
+            this.gridarticulo.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gridarticulo.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridarticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridarticulo.Size = new System.Drawing.Size(701, 211);
             this.gridarticulo.TabIndex = 51;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtitebis);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lbcodigoarticulo);
             this.panel1.Controls.Add(this.btnquitararticulo);
             this.panel1.Controls.Add(this.btnagregararticulo);
             this.panel1.Controls.Add(this.txtprecioventa);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.txtpreciocompra);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.lbstock);
             this.panel1.Controls.Add(this.txtcantidad);
             this.panel1.Controls.Add(this.label11);
@@ -156,12 +183,12 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(26, 302);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 118);
+            this.panel1.Size = new System.Drawing.Size(701, 118);
             this.panel1.TabIndex = 50;
             // 
             // btnquitararticulo
             // 
-            this.btnquitararticulo.Location = new System.Drawing.Point(623, 53);
+            this.btnquitararticulo.Location = new System.Drawing.Point(602, 69);
             this.btnquitararticulo.Name = "btnquitararticulo";
             this.btnquitararticulo.Size = new System.Drawing.Size(75, 23);
             this.btnquitararticulo.TabIndex = 33;
@@ -170,49 +197,36 @@
             // 
             // btnagregararticulo
             // 
-            this.btnagregararticulo.Location = new System.Drawing.Point(623, 11);
+            this.btnagregararticulo.Location = new System.Drawing.Point(602, 27);
             this.btnagregararticulo.Name = "btnagregararticulo";
             this.btnagregararticulo.Size = new System.Drawing.Size(75, 23);
             this.btnagregararticulo.TabIndex = 32;
             this.btnagregararticulo.Text = "Agregar";
             this.btnagregararticulo.UseVisualStyleBackColor = true;
+            this.btnagregararticulo.Click += new System.EventHandler(this.btnagregararticulo_Click);
             // 
             // txtprecioventa
             // 
-            this.txtprecioventa.Location = new System.Drawing.Point(416, 55);
+            this.txtprecioventa.BackColor = System.Drawing.Color.White;
+            this.txtprecioventa.Location = new System.Drawing.Point(416, 34);
             this.txtprecioventa.Name = "txtprecioventa";
+            this.txtprecioventa.ReadOnly = true;
             this.txtprecioventa.Size = new System.Drawing.Size(154, 20);
             this.txtprecioventa.TabIndex = 31;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(328, 58);
+            this.label14.Location = new System.Drawing.Point(328, 37);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 13);
             this.label14.TabIndex = 30;
             this.label14.Text = "Precio Venta :";
             // 
-            // txtpreciocompra
-            // 
-            this.txtpreciocompra.Location = new System.Drawing.Point(416, 15);
-            this.txtpreciocompra.Name = "txtpreciocompra";
-            this.txtpreciocompra.Size = new System.Drawing.Size(154, 20);
-            this.txtpreciocompra.TabIndex = 29;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(328, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Precio Compra :";
-            // 
             // lbstock
             // 
             this.lbstock.AutoSize = true;
-            this.lbstock.Location = new System.Drawing.Point(227, 55);
+            this.lbstock.Location = new System.Drawing.Point(227, 74);
             this.lbstock.Name = "lbstock";
             this.lbstock.Size = new System.Drawing.Size(35, 13);
             this.lbstock.TabIndex = 27;
@@ -220,7 +234,7 @@
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Location = new System.Drawing.Point(67, 52);
+            this.txtcantidad.Location = new System.Drawing.Point(67, 71);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(154, 20);
             this.txtcantidad.TabIndex = 26;
@@ -228,7 +242,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 55);
+            this.label11.Location = new System.Drawing.Point(13, 74);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 25;
@@ -236,7 +250,7 @@
             // 
             // btnbuscararticulo
             // 
-            this.btnbuscararticulo.Location = new System.Drawing.Point(228, 11);
+            this.btnbuscararticulo.Location = new System.Drawing.Point(228, 30);
             this.btnbuscararticulo.Name = "btnbuscararticulo";
             this.btnbuscararticulo.Size = new System.Drawing.Size(75, 23);
             this.btnbuscararticulo.TabIndex = 24;
@@ -246,15 +260,17 @@
             // 
             // txtarticulo
             // 
-            this.txtarticulo.Location = new System.Drawing.Point(67, 15);
+            this.txtarticulo.BackColor = System.Drawing.Color.White;
+            this.txtarticulo.Location = new System.Drawing.Point(67, 34);
             this.txtarticulo.Name = "txtarticulo";
+            this.txtarticulo.ReadOnly = true;
             this.txtarticulo.Size = new System.Drawing.Size(154, 20);
             this.txtarticulo.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 18);
+            this.label10.Location = new System.Drawing.Point(13, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 22;
@@ -393,21 +409,14 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Cliente :";
             // 
-            // dtfecha
+            // lbfecha
             // 
-            this.dtfecha.Location = new System.Drawing.Point(129, 25);
-            this.dtfecha.Name = "dtfecha";
-            this.dtfecha.Size = new System.Drawing.Size(200, 20);
-            this.dtfecha.TabIndex = 35;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Fecha :";
+            this.lbfecha.AutoSize = true;
+            this.lbfecha.Location = new System.Drawing.Point(21, 25);
+            this.lbfecha.Name = "lbfecha";
+            this.lbfecha.Size = new System.Drawing.Size(43, 13);
+            this.lbfecha.TabIndex = 34;
+            this.lbfecha.Text = "Fecha :";
             // 
             // label1
             // 
@@ -418,12 +427,81 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Numero Factura :";
             // 
+            // lbcodigoarticulo
+            // 
+            this.lbcodigoarticulo.AutoSize = true;
+            this.lbcodigoarticulo.Location = new System.Drawing.Point(64, 18);
+            this.lbcodigoarticulo.Name = "lbcodigoarticulo";
+            this.lbcodigoarticulo.Size = new System.Drawing.Size(78, 13);
+            this.lbcodigoarticulo.TabIndex = 59;
+            this.lbcodigoarticulo.Text = "Codigo Articulo";
+            // 
+            // txtitebis
+            // 
+            this.txtitebis.BackColor = System.Drawing.Color.White;
+            this.txtitebis.Location = new System.Drawing.Point(416, 74);
+            this.txtitebis.Name = "txtitebis";
+            this.txtitebis.ReadOnly = true;
+            this.txtitebis.Size = new System.Drawing.Size(154, 20);
+            this.txtitebis.TabIndex = 61;
+            this.txtitebis.Text = "0.18";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(329, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "ITEBIS :";
+            // 
+            // ColCodigo
+            // 
+            this.ColCodigo.HeaderText = "Codigo";
+            this.ColCodigo.Name = "ColCodigo";
+            this.ColCodigo.ReadOnly = true;
+            this.ColCodigo.Width = 110;
+            // 
+            // ColDescripcion
+            // 
+            this.ColDescripcion.HeaderText = "Descripcion";
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.ReadOnly = true;
+            this.ColDescripcion.Width = 200;
+            // 
+            // ColPrecio
+            // 
+            this.ColPrecio.HeaderText = "Precio";
+            this.ColPrecio.Name = "ColPrecio";
+            this.ColPrecio.ReadOnly = true;
+            this.ColPrecio.Width = 110;
+            // 
+            // clitebis
+            // 
+            this.clitebis.HeaderText = "ITEBIS";
+            this.clitebis.Name = "clitebis";
+            this.clitebis.ReadOnly = true;
+            // 
+            // ColCantidad
+            // 
+            this.ColCantidad.HeaderText = "Cantidad";
+            this.ColCantidad.Name = "ColCantidad";
+            this.ColCantidad.ReadOnly = true;
+            this.ColCantidad.Width = 110;
+            // 
+            // ColImporte
+            // 
+            this.ColImporte.HeaderText = "Importe";
+            this.ColImporte.Name = "ColImporte";
+            this.ColImporte.ReadOnly = true;
+            this.ColImporte.Width = 110;
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 749);
+            this.ClientSize = new System.Drawing.Size(834, 698);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.btnnuevo);
@@ -447,8 +525,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnagregarrnc);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dtfecha);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbfecha);
             this.Controls.Add(this.label1);
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
@@ -476,8 +553,6 @@
         private System.Windows.Forms.Button btnagregararticulo;
         private System.Windows.Forms.TextBox txtprecioventa;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtpreciocompra;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lbstock;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Label label11;
@@ -498,8 +573,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnagregarrnc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtfecha;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbcodigoarticulo;
+        private System.Windows.Forms.TextBox txtitebis;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clitebis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColImporte;
     }
 }
