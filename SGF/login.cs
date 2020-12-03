@@ -21,6 +21,7 @@ namespace SGF
         }
         public int intentos = 10;
         public string nombre;
+        public bool salir = false;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -61,18 +62,20 @@ namespace SGF
                 ds = Utilidades.EjecutarDS(cmd);
                 if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
-                    SGF.principal vj = new SGF.principal();
-                    this.Hide();
+                    //SGF.FrmMenu vj = new SGF.FrmMenu();
+                    //this.Hide();
                     //vj.toolStripStatusLabel.Text = tbNombre.Text.Trim();
                     //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //vj.cambiarNiveles();
-                    MessageBox.Show("Bienvenido " + tbNombre.Text);
-                    vj.Show();
+                    //MessageBox.Show("Bienvenido " + tbNombre.Text);
+                    //vj.Show();
+                    codigo_usuario = ds.Tables[0].Rows[0]["id"].ToString();
+                    this.Close();
                     //MessageBox.Show("Felicidades, has iniciado seción correctamente");
 
 
-                    this.Visible = false;
+                    //this.Visible = false;
                 }
                 else
                 {
@@ -117,6 +120,7 @@ namespace SGF
 
         }
 
+        public string codigo_usuario= "";
         private void btnEntrar_Click_1(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(tbNombre.Text.Trim()) || String.IsNullOrEmpty(tbContraseña.Text.Trim()))
@@ -140,18 +144,20 @@ namespace SGF
                 ds = Utilidades.EjecutarDS(cmd);
                 if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
-                    SGF.principal vj = new SGF.principal();
-                    this.Hide();
+                    //SGF.FrmMenu vj = new SGF.FrmMenu();
+                    //this.Hide();
                     //vj.toolStripStatusLabel.Text = tbNombre.Text.Trim();
                     //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
                     //vj.cambiarNiveles();
+                    codigo_usuario = ds.Tables[0].Rows[0]["id"].ToString();
                     MessageBox.Show("Bienvenido " + tbNombre.Text);
-                    vj.Show();
+                    this.Close();
+                    //vj.Show();
                     //MessageBox.Show("Felicidades, has iniciado seción correctamente");
 
 
-                    this.Visible = false;
+                    //this.Visible = false;
                 }
                 else
                 {
@@ -192,7 +198,8 @@ namespace SGF
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            salir = true;
+            this.Close();
         }
     }
 }

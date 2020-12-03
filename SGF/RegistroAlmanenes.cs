@@ -16,28 +16,51 @@ namespace SGF
         {
             InitializeComponent();
         }
+
+
+
+        public bool ComprobarCampos()
+        {
+            bool ok = true;
+            if (tbxDescripcion.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxDescripcion, "Este campo no puede estar vasio.");
+            }
+            if (tbxCapacidad.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCapacidad, "Este campo no puede estar vasio.");
+            }
+            return ok;
+        }
+
+
+
         public override void Guardar()
         {
-            if (tbxCapacidad.Text.Trim()=="" || tbxDescripcion.Text.Trim()=="")
+            if (ComprobarCampos())
             {
-                MessageBox.Show("Faltan campos por reyenar");
 
-            }
-            else if (tbxCodigo.Text.Trim()=="Nuevo")
-            {
-                cmd = "insert into almacen(id,descripcion,capacidad,estado)values(newid(),'"+tbxDescripcion.Text.Trim()+"','"+tbxCapacidad.Text.Trim()+"','"+chxEstado.Checked+"');";
-                ds = Utilidades.EjecutarDS(cmd);
-                MessageBox.Show("Guardado exitosamente");
-                ////Limpiar();
-                this.Close();
-            }
-            else
-            {
-                cmd = "update from almacen set descripcion='"+tbxDescripcion.Text.Trim()+"',capacidad='"+tbxCapacidad.Text.Trim()+"',estado='"+chxEstado.Checked+"' where id='"+tbxCodigo.Text.Trim()+"';";
-                ds = Utilidades.EjecutarDS(cmd);
-                MessageBox.Show("Guardado exitosamente");
-                ////Limpiar();
-                this.Close();
+
+                if (tbxCodigo.Text.Trim() == "Nuevo")
+                {
+                    cmd = "insert into almacen(id,descripcion,capacidad,estado)values(newid(),'" + tbxDescripcion.Text.Trim() + "','" + tbxCapacidad.Text.Trim() + "','" + chxEstado.Checked + "');";
+                    ds = Utilidades.EjecutarDS(cmd);
+                    MessageBox.Show("Guardado exitosamente");
+                    ////Limpiar();
+                    this.Close();
+                }
+                else
+                {
+                    cmd = "update from almacen set descripcion='" + tbxDescripcion.Text.Trim() + "',capacidad='" + tbxCapacidad.Text.Trim() + "',estado='" + chxEstado.Checked + "' where id='" + tbxCodigo.Text.Trim() + "';";
+                    ds = Utilidades.EjecutarDS(cmd);
+                    MessageBox.Show("Guardado exitosamente");
+                    ////Limpiar();
+                    this.Close();
+                }
             }
         }
     }

@@ -14,7 +14,7 @@ namespace SGF
     {
         public string BuscarDatos = "select " +
             "a.id, a.nombre_articulo, a.precio_compra, a.precio_venta, a.existencia, a.descripcion, a.cantidad_maxima, a.cantidad_minima," +
-            "a.fecha_renovacion, me.medida, ma.marca, t.categoria, a.estado " +
+            "a.fecha_renovacion, me.medida, ma.marca, t.categoria, a.ITEBIs, a.estado " +
             "from articulo as a, marca as ma, medida as me, tipo_articulo as t " +
             "where a.idMedida=me.id and a.idMarca=ma.id and a.idTipo_articulo=t.id ";
         public MantenimientoInventario()
@@ -66,10 +66,12 @@ namespace SGF
             rc.tbxCantidad_maxima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[6].Value.ToString();
             rc.tbxCantidad_minima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
             rc.dtFecha_renovacion.Value = Convert.ToDateTime(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString());
-            rc.cbxMedida.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
-            rc.cbxMarca.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
-            rc.cbxTipo.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
-            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString());
+            rc.cbxMedida.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
+            rc.cbxMarca.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
+            rc.cbxTipo.Text= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
+            rc.tkbItebis.Value =Convert.ToInt32( 100*Convert.ToDouble(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString()));
+            rc.lbItebis.Text="("+ Convert.ToInt32(100 * Convert.ToDouble(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString()))+"%)";
+            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
             cmd = "select * from cantidad_caja where idArticulo='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
             ds = Utilidades.EjecutarDS(cmd);
             if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)

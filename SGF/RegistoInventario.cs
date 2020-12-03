@@ -35,21 +35,59 @@ namespace SGF
             cbxTipo.DataSource = ds.Tables[0].DefaultView;
 
         }
+        public bool ComprobarCampos()
+        {
+                //tbxNombre.Text.Trim() == "" ||
+                //tbxPrecio_compra.Text.Trim() == "" ||
+                //tbxPrecio_venta.Text.Trim() == "" ||
+                //tbxExistencia.Text.Trim() == "" ||
+                //tbxDescripcion.Text.Trim() == "" ||
+                //tbxCantidad_maxima.Text.Trim() == "" ||
+                //tbxCantidad_minima.Text.Trim() == ""
+            bool ok = true;
+            if (tbxNombre.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxNombre, "Este campo no puede estar vasio.");
+            }
+            if (tbxPrecio_compra.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxPrecio_compra, "Este campo no puede estar vasio.");
+            }
+            if (tbxPrecio_venta.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxExistencia, "Este campo no puede estar vasio.");
+            }
+            if (tbxDescripcion.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxDescripcion, "Este campo no puede estar vasio.");
+            }
+            if (tbxCantidad_maxima.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCantidad_maxima, "Este campo no puede estar vasio.");
+            }
+            if (tbxCantidad_minima.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCantidad_minima, "Este campo no puede estar vasio.");
+            }
+            return ok;
+        }
         public override void Guardar()
         {
-            if (tbxNombre.Text.Trim()==""||
-                tbxPrecio_compra.Text.Trim() ==""||
-                tbxPrecio_venta.Text.Trim() == ""||
-                tbxExistencia.Text.Trim() == ""||
-                tbxDescripcion.Text.Trim() == ""||
-                tbxCantidad_maxima.Text.Trim() == ""||
-                tbxCantidad_minima.Text.Trim() == ""
-                )
+            if (ComprobarCampos())
             {
-                MessageBox.Show("Faltan campos por reyenar");
-            }
-            else
-            {
+
                 if (etCantidad.Visible == true && tbxCantidad_caja.Text.Trim() == "")
                 {
                     MessageBox.Show("Faltan la cantidad de caja por reyenar");
@@ -116,7 +154,7 @@ namespace SGF
                             "select @idMedida = m.id from medida as m where m.medida = '" + cbxMedida.Text.Trim() + "';" +
                             "select @idMarca = m.id from marca as m where m.marca = '" + cbxMarca.Text.Trim() + "';" +
                             "select @idTipo_articulo = t.id from tipo_articulo as t where t.categoria = '" + cbxTipo.Text.Trim() + "';" +
-                            "update articulo set nombre = '" + tbxNombre.Text.Trim() + "', precio_compra = '" + tbxPrecio_compra.Text.Trim() + "', precio_venta = '" + tbxPrecio_venta.Text.Trim() + "', existencia = '" + tbxExistencia.Text.Trim() + "', descripcion = '" + tbxDescripcion.Text.Trim() + "', cantidad_maxima = '" + tbxCantidad_maxima.Text.Trim() + "', cantidad_minima = '" + tbxCantidad_minima.Text.Trim() + "', fecha_renovacion = '" + dtFecha_renovacion.Value.Day + "/" + dtFecha_renovacion.Value.Month + "/" + dtFecha_renovacion.Value.Year + "', idMedida = @idMedida, idMarca = @idMarca, idTipo_articulo = @idTipo_articulo, estado = '" + chxEstado.Checked + "' where id = '" + tbxCodigo.Text.Trim() + "';" +
+                            "update articulo set nombre = '" + tbxNombre.Text.Trim() + "', precio_compra = '" + tbxPrecio_compra.Text.Trim() + "', precio_venta = '" + tbxPrecio_venta.Text.Trim() + "', existencia = '" + tbxExistencia.Text.Trim() + "', descripcion = '" + tbxDescripcion.Text.Trim() + "', cantidad_maxima = '" + tbxCantidad_maxima.Text.Trim() + "', cantidad_minima = '" + tbxCantidad_minima.Text.Trim() + "', fecha_renovacion = '" + dtFecha_renovacion.Value.Day + "/" + dtFecha_renovacion.Value.Month + "/" + dtFecha_renovacion.Value.Year + "', idMedida = @idMedida, idMarca = @idMarca, idTipo_articulo = @idTipo_articulo, estado = '" + chxEstado.Checked + "' where id = '" + tbxCodigo.Text.Trim() + "', ITEBIs='" + (tkbItebis.Value / 100) + "';" +
                             "delete from cantidad_caja where idArticulo='"+tbxCodigo.Text.Trim()+"'" +
                             "end";
                         //MessageBox.Show(cmd);
@@ -138,8 +176,8 @@ namespace SGF
                             "select @idMedida = m.id from medida as m where m.medida = '" + cbxMedida.Text.Trim() + "';" +
                             "select @idMarca = m.id from marca as m where m.marca = '" + cbxMarca.Text.Trim() + "';" +
                             "select @idTipo_articulo = t.id from tipo_articulo as t where t.categoria = '" + cbxTipo.Text.Trim() + "';" +
-                            "insert into articulo(id, nombre, precio_compra, precio_venta, existencia, descripcion, cantidad_maxima, cantidad_minima, fecha_renovacion, idMedida, idMarca, idTipo_articulo, estado)" +
-                            "values(newid(), '" + tbxNombre.Text.Trim() + "', '" + tbxPrecio_compra.Text.Trim() + "', '" + tbxPrecio_venta.Text.Trim() + "', '" + tbxExistencia.Text.Trim() + "', '" + tbxDescripcion.Text.Trim() + "', '" + tbxCantidad_maxima.Text.Trim() + "', '" + tbxCantidad_minima.Text.Trim() + "', '" + dtFecha_renovacion.Value.Day + "/" + dtFecha_renovacion.Value.Month + "/" + dtFecha_renovacion.Value.Year + "', @idMedida, @idMarca, @idTipo_articulo, '" + chxEstado.Checked + "');" +
+                            "insert into articulo(id, nombre, precio_compra, precio_venta, existencia, descripcion, cantidad_maxima, cantidad_minima, fecha_renovacion, idMedida, idMarca, idTipo_articulo, estado, ITEBIs)" +
+                            "values(newid(), '" + tbxNombre.Text.Trim() + "', '" + tbxPrecio_compra.Text.Trim() + "', '" + tbxPrecio_venta.Text.Trim() + "', '" + tbxExistencia.Text.Trim() + "', '" + tbxDescripcion.Text.Trim() + "', '" + tbxCantidad_maxima.Text.Trim() + "', '" + tbxCantidad_minima.Text.Trim() + "', '" + dtFecha_renovacion.Value.Day + "/" + dtFecha_renovacion.Value.Month + "/" + dtFecha_renovacion.Value.Year + "', @idMedida, @idMarca, @idTipo_articulo, '" + chxEstado.Checked + "','"+(tkbItebis.Value/100)+"');" +
                             "end";
                         //cmd = String.Format("exec crearCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'",
                         //   tbxNombre.Text.Trim(), tbxApellido.Text.Trim(), dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year,
@@ -244,6 +282,11 @@ namespace SGF
                 tbxCantidad_caja.Visible = false;
                 etCantidad.Visible = false;
             }
+        }
+
+        private void tkbItebis_Scroll(object sender, EventArgs e)
+        {
+            lbItebis.Text = "(" +tkbItebis.Value+ "%)";
         }
     }
 }

@@ -12,12 +12,18 @@ namespace SGF
 {
     public partial class MantenimientoEmpleados : FormProcesos
     {
+        public string codigo_empleado = "";
         public string BuscarDatos = "select t.id,t.nombre,p.apellido,pu.puesto,pu.salario,h.hora_entrada,h.hora_salida,e.estado from tercero as t, persona as p, empleado as e, puesto as pu,departamento as d, horario as h where p.idTercero=t.id and p.idTercero=t.id and e.idTercero=t.id and e.idPuesto=pu.id and  e.idHorario=h.id and pu.idDepartamento=d.id ";
         public MantenimientoEmpleados()
         {
             InitializeComponent();
             refrescarDatos(BuscarDatos);
             cbxBuscar.SelectedIndex = 0;
+        }
+        public override void Seleccionar()
+        {
+            codigo_empleado= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            this.Close();
         }
 
 

@@ -76,7 +76,7 @@ namespace SGF
                 //DateTime fechaPago = Convert.ToDateTime(ds.Tables[0].Rows[0]["fecha_ultimo_pago"].ToString());
                 //dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString()
                 //cmd = "select * from pagos where fecha_ultimo_pago between '1/" + hoy.Month + "/" + hoy.Year + "' and '30/" + hoy.Month + "/" + hoy.Year + "' and idEmpleado='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
-                cmd = "select * from pagos where idTercero='"+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
+                cmd = "select * from pagos where idEmpleado='"+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
                 ds = Utilidades.EjecutarDS(cmd);
                 if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0))
                 {

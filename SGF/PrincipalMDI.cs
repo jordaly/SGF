@@ -13,12 +13,35 @@ namespace SGF
     public partial class FrmMenu : Form
     {
         private int childFormNumber = 0;
-
+        public string codigo_usuario="";
+        public bool salir = false;
         public FrmMenu()
         {
+            
+            
             InitializeComponent();
-        }
+            this.Visible=false;
+            login lg = new login();
+            lg.ShowDialog();
+            codigo_usuario = lg.codigo_usuario;
+            this.tsslUsuario.Text = lg.tbNombre.Text;
+            this.salir = lg.salir;
+            //SalirAplicacion(lg.salir);
+            
 
+
+        }
+        public void SalirAplicacion(bool ok)
+        {
+            if (ok)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Visible = true;
+            }
+        }
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -116,12 +139,94 @@ namespace SGF
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
+            login lg = new login();
+            lg.ShowDialog();
+            codigo_usuario = lg.codigo_usuario;
+            this.tsslUsuario.Text = lg.tbNombre.Text;
+            this.salir = lg.salir;
+            SalirAplicacion(salir);
+            
+
         }
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoUsuarios rc = new MantenimientoUsuarios();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoClientes rc = new MantenimientoClientes();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoEmpleados rc = new MantenimientoEmpleados();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void suplidoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            SalirAplicacion(salir);
+        }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoInventario rc = new MantenimientoInventario();
+            rc.MdiParent = this;
+            rc.Show();
+
+        }
+
+        private void movimientoInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoMovimientoArticulos rc = new MantenimientoMovimientoArticulos();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void almacenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoAlmacenes rc = new MantenimientoAlmacenes();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void pagosNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ControlPagos rc = new ControlPagos();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void vacacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarVacaciones rc = new ModificarVacaciones();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVentas rc = new FrmVentas();
+            rc.MdiParent = this;
+            rc.Show();
         }
     }
 }

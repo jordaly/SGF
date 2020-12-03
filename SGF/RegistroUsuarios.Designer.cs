@@ -52,12 +52,16 @@
             this.chxReimprimirFacturas = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxLimiteDescuento = new System.Windows.Forms.TextBox();
+            this.tbxEmpleado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(152, 438);
+            this.btnGuardar.Location = new System.Drawing.Point(152, 455);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5);
             // 
             // label1
@@ -127,7 +131,7 @@
             // chxEstado
             // 
             this.chxEstado.AutoSize = true;
-            this.chxEstado.Location = new System.Drawing.Point(152, 377);
+            this.chxEstado.Location = new System.Drawing.Point(152, 394);
             this.chxEstado.Margin = new System.Windows.Forms.Padding(4);
             this.chxEstado.Name = "chxEstado";
             this.chxEstado.Size = new System.Drawing.Size(74, 21);
@@ -137,7 +141,7 @@
             // 
             // btnGuardar1
             // 
-            this.btnGuardar1.Location = new System.Drawing.Point(273, 438);
+            this.btnGuardar1.Location = new System.Drawing.Point(273, 455);
             this.btnGuardar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar1.Name = "btnGuardar1";
             this.btnGuardar1.Size = new System.Drawing.Size(100, 28);
@@ -170,7 +174,7 @@
             // chxConsultaVentas
             // 
             this.chxConsultaVentas.AutoSize = true;
-            this.chxConsultaVentas.Location = new System.Drawing.Point(336, 235);
+            this.chxConsultaVentas.Location = new System.Drawing.Point(336, 252);
             this.chxConsultaVentas.Margin = new System.Windows.Forms.Padding(4);
             this.chxConsultaVentas.Name = "chxConsultaVentas";
             this.chxConsultaVentas.Size = new System.Drawing.Size(133, 21);
@@ -181,7 +185,7 @@
             // chxModificarArticulos
             // 
             this.chxModificarArticulos.AutoSize = true;
-            this.chxModificarArticulos.Location = new System.Drawing.Point(152, 179);
+            this.chxModificarArticulos.Location = new System.Drawing.Point(152, 196);
             this.chxModificarArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.chxModificarArticulos.Name = "chxModificarArticulos";
             this.chxModificarArticulos.Size = new System.Drawing.Size(145, 21);
@@ -192,7 +196,7 @@
             // chxAjusteStock
             // 
             this.chxAjusteStock.AutoSize = true;
-            this.chxAjusteStock.Location = new System.Drawing.Point(152, 207);
+            this.chxAjusteStock.Location = new System.Drawing.Point(152, 224);
             this.chxAjusteStock.Margin = new System.Windows.Forms.Padding(4);
             this.chxAjusteStock.Name = "chxAjusteStock";
             this.chxAjusteStock.Size = new System.Drawing.Size(108, 21);
@@ -203,7 +207,7 @@
             // chxModificarClientes
             // 
             this.chxModificarClientes.AutoSize = true;
-            this.chxModificarClientes.Location = new System.Drawing.Point(152, 235);
+            this.chxModificarClientes.Location = new System.Drawing.Point(152, 252);
             this.chxModificarClientes.Margin = new System.Windows.Forms.Padding(4);
             this.chxModificarClientes.Name = "chxModificarClientes";
             this.chxModificarClientes.Size = new System.Drawing.Size(141, 21);
@@ -214,7 +218,7 @@
             // chxModificarSuplidores
             // 
             this.chxModificarSuplidores.AutoSize = true;
-            this.chxModificarSuplidores.Location = new System.Drawing.Point(152, 264);
+            this.chxModificarSuplidores.Location = new System.Drawing.Point(152, 281);
             this.chxModificarSuplidores.Margin = new System.Windows.Forms.Padding(4);
             this.chxModificarSuplidores.Name = "chxModificarSuplidores";
             this.chxModificarSuplidores.Size = new System.Drawing.Size(158, 21);
@@ -225,7 +229,7 @@
             // chxModificarVendedores
             // 
             this.chxModificarVendedores.AutoSize = true;
-            this.chxModificarVendedores.Location = new System.Drawing.Point(152, 292);
+            this.chxModificarVendedores.Location = new System.Drawing.Point(152, 309);
             this.chxModificarVendedores.Margin = new System.Windows.Forms.Padding(4);
             this.chxModificarVendedores.Name = "chxModificarVendedores";
             this.chxModificarVendedores.Size = new System.Drawing.Size(168, 21);
@@ -236,7 +240,7 @@
             // chxIngresarCompras
             // 
             this.chxIngresarCompras.AutoSize = true;
-            this.chxIngresarCompras.Location = new System.Drawing.Point(152, 320);
+            this.chxIngresarCompras.Location = new System.Drawing.Point(152, 337);
             this.chxIngresarCompras.Margin = new System.Windows.Forms.Padding(4);
             this.chxIngresarCompras.Name = "chxIngresarCompras";
             this.chxIngresarCompras.Size = new System.Drawing.Size(142, 21);
@@ -247,7 +251,7 @@
             // chxIngresarVentas
             // 
             this.chxIngresarVentas.AutoSize = true;
-            this.chxIngresarVentas.Location = new System.Drawing.Point(336, 179);
+            this.chxIngresarVentas.Location = new System.Drawing.Point(336, 196);
             this.chxIngresarVentas.Margin = new System.Windows.Forms.Padding(4);
             this.chxIngresarVentas.Name = "chxIngresarVentas";
             this.chxIngresarVentas.Size = new System.Drawing.Size(130, 21);
@@ -258,7 +262,7 @@
             // chxDespachoTransporte
             // 
             this.chxDespachoTransporte.AutoSize = true;
-            this.chxDespachoTransporte.Location = new System.Drawing.Point(336, 207);
+            this.chxDespachoTransporte.Location = new System.Drawing.Point(336, 224);
             this.chxDespachoTransporte.Margin = new System.Windows.Forms.Padding(4);
             this.chxDespachoTransporte.Name = "chxDespachoTransporte";
             this.chxDespachoTransporte.Size = new System.Drawing.Size(168, 21);
@@ -269,7 +273,7 @@
             // chxActualizarCaja
             // 
             this.chxActualizarCaja.AutoSize = true;
-            this.chxActualizarCaja.Location = new System.Drawing.Point(336, 320);
+            this.chxActualizarCaja.Location = new System.Drawing.Point(336, 337);
             this.chxActualizarCaja.Margin = new System.Windows.Forms.Padding(4);
             this.chxActualizarCaja.Name = "chxActualizarCaja";
             this.chxActualizarCaja.Size = new System.Drawing.Size(124, 21);
@@ -280,7 +284,7 @@
             // chxConsultaReportes
             // 
             this.chxConsultaReportes.AutoSize = true;
-            this.chxConsultaReportes.Location = new System.Drawing.Point(336, 263);
+            this.chxConsultaReportes.Location = new System.Drawing.Point(336, 280);
             this.chxConsultaReportes.Margin = new System.Windows.Forms.Padding(4);
             this.chxConsultaReportes.Name = "chxConsultaReportes";
             this.chxConsultaReportes.Size = new System.Drawing.Size(147, 21);
@@ -291,7 +295,7 @@
             // chxReimprimirFacturas
             // 
             this.chxReimprimirFacturas.AutoSize = true;
-            this.chxReimprimirFacturas.Location = new System.Drawing.Point(336, 292);
+            this.chxReimprimirFacturas.Location = new System.Drawing.Point(336, 309);
             this.chxReimprimirFacturas.Margin = new System.Windows.Forms.Padding(4);
             this.chxReimprimirFacturas.Name = "chxReimprimirFacturas";
             this.chxReimprimirFacturas.Size = new System.Drawing.Size(156, 21);
@@ -315,11 +319,41 @@
             this.tbxLimiteDescuento.Size = new System.Drawing.Size(352, 22);
             this.tbxLimiteDescuento.TabIndex = 27;
             // 
+            // tbxEmpleado
+            // 
+            this.tbxEmpleado.Location = new System.Drawing.Point(152, 167);
+            this.tbxEmpleado.Name = "tbxEmpleado";
+            this.tbxEmpleado.ReadOnly = true;
+            this.tbxEmpleado.Size = new System.Drawing.Size(272, 22);
+            this.tbxEmpleado.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Empleado";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(430, 167);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 30;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 497);
+            this.ClientSize = new System.Drawing.Size(578, 499);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.tbxEmpleado);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbxLimiteDescuento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.chxReimprimirFacturas);
@@ -373,7 +407,11 @@
             this.Controls.SetChildIndex(this.chxReimprimirFacturas, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.tbxLimiteDescuento, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.tbxEmpleado, 0);
+            this.Controls.SetChildIndex(this.btnBuscar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,5 +442,8 @@
         public System.Windows.Forms.CheckBox chxReimprimirFacturas;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox tbxLimiteDescuento;
+        public System.Windows.Forms.TextBox tbxEmpleado;
+        public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
