@@ -21,7 +21,8 @@ namespace SGF
 
         }
         public string BuscarDatos = "select t.id, t.nombre,p.apellido,p.fecha_nacimiento,p.sexo,pais.pais,d.provincia,d.localidad,d.direccion,d.codigo_postal,d.indicaciones,telefono.numero,correo.correo_electronico,p.estado from persona as p,tercero as t, cliente as c,direccion_cliente as d,pais,telefono,correo,correo_vs_tercero,telefono_vs_tercero where c.idTercero = t.id and c.idTercero = p.idtercero and d.idPais=pais.id and d.id=c.idDireccion_cleinte and telefono_vs_tercero.idTelefono=telefono.id and telefono_vs_tercero.idTercero=t.id and correo_vs_tercero.idCorreo=correo.id and correo_vs_tercero.idTercero=t.id";
-
+        
+        
         
         public override void Borrar()
         {
@@ -70,6 +71,7 @@ namespace SGF
             rc.tbxTelefono.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
             rc.tbxCorreo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString();
             rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
+
             rc.ShowDialog();
 
 

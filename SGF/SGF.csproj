@@ -378,5 +378,8 @@
   <ItemGroup>
     <None Include="Recursos\key_password_lock_800.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

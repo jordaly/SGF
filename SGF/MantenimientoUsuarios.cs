@@ -54,38 +54,15 @@ namespace SGF
             RegistroUsuarios rc = new RegistroUsuarios();
             rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
             rc.tbxUsuario.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxContraseña.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            //rc.cbxNivel.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            //rc.tbxExistencia.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            //rc.tbxDescripcion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[5].Value.ToString();
-            //rc.tbxCantidad_maxima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[6].Value.ToString();
-            //rc.tbxCantidad_minima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
-            //rc.dtFecha_renovacion.Value = Convert.ToDateTime(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString());
-            //rc.cbxMedida.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
-            //rc.cbxMarca.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
-            //rc.cbxTipo.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
             rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
             rc.usuarioViejo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            cmd = "select * from usuario where id='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
+            
+            
+            cmd = "select * from usuario where id='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";            
             ds = Utilidades.EjecutarDS(cmd);
-            ////id,
-            ////usuario,
-            ////    password,
-            ////    nivel,
-            ////    modificar_articulos[
-            ////    ajuste_stock[
-            ////    modificar_clientes[
-            ////    modificar_suplidores[
-            ////    modificar_vendedores[
-            ////    ingresar_compras[
-            ////    ingresar_ventas[
-            ////    despacho_transporte[
-            ////    consulta_ventas[
-            ////    consultar_reportes[
-            ////    reimprimir_facturas[
-            ////    actualizar_caja[
-            ////    limite_descuento[
-            ////    estado
+
+            rc.tbxContraseña.Text= ds.Tables[0].Rows[0]["password"].ToString();
+            rc.tbxEmpleado.Text= ds.Tables[0].Rows[0]["idEmpleado"].ToString();
             rc.chxModificarArticulos.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["modificar_articulos"].ToString());
             rc.chxAjusteStock.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["ajuste_stock"].ToString());
             rc.chxModificarClientes.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["modificar_clientes"].ToString());
@@ -100,13 +77,6 @@ namespace SGF
             rc.chxActualizarCaja.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["actualizar_caja"].ToString());
             rc.tbxLimiteDescuento.Text = ds.Tables[0].Rows[0]["limite_descuento"].ToString();
 
-            //if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-            //{
-            //    //rc.tbxCantidad_caja.Visible = true;
-            //    //rc.tbxCantidad_caja.Text = ds.Tables[0].Rows[0]["cantidad_caja"].ToString();
-            //    //MessageBox.Show("errror: "+ds.Tables[0].Rows[0]["cantidad_caja"].ToString());
-            //    //rc.etCantidad.Visible = true;
-            //}
             rc.ShowDialog();
 
 

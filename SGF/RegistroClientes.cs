@@ -172,6 +172,63 @@ namespace SGF
 
         }
 
+
+        public bool ComprobarCampos()
+        {
+                //tbxNombre.Text == "" ||
+                //tbxApellido.Text == "" ||
+                //tbxCodigo_postal.Text == "" ||
+                //tbxDireccion.Text == "" ||
+                //tbxLocalidad.Text == "" ||
+                //tbxCodigo.Text == "" ||
+                //tbxTelefono.Text == "" ||
+                //rtbxIndicaciones.Text == ""
+            bool ok = true;
+            if (tbxNombre.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxNombre, "Este campo no puede estar vasio.");
+            }
+            if (tbxApellido.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxApellido, "Este campo no puede estar vasio.");
+            }
+            if (tbxCodigo_postal.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCodigo_postal, "Este campo no puede estar vasio.");
+            }/////////////////////////////////////////////////////////////////
+            if (tbxDireccion.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxDireccion, "Este campo no puede estar vasio.");
+            }
+            if (tbxLocalidad.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxLocalidad, "Este campo no puede estar vasio.");
+            }
+            if (tbxCorreo.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCorreo, "Este campo no puede estar vasio.");
+            }
+            if (tbxTelefono.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxTelefono, "Este campo no puede estar vasio.");
+            }
+           
+            return ok;
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -179,54 +236,52 @@ namespace SGF
             //string cmdCliente = string.Format("select * from cliente where idTercero='{0}'",
             //    tbxCodigo.Text.Trim());
             //ds = Utilidades.EjecutarDS(cmdCliente);
-            if (tbxNombre.Text==""||tbxApellido.Text==""||tbxCodigo_postal.Text==""||tbxDireccion.Text==""||tbxLocalidad.Text==""||tbxCodigo.Text==""||tbxTelefono.Text==""||rtbxIndicaciones.Text=="")
+            if (ComprobarCampos())
             {
-                MessageBox.Show("Faltan campos por reyenar");
-            }
-            else { 
-            if (tbxCodigo.Text!="Nuevo")
-            {
-                 cmd="begin" +
-                     " declare @idDireccion uniqueidentifier;" +
-                     "declare @idTelefono uniqueidentifier;" +
-                     "declare @idCorreo uniqueidentifier;" +
-                     "select @idTelefono=te.idTelefono from telefono_vs_tercero as te,tercero as t where t.id='" + tbxCodigo.Text.Trim() + "' and te.idTercero=t.id;" +
-                     "select @idCorreo = c.idCorreo from correo_vs_tercero as c,tercero as t where t.id = '" + tbxCodigo.Text.Trim()+"' and c.idTercero = t.id; " +
-                     "select @idDireccion=c.idDireccion_cleinte from cliente as c,tercero as t where t.id='" + tbxCodigo.Text.Trim()+"' and c.idTercero=t.id;" +
-                     "update telefono set numero='" + tbxTelefono.Text.Trim() + "'where id=@idTelefono;" +
-                     "update correo set correo_electronico='" + tbxCorreo.Text.Trim() + "'where id=@idCorreo;" +
-                     "update tercero " +
-                     "set nombre='"+tbxNombre.Text.Trim()+ "',estado='" + chxEstado.Checked + "'" +
-                     "where id='" + tbxCodigo.Text.Trim() + "';" +
-                     "update persona " +
-                     "set apellido='" + tbxApellido.Text.Trim() + "',fecha_nacimiento='"+ dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year + "',sexo='"+cbxSexo.Text.Trim()+"'" +
-                     "where idTercero='" + tbxCodigo.Text.Trim() + "';" +
-                     "update direccion_cliente " +
-                     "set provincia='" + cbxProvincia.Text.Trim() + "',localidad='" + tbxLocalidad.Text.Trim() + "',direccion='" + tbxDireccion.Text.Trim() + "',indicaciones='" + rtbxIndicaciones.Text.Trim() + "',codigo_postal='" + tbxCodigo_postal.Text.Trim() + "'" +
-                     "where id=@idDireccion " +
-                     "end";
-                //MessageBox.Show(cmd);
-                //rtbxIndicaciones.Text = cmd;
-                //Console.Out(cmd);
-                ds = Utilidades.EjecutarDS(cmd);
-                MessageBox.Show("Modificado exitosamente");
-                Limpiar();
-                this.Close();
+
+                if (tbxCodigo.Text != "Nuevo")
+                {
+                    cmd = "begin" +
+                        " declare @idDireccion uniqueidentifier;" +
+                        "declare @idTelefono uniqueidentifier;" +
+                        "declare @idCorreo uniqueidentifier;" +
+                        "select @idTelefono=te.idTelefono from telefono_vs_tercero as te,tercero as t where t.id='" + tbxCodigo.Text.Trim() + "' and te.idTercero=t.id;" +
+                        "select @idCorreo = c.idCorreo from correo_vs_tercero as c,tercero as t where t.id = '" + tbxCodigo.Text.Trim() + "' and c.idTercero = t.id; " +
+                        "select @idDireccion=c.idDireccion_cleinte from cliente as c,tercero as t where t.id='" + tbxCodigo.Text.Trim() + "' and c.idTercero=t.id;" +
+                        "update telefono set numero='" + tbxTelefono.Text.Trim() + "'where id=@idTelefono;" +
+                        "update correo set correo_electronico='" + tbxCorreo.Text.Trim() + "'where id=@idCorreo;" +
+                        "update tercero " +
+                        "set nombre='" + tbxNombre.Text.Trim() + "',estado='" + chxEstado.Checked + "'" +
+                        "where id='" + tbxCodigo.Text.Trim() + "';" +
+                        "update persona " +
+                        "set apellido='" + tbxApellido.Text.Trim() + "',fecha_nacimiento='" + dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year + "',sexo='" + cbxSexo.Text.Trim() + "'" +
+                        "where idTercero='" + tbxCodigo.Text.Trim() + "';" +
+                        "update direccion_cliente " +
+                        "set provincia='" + cbxProvincia.Text.Trim() + "',localidad='" + tbxLocalidad.Text.Trim() + "',direccion='" + tbxDireccion.Text.Trim() + "',indicaciones='" + rtbxIndicaciones.Text.Trim() + "',codigo_postal='" + tbxCodigo_postal.Text.Trim() + "'" +
+                        "where id=@idDireccion " +
+                        "end";
+                    //MessageBox.Show(cmd);
+                    //rtbxIndicaciones.Text = cmd;
+                    //Console.Out(cmd);
+                    ds = Utilidades.EjecutarDS(cmd);
+                    MessageBox.Show("Modificado exitosamente");
+                    Limpiar();
+                    this.Close();
 
 
-            }
-            else
-            {
-                 cmd = String.Format("exec crearCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'",
-                    tbxNombre.Text.Trim(), tbxApellido.Text.Trim(), dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year,
-                    cbxSexo.Text.Trim(),cbxProvincia.Text.Trim(),tbxLocalidad.Text.Trim(), tbxDireccion.Text.Trim(), rtbxIndicaciones.Text.Trim(),
-                    tbxCodigo_postal.Text.Trim(), chxEstado.Checked,tbxCorreo.Text.Trim(),tbxTelefono.Text.Trim());
-                //rtbxIndicaciones.Text = cmd;
-                //MessageBox.Show(cmd);
-                ds = Utilidades.EjecutarDS(cmd);
-                MessageBox.Show("Guardado exitosamente");
-                Limpiar();
-                this.Close();
+                }
+                else
+                {
+                    cmd = String.Format("exec crearCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'",
+                       tbxNombre.Text.Trim(), tbxApellido.Text.Trim(), dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year,
+                       cbxSexo.Text.Trim(), cbxProvincia.Text.Trim(), tbxLocalidad.Text.Trim(), tbxDireccion.Text.Trim(), rtbxIndicaciones.Text.Trim(),
+                       tbxCodigo_postal.Text.Trim(), chxEstado.Checked, tbxCorreo.Text.Trim(), tbxTelefono.Text.Trim());
+                    //rtbxIndicaciones.Text = cmd;
+                    //MessageBox.Show(cmd);
+                    ds = Utilidades.EjecutarDS(cmd);
+                    MessageBox.Show("Guardado exitosamente");
+                    Limpiar();
+                    this.Close();
                 }
             }
             

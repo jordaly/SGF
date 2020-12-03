@@ -30,6 +30,47 @@ namespace SGF
 
             cbxSexo.SelectedIndex = 0;
         }
+        public bool ComprobarCampos()
+        {
+
+                //tbxNombre.Text == "" ||
+                //tbxApellido.Text == "" ||
+                //tbxCedula.Text == "" ||
+                //tbxCorreo.Text == "" ||
+                //tbxTelefono.Text == ""
+            bool ok = true;
+            if (tbxNombre.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxNombre, "Este campo no puede estar vasio.");
+            }
+            if (tbxApellido.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxApellido, "Este campo no puede estar vasio.");
+            }
+            if (tbxCedula.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCedula, "Este campo no puede estar vasio.");
+            }
+            if (tbxCorreo.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCorreo, "Este campo no puede estar vasio.");
+            }
+            if (tbxTelefono.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxTelefono, "Este campo no puede estar vasio.");
+            }
+            return ok;
+        }
         public override void Guardar()
         {
             //(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -37,12 +78,9 @@ namespace SGF
             //string cmdCliente = string.Format("select * from cliente where idTercero='{0}'",
             //    tbxCodigo.Text.Trim());
             //ds = Utilidades.EjecutarDS(cmdCliente);
-            if (tbxNombre.Text == "" || tbxApellido.Text == "" || tbxCedula.Text == "" || tbxCorreo.Text == "" || tbxTelefono.Text == "" )
+            if (ComprobarCampos())
             {
-                MessageBox.Show("Faltan campos por reyenar");
-            }
-            else
-            {
+            
                 if (tbxCodigo.Text != "Nuevo")
                 {
                     cmd = "begin " +

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxBuscar = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -36,8 +37,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dgvPadre = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPadre)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 82);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Enabled = false;
+            this.btnSeleccionar.Location = new System.Drawing.Point(14, 13);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(96, 52);
+            this.btnSeleccionar.TabIndex = 6;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label1
             // 
@@ -140,18 +153,6 @@
             this.dgvPadre.StandardTab = true;
             this.dgvPadre.TabIndex = 1;
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Enabled = false;
-            this.btnSeleccionar.Location = new System.Drawing.Point(14, 13);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(96, 52);
-            this.btnSeleccionar.TabIndex = 6;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
             // FormProcesos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -162,9 +163,9 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormProcesos";
             this.Text = "FormProcesos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormProcesos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPadre)).EndInit();

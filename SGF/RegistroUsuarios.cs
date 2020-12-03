@@ -19,55 +19,83 @@ namespace SGF
             InitializeComponent();
             cbxNivel.SelectedIndex = 0;
         }
+        public bool ComprobarCampos()
+        {
+            bool ok = true;
+            if (tbxUsuario.Text=="")
+            {
+                ok = false;
+                
+                ErrorProvider.SetError(tbxUsuario, "Este campo no puede estar vasio.");
+            }
+            if (tbxContraseña.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxContraseña, "Este campo no puede estar vasio.");
+            }
+            if (tbxEmpleado.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxEmpleado, "Este campo no puede estar vasio.");
+            }
+            return ok;
+        }
         public override void Guardar()
         {
             DataSet ds = new DataSet();
 
-            if (tbxCodigo.Text.Trim()=="Nuevo")
+            if (ComprobarCampos())
             {
-                string cmdUsuario = string.Format("select * from usuario where usuario='{0}'",
-                tbxUsuario.Text.Trim());
-                ds = Utilidades.EjecutarDS(cmdUsuario);
-                if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0))
+
+
+
+                if (tbxCodigo.Text.Trim() == "Nuevo")
                 {
-                    string cmd = "insert into usuario(id,usuario,password,modificar_articulos,ajuste_stock,modificar_clientes,modificar_suplidores,modificar_vendedores,ingresar_compras,ingresar_ventas,despacho_transporte,consulta_ventas,consultar_reportes,reimprimir_facturas,actualizar_caja,limite_descuento,estado)" +
-                        "values(newid(),'" + tbxUsuario.Text.Trim() + "','" + tbxContraseña.Text.Trim() + "','" + chxModificarArticulos.Checked + "','" + chxAjusteStock.Checked + "','" + chxModificarClientes.Checked + "','" + chxModificarSuplidores.Checked + "','" + chxModificarVendedores.Checked + "','" + chxIngresarCompras.Checked + "','" + chxIngresarVentas.Checked + "','" + chxDespachoTransporte.Checked + "','" + chxConsultaVentas.Checked + "','" + chxConsultaReportes.Checked + "','" + chxReimprimirFacturas.Checked + "','" + chxActualizarCaja.Checked + "','" + tbxLimiteDescuento.Text.Trim() + "','" + chxEstado.Checked + "');";
-                    //MessageBox.Show(cmd);
-                    ds = Utilidades.EjecutarDS(cmd);
-                    tbxLimiteDescuento.Text = cmd;
-                    //Limpiar();
-                    this.Close();
+                    string cmdUsuario = string.Format("select * from usuario where usuario='{0}'",
+                    tbxUsuario.Text.Trim());
+                    ds = Utilidades.EjecutarDS(cmdUsuario);
+                    if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0))
+                    {
+                        string cmd = "insert into usuario(id,usuario,password,modificar_articulos,ajuste_stock,modificar_clientes,modificar_suplidores,modificar_vendedores,ingresar_compras,ingresar_ventas,despacho_transporte,consulta_ventas,consultar_reportes,reimprimir_facturas,actualizar_caja,limite_descuento,estado,idEmpleado)" +
+                            "values(newid(),'" + tbxUsuario.Text.Trim() + "','" + tbxContraseña.Text.Trim() + "','" + chxModificarArticulos.Checked + "','" + chxAjusteStock.Checked + "','" + chxModificarClientes.Checked + "','" + chxModificarSuplidores.Checked + "','" + chxModificarVendedores.Checked + "','" + chxIngresarCompras.Checked + "','" + chxIngresarVentas.Checked + "','" + chxDespachoTransporte.Checked + "','" + chxConsultaVentas.Checked + "','" + chxConsultaReportes.Checked + "','" + chxReimprimirFacturas.Checked + "','" + chxActualizarCaja.Checked + "','" + tbxLimiteDescuento.Text.Trim() + "','" + chxEstado.Checked + "','" + tbxEmpleado.Text + "');";
+                        //MessageBox.Show(cmd);
+                        ds = Utilidades.EjecutarDS(cmd);
+                        tbxLimiteDescuento.Text = cmd;
+                        //Limpiar();
+                        this.Close();
 
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("El nombre de usuario " + tbxUsuario.Text + " ya esta en uso.");
+                        //Limpiar();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("El nombre de usuario " + tbxUsuario.Text + " ya esta en uso.");
-                    //Limpiar();
+                    string cmdUsuario = string.Format("select * from usuario where usuario='{0}'",
+                    tbxUsuario.Text.Trim());
+                    ds = Utilidades.EjecutarDS(cmdUsuario);
+                    if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0) || tbxUsuario.Text.Trim() == usuarioViejo)
+                    {
+                        string cmd = "update usuario " +
+                        "set usuario='" + tbxUsuario.Text.Trim() + "', password='" + tbxContraseña.Text.Trim() + "',modificar_articulos='" + chxModificarArticulos.Checked + "',ajuste_stock='" + chxAjusteStock.Checked + "',modificar_clientes='" + chxModificarClientes.Checked + "',modificar_suplidores='" + chxModificarSuplidores.Checked + "',modificar_vendedores='" + chxModificarVendedores.Checked + "',ingresar_compras='" + chxIngresarCompras.Checked + "',ingresar_ventas='" + chxIngresarVentas.Checked + "',despacho_transporte='" + chxDespachoTransporte.Checked + "',consulta_ventas='" + chxConsultaVentas.Checked + "',consultar_reportes='" + chxConsultaReportes.Checked + "',reimprimir_facturas='" + chxReimprimirFacturas.Checked + "',actualizar_caja='" + chxActualizarCaja.Checked + "',limite_descuento='" + tbxLimiteDescuento.Text.Trim() + "',estado='" + chxEstado.Checked + "' " +
+                        "where id='" + tbxCodigo.Text.Trim() + "';";
+                        MessageBox.Show(cmd);
+                        ds = Utilidades.EjecutarDS(cmd);
+                        //Limpiar();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El nombre de usuario " + tbxUsuario.Text + " ya esta en uso.");
+                        //Limpiar();
+                    }
                 }
             }
-            else
-            {
-                string cmdUsuario = string.Format("select * from usuario where usuario='{0}'",
-                tbxUsuario.Text.Trim());
-                ds = Utilidades.EjecutarDS(cmdUsuario);
-                if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)||tbxUsuario.Text.Trim()==usuarioViejo)
-                {
-                    string cmd = "update usuario " +
-                    "set usuario='"+tbxUsuario.Text.Trim()+"', password='"+tbxContraseña.Text.Trim()+"',modificar_articulos='"+chxModificarArticulos.Checked+"',ajuste_stock='"+chxAjusteStock.Checked+"',modificar_clientes='"+chxModificarClientes.Checked+"',modificar_suplidores='"+chxModificarSuplidores.Checked+"',modificar_vendedores='"+chxModificarVendedores.Checked+"',ingresar_compras='"+chxIngresarCompras.Checked+"',ingresar_ventas='"+chxIngresarVentas.Checked+"',despacho_transporte='"+chxDespachoTransporte.Checked+"',consulta_ventas='"+chxConsultaVentas.Checked+"',consultar_reportes='"+chxConsultaReportes.Checked+"',reimprimir_facturas='"+chxReimprimirFacturas.Checked+"',actualizar_caja='"+chxActualizarCaja.Checked+"',limite_descuento='"+tbxLimiteDescuento.Text.Trim()+"',estado='"+chxEstado.Checked+"' " +
-                    "where id='"+tbxCodigo.Text.Trim()+"';";
-                    MessageBox.Show(cmd);
-                    ds = Utilidades.EjecutarDS(cmd);
-                    //Limpiar();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("El nombre de usuario " + tbxUsuario.Text + " ya esta en uso.");
-                    //Limpiar();
-                }
-            }
-
             
         }
 
@@ -121,6 +149,17 @@ namespace SGF
         private void button1_Click(object sender, EventArgs e)
         {
             cbxNivel.SelectedIndex = 0;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            MantenimientoEmpleados rc = new MantenimientoEmpleados();
+            rc.btnBorrar.Enabled = false;
+            rc.btnModificar.Enabled = false;
+            rc.btnNuevo.Enabled = false;
+            rc.btnSeleccionar.Enabled = true;
+            rc.ShowDialog();
+            this.tbxEmpleado.Text = rc.codigo_empleado;
         }
     }
     
