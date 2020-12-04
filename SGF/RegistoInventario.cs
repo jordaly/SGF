@@ -109,7 +109,7 @@ namespace SGF
                         //MessageBox.Show(cmd);
                         //rtbxIndicaciones.Text = cmd;
                         //Console.Out(cmd);
-                        //ds = Utilidades.EjecutarDS(cmd);
+                        ds = Utilidades.EjecutarDS(cmd);
                         MessageBox.Show("Modificado exitosamente");
                         //Limpiar();
                         this.Close();
