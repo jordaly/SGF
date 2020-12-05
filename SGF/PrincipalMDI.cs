@@ -183,7 +183,9 @@ namespace SGF
 
         private void suplidoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            MantenimientoSuplidores rc = new MantenimientoSuplidores();
+            rc.MdiParent = this;
+            rc.Show();
         }
 
         private void FrmMenu_Load(object sender, EventArgs e)

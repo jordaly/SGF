@@ -100,6 +100,12 @@
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoDGII.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoDGII.Designer.cs">
+      <DependentUpon>ListadoDGII.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoAlmacenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="MantenimientoMovimientoArticulos.Designer.cs">
       <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoSuplidores.Designer.cs">
+      <DependentUpon>MantenimientoSuplidores.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoUsuarios.cs">
       <SubType>Form</SubType>
@@ -185,6 +197,12 @@
     </Compile>
     <Compile Include="RegistroMovimientoArticulos.Designer.cs">
       <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroSuplidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroSuplidores.Designer.cs">
+      <DependentUpon>RegistroSuplidores.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroUsuarios.cs">
       <SubType>Form</SubType>
@@ -255,6 +273,9 @@
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDGII.resx">
+      <DependentUpon>ListadoDGII.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroMovimientoArticulos.resx">
       <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroSuplidores.resx">
+      <DependentUpon>RegistroSuplidores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
