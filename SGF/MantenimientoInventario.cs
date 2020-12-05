@@ -92,12 +92,14 @@ namespace SGF
         public string nombre_articulo = "";
         public string stock_articulo = "";
         public string precio_articulo = "";
+        public string itebis = "";
         public override void Seleccionar()
         {
             codigo_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             nombre_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
             precio_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
             stock_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            itebis = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString();
             this.Close();
         }
 

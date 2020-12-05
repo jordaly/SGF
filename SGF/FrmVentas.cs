@@ -36,6 +36,7 @@ namespace SGF
         public string nombre_articulo = "";
         public string stock_articulo = "";
         public string precio_articulo = "";
+        public string itebis = "";
         private void btnbuscararticulo_Click(object sender, EventArgs e)
         {
             MantenimientoInventario frm = new MantenimientoInventario();
@@ -50,11 +51,13 @@ namespace SGF
             nombre_articulo = frm.nombre_articulo;
             stock_articulo = frm.stock_articulo;
             precio_articulo = frm.precio_articulo;
+            itebis = frm.itebis;
 
             lbcodigoarticulo.Text =" Codigo Articulo: " +codigo_articulo;
             txtarticulo.Text = nombre_articulo;
-            lbstock.Text = stock_articulo;
+            lbstock.Text = "STOCK: "+stock_articulo;
             txtprecioventa.Text = precio_articulo;
+            txtitebis.Text = itebis;
         }
 
         public void validar()
@@ -69,6 +72,7 @@ namespace SGF
         }
 
         public static int cont_fila = 0;
+        public static double total;
         private void btnagregararticulo_Click(object sender, EventArgs e)
         {
             if ( lbnumfactura.Text == "" || cbxsucursal.Text == "" || cbxtipofactura.Text == "" ||txtcliente.Text == "" || txtrnc.Text == "" || cbxtipopago.Text == "" ||cbxdivisa.Text == "" || txtarticulo.Text=="" || txtcantidad.Text=="")
@@ -97,11 +101,13 @@ namespace SGF
 
                     if (existe == true)
                     {
-                        gridarticulo.Rows[num_fila].Cells[4].Value = Convert.ToDouble(txtcantidad.Text) + (Convert.ToDouble(gridarticulo.Rows[num_fila].Cells[4].Value)).ToString();
+                        //MessageBox.Show(""+num_fila);
+                        gridarticulo.Rows[num_fila].Cells[4].Value = Convert.ToDouble(txtcantidad.Text) + (Convert.ToDouble(gridarticulo.Rows[num_fila].Cells[4].Value));
 
-                        double importe = (Convert.ToDouble(gridarticulo.Rows[cont_fila].Cells[2].Value) + (Convert.ToDouble(gridarticulo.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(gridarticulo.Rows[cont_fila].Cells[3].Value))) * Convert.ToDouble(gridarticulo.Rows[cont_fila].Cells[4].Value);
+                        double importe = (Convert.ToDouble(gridarticulo.Rows[num_fila].Cells[2].Value) + (Convert.ToDouble(gridarticulo.Rows[num_fila].Cells[2].Value) * Convert.ToDouble(gridarticulo.Rows[num_fila].Cells[3].Value))) * (Convert.ToDouble(gridarticulo.Rows[num_fila].Cells[4].Value));
 
                         gridarticulo.Rows[num_fila].Cells[5].Value = importe;
+
                     }
                     else
                     {
@@ -112,8 +118,30 @@ namespace SGF
                         cont_fila++;
                     }
                 }
+                total = 0;
+
+                foreach (DataGridViewRow fila in gridarticulo.Rows)
+                {
+                    total += Convert.ToDouble(fila.Cells[5].Value);
+                }
+                txttotal.Text = "RD$ " + total.ToString();
             }
+
+            txtcantidad.Text = "";
            
+        }
+
+        private void btnquitararticulo_Click(object sender, EventArgs e)
+        {
+            if (cont_fila > 0)
+            {
+                total = total - (Convert.ToDouble(gridarticulo.Rows[gridarticulo.CurrentRow.Index].Cells[5].Value));
+                txttotal.Text = "RD$ " + total.ToString();
+
+                gridarticulo.Rows.RemoveAt(gridarticulo.CurrentRow.Index);
+                
+                cont_fila--;
+            }
         }
     }
 }
