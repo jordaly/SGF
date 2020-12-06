@@ -16,6 +16,7 @@ namespace SGF
         public MantenimientoSuplidores()
         {
             InitializeComponent();
+            cbxBuscar.SelectedIndex = 0;
             refrescarDatos(BuscarDatos);
         }
 
@@ -70,10 +71,17 @@ namespace SGF
         public string nombre_suplidor_apellido_suplidor = "";
         public override void Seleccionar()
         {
-            codigo_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            nombre_suplidor_apellido_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
 
-            this.Close();
+            if (dgvPadre.Rows.Count != 0)
+            {
+                codigo_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                nombre_suplidor_apellido_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
+                this.Close();
+            }
+
+
+            
         }
 
         public override void Buscar()

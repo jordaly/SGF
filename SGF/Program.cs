@@ -16,7 +16,8 @@ namespace SGF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MantenimientoSuplidores());
+            Application.Run(new FrmMenu());
+
 
         }
     }

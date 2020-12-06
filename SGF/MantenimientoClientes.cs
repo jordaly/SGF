@@ -82,10 +82,16 @@ namespace SGF
         public string nombre_cliente_apellido_cliente = "";
         public override void Seleccionar()
         {
-            codigo_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            nombre_cliente_apellido_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString()+" "+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
 
-            this.Close();
+            if (dgvPadre.Rows.Count != 0)
+            {
+                codigo_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                nombre_cliente_apellido_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
+                this.Close();
+            }
+
+            
         }
 
         private void MantenimientoClientes_Load(object sender, EventArgs e)
