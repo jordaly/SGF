@@ -18,6 +18,7 @@ namespace SGF
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMenu());
 
+
         }
     }
 }
