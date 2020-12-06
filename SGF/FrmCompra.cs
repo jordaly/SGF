@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class FrmCompra : Form
+    public partial class FrmCompra : FormBase
     {
         public FrmCompra()
         {
@@ -30,11 +30,10 @@ namespace SGF
             frm.ShowDialog();
 
             txtsuplidor.Text = frm.nombre_suplidor_apellido_suplidor;
-            lbcodigosuplidor.Text = "Codigo Cliente: " + frm.codigo_suplidor;
+            lbcodigosuplidor.Text = "Codigo Suplidor: " + frm.codigo_suplidor;
+            txtrnc.Text = frm.RNC;
         }
 
-        public string codigo_cliente = "";
-        public string nombre_suplidor_apellido_suplidor = "";
 
         public string codigo_articulo = "";
         public string nombre_articulo = "";
@@ -135,6 +134,28 @@ namespace SGF
 
                 cont_fila--;
             }
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow fila in gridarticulosuplidor.Rows)
+            {
+                /*cmd = "begin" +
+                "insert into detalle_factura(idFactura,idArticulo,cantidad,importe)values(@idFactura,'"++"','"++"','"++"');" +
+                "end";*/
+            }
+
+            
+            /*cmd = "begin" +
+                " declare @idFactura uniqueidentifier= newid();" +
+                "insert into factura(id,idTipo_factura,fecha,idcliente,NCF,idDivisa,idTipo_pago,idSucursal,idEmpleado,total)values(@idFactura,'"++"',getdate(),'"++"','"++"','"++"','"++"','"++"','"++"','"++"');" +
+                "insert into detalle_factura(idFactura,idArticulo,cantidad,importe)values(@idFactura,'"++"','"++"','"++"');" +
+                "end";*/
         }
     }
 }
