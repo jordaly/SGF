@@ -22,8 +22,15 @@ namespace SGF
         }
         public override void Seleccionar()
         {
-            codigo_empleado= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            this.Close();
+
+            if (dgvPadre.Rows.Count != 0)
+            {
+                codigo_empleado = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                this.Close();
+            }
+
+
+            
         }
 
 
