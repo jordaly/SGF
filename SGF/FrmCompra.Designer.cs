@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbcodigosuplidor = new System.Windows.Forms.Label();
             this.txtsuplidor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -148,6 +148,7 @@
             this.btnquitararticulo.TabIndex = 33;
             this.btnquitararticulo.Text = "Quitar";
             this.btnquitararticulo.UseVisualStyleBackColor = true;
+            this.btnquitararticulo.Click += new System.EventHandler(this.btnquitararticulo_Click);
             // 
             // btnagregararticulo
             // 
@@ -157,6 +158,7 @@
             this.btnagregararticulo.TabIndex = 32;
             this.btnagregararticulo.Text = "Agregar";
             this.btnagregararticulo.UseVisualStyleBackColor = true;
+            this.btnagregararticulo.Click += new System.EventHandler(this.btnagregararticulo_Click);
             // 
             // txtpreciocompra
             // 
@@ -209,6 +211,7 @@
             this.btnbuscararticulo.TabIndex = 24;
             this.btnbuscararticulo.Text = "Buscar";
             this.btnbuscararticulo.UseVisualStyleBackColor = true;
+            this.btnbuscararticulo.Click += new System.EventHandler(this.btnbuscararticulo_Click);
             // 
             // txtarticulo
             // 
@@ -298,6 +301,7 @@
             this.btnbuscarsuplidor.TabIndex = 64;
             this.btnbuscarsuplidor.Text = "Buscar";
             this.btnbuscarsuplidor.UseVisualStyleBackColor = true;
+            this.btnbuscarsuplidor.Click += new System.EventHandler(this.btnbuscarsuplidor_Click);
             // 
             // lbnumfactura
             // 
@@ -438,8 +442,8 @@
             this.gridarticulosuplidor.Name = "gridarticulosuplidor";
             this.gridarticulosuplidor.ReadOnly = true;
             this.gridarticulosuplidor.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gridarticulosuplidor.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gridarticulosuplidor.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridarticulosuplidor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridarticulosuplidor.Size = new System.Drawing.Size(725, 211);
             this.gridarticulosuplidor.TabIndex = 74;
