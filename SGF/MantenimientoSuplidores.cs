@@ -12,7 +12,7 @@ namespace SGF
 {
     public partial class MantenimientoSuplidores : FormProcesos
     {
-        public string BuscarDatos = "select s.idTercero as id,t.nombre,s.estado from suplidor as s, tercero as t,articulo as a where t.id=s.idTercero ";
+        public string BuscarDatos = "select s.idTercero as id,t.nombre,t.RNC,s.estado from suplidor as s, tercero as t where t.id=s.idTercero ";
         public MantenimientoSuplidores()
         {
             InitializeComponent();
@@ -52,9 +52,13 @@ namespace SGF
         {
 
             RegistroSuplidores rc = new RegistroSuplidores();
-            rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            rc.tbxCodigo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            if (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString()!=null)
+            {
+                rc.tbxRNC.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            }
+            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
             rc.ShowDialog();
 
 
@@ -78,22 +82,15 @@ namespace SGF
             bb.ShowDialog();
             string parametro = bb.parametro;
             string v = "";
-            if (cbxBuscar.Text == "id" || cbxBuscar.Text == "nombre" || cbxBuscar.Text == "precio_compra" || cbxBuscar.Text == "precio_venta" || cbxBuscar.Text == "existencia" || cbxBuscar.Text == "descripcion" || cbxBuscar.Text == "cantidad_maxima" || cbxBuscar.Text == "cantidad_minima" || cbxBuscar.Text == "fecha_renovacion" || cbxBuscar.Text == "estado")
+            if (cbxBuscar.Text == "id" || cbxBuscar.Text=="estado")
             {
-                v = "a.";
+                v = "s.";
             }
-            else if (cbxBuscar.Text == "marca")
-            {
-                v = "ma.";
-            }
-            else if (cbxBuscar.Text == "medida")
-            {
-                v = "me.";
-            }
-            else if (cbxBuscar.Text == "categoria")
+            else 
             {
                 v = "t.";
             }
+           
 
             cmd = BuscarDatos;
             //MessageBox.Show("se esta ejecuetando");

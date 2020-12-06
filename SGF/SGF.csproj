@@ -294,6 +294,9 @@
     <EmbeddedResource Include="MantenimientoMovimientoArticulos.resx">
       <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoSuplidores.resx">
+      <DependentUpon>MantenimientoSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoUsuarios.resx">
       <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
