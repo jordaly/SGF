@@ -128,7 +128,7 @@ namespace SGF
             //MessageBox.Show("se esta ejecuetando");
             if (!String.IsNullOrEmpty(parametro.Trim()))
             {
-                cmd += "and " + v + cbxBuscar.Text + " like('%" + parametro.Trim() + "%')";
+                cmd += " and " + v + cbxBuscar.Text + " like('%" + parametro.Trim() + "%')";
             }
             ds = Utilidades.EjecutarDS(cmd);
             //MessageBox.Show(cmd);
