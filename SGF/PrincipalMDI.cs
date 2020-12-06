@@ -241,5 +241,12 @@ namespace SGF
         {
             tsslhora.Text= "Hora: " + DateTime.Now.ToString("hh:mm:ss") + "   Fecha: " + DateTime.Now.ToLongDateString();
         }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            principal rc = new principal();
+            rc.MdiParent = this;
+            rc.Show();
+        }
     }
 }

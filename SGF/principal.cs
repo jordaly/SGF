@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class principal : Form
+    public partial class principal : FormBase
     {
         public principal()
         {
@@ -19,10 +19,14 @@ namespace SGF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SGF.RegistroUsuarios vj = new SGF.RegistroUsuarios();
-            this.Hide();
-            vj.Show();
-            this.Visible = false;
+            cmd = "select * from tipo_NCF where tipo='Facturas de Crédito Fiscal'";
+            ds = Utilidades.EjecutarDS(cmd);
+            string idTipo_NCF = ds.Tables[0].Rows[0]["numero"].ToString();
+            cmd = "select * from NCF";
+            ds = Utilidades.EjecutarDS(cmd);
+            string ncf = ds.Tables[0].Rows[0]["serie"].ToString() + idTipo_NCF + ds.Tables[0].Rows[0]["secuencia"].ToString().PadLeft((9 - ds.Tables[0].Rows[0]["secuencia"].ToString().Length), '0');
+            MessageBox.Show(""+ncf.Length);
+            MessageBox.Show(ncf);
         }
 
         private void principal_Load(object sender, EventArgs e)
