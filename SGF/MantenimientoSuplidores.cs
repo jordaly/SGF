@@ -16,6 +16,7 @@ namespace SGF
         public MantenimientoSuplidores()
         {
             InitializeComponent();
+            cbxBuscar.SelectedIndex = 0;
             refrescarDatos(BuscarDatos);
         }
 
