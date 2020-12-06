@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.txttotal = new System.Windows.Forms.TextBox();
@@ -68,10 +68,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbxtipofactura = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnagregarrnc = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbfecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbxtipo_ncf = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridarticulo)).BeginInit();
@@ -86,6 +87,7 @@
             this.btnguardar.TabIndex = 57;
             this.btnguardar.Text = "guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btnnuevo
             // 
@@ -152,8 +154,8 @@
             this.gridarticulo.Name = "gridarticulo";
             this.gridarticulo.ReadOnly = true;
             this.gridarticulo.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gridarticulo.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gridarticulo.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridarticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridarticulo.Size = new System.Drawing.Size(725, 211);
             this.gridarticulo.TabIndex = 51;
@@ -340,13 +342,16 @@
             // 
             // cbxsucursal
             // 
+            this.cbxsucursal.BackColor = System.Drawing.Color.White;
+            this.cbxsucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxsucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxsucursal.FormattingEnabled = true;
             this.cbxsucursal.Items.AddRange(new object[] {
             "Cliente Final (Contado)",
             "Comprabante Fiscal"});
-            this.cbxsucursal.Location = new System.Drawing.Point(407, 70);
+            this.cbxsucursal.Location = new System.Drawing.Point(427, 73);
             this.cbxsucursal.Name = "cbxsucursal";
-            this.cbxsucursal.Size = new System.Drawing.Size(130, 21);
+            this.cbxsucursal.Size = new System.Drawing.Size(204, 21);
             this.cbxsucursal.TabIndex = 49;
             // 
             // label9
@@ -382,6 +387,8 @@
             // 
             // cbxtipopago
             // 
+            this.cbxtipopago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxtipopago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxtipopago.FormattingEnabled = true;
             this.cbxtipopago.Items.AddRange(new object[] {
             "Cliente Final (Contado)",
@@ -438,9 +445,6 @@
             // cbxtipofactura
             // 
             this.cbxtipofactura.FormattingEnabled = true;
-            this.cbxtipofactura.Items.AddRange(new object[] {
-            "Cliente Final (Contado)",
-            "Comprabante Fiscal"});
             this.cbxtipofactura.Location = new System.Drawing.Point(130, 116);
             this.cbxtipofactura.Name = "cbxtipofactura";
             this.cbxtipofactura.Size = new System.Drawing.Size(199, 21);
@@ -454,15 +458,6 @@
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 38;
             this.label3.Text = "Tipo de Factura :";
-            // 
-            // btnagregarrnc
-            // 
-            this.btnagregarrnc.Location = new System.Drawing.Point(335, 206);
-            this.btnagregarrnc.Name = "btnagregarrnc";
-            this.btnagregarrnc.Size = new System.Drawing.Size(75, 23);
-            this.btnagregarrnc.TabIndex = 37;
-            this.btnagregarrnc.Text = "Agregar";
-            this.btnagregarrnc.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -491,12 +486,34 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Numero Factura :";
             // 
+            // cbxtipo_ncf
+            // 
+            this.cbxtipo_ncf.BackColor = System.Drawing.Color.White;
+            this.cbxtipo_ncf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxtipo_ncf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxtipo_ncf.FormattingEnabled = true;
+            this.cbxtipo_ncf.Location = new System.Drawing.Point(427, 116);
+            this.cbxtipo_ncf.Name = "cbxtipo_ncf";
+            this.cbxtipo_ncf.Size = new System.Drawing.Size(204, 21);
+            this.cbxtipo_ncf.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(346, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Tipo de RNC :";
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(873, 698);
+            this.Controls.Add(this.cbxtipo_ncf);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.btnnuevo);
             this.Controls.Add(this.txttotal);
@@ -517,7 +534,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxtipofactura);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnagregarrnc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbfecha);
             this.Controls.Add(this.label1);
@@ -564,7 +580,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxtipofactura;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnagregarrnc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Label label1;
@@ -577,5 +592,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clitebis;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColImporte;
+        private System.Windows.Forms.ComboBox cbxtipo_ncf;
+        private System.Windows.Forms.Label label2;
     }
 }

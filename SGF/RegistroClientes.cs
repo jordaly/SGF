@@ -307,6 +307,11 @@ namespace SGF
 
         }
 
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         //public void Limpiar()
         //{
         //    tbxUsuario.Text = "";

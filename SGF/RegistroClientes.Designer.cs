@@ -55,11 +55,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnGuardar1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(112, 492);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // cbxProvincia
             // 
@@ -388,6 +390,7 @@
             this.Controls.SetChildIndex(this.tbxTelefono, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
