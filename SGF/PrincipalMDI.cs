@@ -234,6 +234,7 @@ namespace SGF
         {
             FrmVentas rc = new FrmVentas();
             rc.MdiParent = this;
+            rc.codigo_usuario=this.codigo_usuario;
             rc.Show();
         }
 

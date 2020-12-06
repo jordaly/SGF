@@ -57,7 +57,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbxtipofactura = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnagregarrnc = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbfecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -314,8 +313,10 @@
             // 
             // txtrnc
             // 
+            this.txtrnc.BackColor = System.Drawing.Color.White;
             this.txtrnc.Location = new System.Drawing.Point(145, 212);
             this.txtrnc.Name = "txtrnc";
+            this.txtrnc.ReadOnly = true;
             this.txtrnc.Size = new System.Drawing.Size(200, 20);
             this.txtrnc.TabIndex = 62;
             // 
@@ -347,15 +348,6 @@
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 59;
             this.label3.Text = "Tipo de Factura :";
-            // 
-            // btnagregarrnc
-            // 
-            this.btnagregarrnc.Location = new System.Drawing.Point(350, 209);
-            this.btnagregarrnc.Name = "btnagregarrnc";
-            this.btnagregarrnc.Size = new System.Drawing.Size(75, 23);
-            this.btnagregarrnc.TabIndex = 58;
-            this.btnagregarrnc.Text = "Agregar";
-            this.btnagregarrnc.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -392,6 +384,7 @@
             this.btnguardar.TabIndex = 78;
             this.btnguardar.Text = "guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btnnuevo
             // 
@@ -401,6 +394,7 @@
             this.btnnuevo.TabIndex = 77;
             this.btnnuevo.Text = "nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // txttotal
             // 
@@ -515,7 +509,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxtipofactura);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnagregarrnc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbfecha);
             this.Controls.Add(this.label1);
@@ -559,7 +552,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxtipofactura;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnagregarrnc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Label label1;

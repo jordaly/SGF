@@ -39,13 +39,18 @@
             "nombre",
             "RNC",
             "estado"});
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            this.cbxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // MantenimientoSuplidores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "MantenimientoSuplidores";
             this.Text = "MantenimientoSuplidores";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
