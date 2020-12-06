@@ -23,9 +23,13 @@ namespace SGF
         public string nombre = "";
         public override void Seleccionar()
         {
-            rnc = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            nombre = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            this.Close();
+            if (dgvPadre.Rows.Count!=0)
+            {
+                rnc = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                nombre = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                this.Close();
+            }
+            
         }
 
 

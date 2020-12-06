@@ -73,7 +73,7 @@ namespace SGF
                     {
                         cmd = "begin " +
                                 "declare @id uniqueidentifier= newid();" +
-                                "insert into tercero(id,nombre,fecha_in,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + tbxRNC.Text + "','" + chxEstado.Checked + "');" +
+                                "insert into tercero(id,nombre,fecha_in,RNC,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + tbxRNC.Text + "','" + chxEstado.Checked + "');" +
                                 "insert into suplidor(idTercero,estado)values(@id,'" + chxEstado.Checked + "');" +
                             "end";
 
@@ -103,7 +103,7 @@ namespace SGF
                     {
                         cmd = "begin " +
                                 "declare @id uniqueidentifier= newid();" +
-                                "insert into tercero(id,nombre,fecha_in,RNC,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + chxEstado.Checked + "');" +
+                                "insert into tercero(id,nombre,fecha_in,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + chxEstado.Checked + "');" +
                                 "insert into suplidor(idTercero,estado)values(@id,'" + chxEstado.Checked + "');" +
                             "end";
 
