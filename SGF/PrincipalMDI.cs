@@ -24,7 +24,7 @@ namespace SGF
             login lg = new login();
             lg.ShowDialog();
             codigo_usuario = lg.codigo_usuario;
-            this.tsslUsuario.Text = lg.tbNombre.Text;
+            this.tsslUsuario.Text = "Usuario Actual: " + lg.tbNombre.Text;
             this.salir = lg.salir;
             //SalirAplicacion(lg.salir);
             
@@ -139,6 +139,11 @@ namespace SGF
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+
             this.Visible = false;
             login lg = new login();
             lg.ShowDialog();
@@ -185,6 +190,7 @@ namespace SGF
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
             SalirAplicacion(salir);
         }
 
@@ -229,6 +235,11 @@ namespace SGF
             FrmVentas rc = new FrmVentas();
             rc.MdiParent = this;
             rc.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tsslhora.Text= "Hora: " + DateTime.Now.ToString("hh:mm:ss") + "   Fecha: " + DateTime.Now.ToLongDateString();
         }
     }
 }
