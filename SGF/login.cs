@@ -41,82 +41,82 @@ namespace SGF
         private void btnEntrar_Click(object sender, EventArgs e)
         {
 
-            if (String.IsNullOrEmpty(tbNombre.Text.Trim()) || String.IsNullOrEmpty(tbContraseña.Text.Trim()))
-                return;
+            //if (String.IsNullOrEmpty(tbNombre.Text.Trim()) || String.IsNullOrEmpty(tbContraseña.Text.Trim()))
+            //    return;
 
-            DataSet ds = new DataSet();
-            string cmd = string.Format("select * from usuario where usuario = '{0}'",
-                tbNombre.Text.Trim());
-            ds = Utilidades.EjecutarDS(cmd);
+            //DataSet ds = new DataSet();
+            //string cmd = string.Format("select * from usuario where usuario = '{0}'",
+            //    tbNombre.Text.Trim());
+            //ds = Utilidades.EjecutarDS(cmd);
 
-            //MessageBox.Show(ds.Tables[0].Rows[0]["Estatus"].ToString());
-            //nombre = tbNombre.Text;
+            ////MessageBox.Show(ds.Tables[0].Rows[0]["Estatus"].ToString());
+            ////nombre = tbNombre.Text;
 
-            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estado"]))
-            {
+            //if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estado"]))
+            //{
 
-                cmd = string.Format("select * from usuario where usuario = '{0}' and password = '{1}'",
-                tbNombre.Text.Trim(), tbContraseña.Text.Trim());
-                //MessageBox.Show(cmd);
+            //    cmd = string.Format("select * from usuario where usuario = '{0}' and password = '{1}'",
+            //    tbNombre.Text.Trim(), tbContraseña.Text.Trim());
+            //    //MessageBox.Show(cmd);
 
-                ds = Utilidades.EjecutarDS(cmd);
-                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-                {
-                    //SGF.FrmMenu vj = new SGF.FrmMenu();
-                    //this.Hide();
-                    //vj.toolStripStatusLabel.Text = tbNombre.Text.Trim();
-                    //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
-                    //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
-                    //vj.cambiarNiveles();
-                    //MessageBox.Show("Bienvenido " + tbNombre.Text);
-                    //vj.Show();
-                    codigo_usuario = ds.Tables[0].Rows[0]["id"].ToString();
-                    this.Close();
-                    //MessageBox.Show("Felicidades, has iniciado seción correctamente");
+            //    ds = Utilidades.EjecutarDS(cmd);
+            //    if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            //    {
+            //        //SGF.FrmMenu vj = new SGF.FrmMenu();
+            //        //this.Hide();
+            //        //vj.toolStripStatusLabel.Text = tbNombre.Text.Trim();
+            //        //vj.nivelUsuario = Convert.ToInt16(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
+            //        //MessageBox.Show(ds.Tables[0].Rows[0]["Nivel"].ToString().Trim());
+            //        //vj.cambiarNiveles();
+            //        //MessageBox.Show("Bienvenido " + tbNombre.Text);
+            //        //vj.Show();
+            //        codigo_usuario = ds.Tables[0].Rows[0]["id"].ToString();
+            //        this.Close();
+            //        //MessageBox.Show("Felicidades, has iniciado seción correctamente");
 
 
-                    //this.Visible = false;
-                }
-                else
-                {
-                    string mensaje = "El usuario o la contraseña son incorrectos.";
-                    if (nombre == tbNombre.Text)
-                    {
-                        intentos--;
-                    }
-                    else
-                    {
-                        nombre = tbNombre.Text;
-                        intentos = 9;
-                    }
-                    if (intentos <= 3)
-                    {
-                        mensaje += "\nSolo quedan " + intentos + " intentos antes de bloquear la cuenta.";
-                        if (intentos == 0)
-                        {
-                            cmd = string.Format("select * from usuario where usuario = '{0}'", tbNombre.Text.Trim());
-                            ds = Utilidades.EjecutarDS(cmd);
-                            if (ds.Tables[0].Rows[0]["Nivel"].ToString().Trim() != "0")
-                            {
-                                cmd = string.Format("Update usuarios Set usuario = '0' where id = '{0}'", ds.Tables[0].Rows[0]["id"].ToString().Trim());
-                                ds = Utilidades.EjecutarDS(cmd);
-                            }
-                            else
-                            {
-                                MessageBox.Show("El usuario " + ds.Tables[0].Rows[0]["usuario"].ToString().Trim() + " no puede ser bloqueado.");
-                            }
+            //        //this.Visible = false;
+            //    }
+            //    else
+            //    {
+            //        string mensaje = "El usuario o la contraseña son incorrectos.";
+            //        if (nombre == tbNombre.Text)
+            //        {
+            //            intentos--;
+            //        }
+            //        else
+            //        {
+            //            nombre = tbNombre.Text;
+            //            intentos = 9;
+            //        }
+            //        if (intentos <= 3)
+            //        {
+            //            mensaje += "\nSolo quedan " + intentos + " intentos antes de bloquear la cuenta.";
+            //            if (intentos == 0)
+            //            {
+            //                cmd = string.Format("select * from usuario where usuario = '{0}'", tbNombre.Text.Trim());
+            //                ds = Utilidades.EjecutarDS(cmd);
+            //                if (ds.Tables[0].Rows[0]["Nivel"].ToString().Trim() != "0")
+            //                {
+            //                    cmd = string.Format("Update usuarios Set usuario = '0' where id = '{0}'", ds.Tables[0].Rows[0]["id"].ToString().Trim());
+            //                    ds = Utilidades.EjecutarDS(cmd);
+            //                }
+            //                else
+            //                {
+            //                    MessageBox.Show("El usuario " + ds.Tables[0].Rows[0]["usuario"].ToString().Trim() + " no puede ser bloqueado.");
+            //                }
 
-                        }
-                    }
-                    MessageBox.Show(mensaje);
+            //            }
+            //        }
+            //        MessageBox.Show(mensaje);
 
-                }
-            }
-            else
-            {
-                MessageBox.Show("El usuario " + tbNombre.Text.Trim() + " esta inabilitado por motivos de seguridad," +
-                    "\npara reactivarlo Contacte con el usuario administrador");
-            }
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("El usuario " + tbNombre.Text.Trim() + " esta inabilitado por motivos de seguridad," +
+            //        "\npara reactivarlo Contacte con el usuario administrador");
+            //}
 
         }
 
@@ -133,9 +133,13 @@ namespace SGF
 
             //MessageBox.Show(ds.Tables[0].Rows[0]["Estatus"].ToString());
             //nombre = tbNombre.Text;
-
-            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estado"]))
+            if (!(ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0))
             {
+                MessageBox.Show("El usuario o la contraseña son incorrectos.");
+            }
+            else if (Convert.ToBoolean( ds.Tables[0].Rows[0]["estado"].ToString()))
+            {
+                
 
                 cmd = string.Format("select * from usuario where usuario = '{0}' and password = '{1}'",
                 tbNombre.Text.Trim(), tbContraseña.Text.Trim());
@@ -180,7 +184,7 @@ namespace SGF
                             ds = Utilidades.EjecutarDS(cmd);
                             if (ds.Tables[0].Rows[0]["Nivel"].ToString().Trim() != "0")
                             {
-                                cmd = string.Format("Update usuarios Set usuario = '0' where id = '{0}'", ds.Tables[0].Rows[0]["id"].ToString().Trim());
+                                cmd = string.Format("Update usuarios Set estado = '0' where id = '{0}'", ds.Tables[0].Rows[0]["id"].ToString().Trim());
                                 ds = Utilidades.EjecutarDS(cmd);
                             }
                             else

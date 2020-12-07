@@ -225,7 +225,7 @@ namespace SGF
 
         private void vacacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ModificarVacaciones rc = new ModificarVacaciones();
+            ControlVacasiones rc = new ControlVacasiones();
             rc.MdiParent = this;
             rc.Show();
         }
@@ -241,6 +241,13 @@ namespace SGF
         private void timer1_Tick(object sender, EventArgs e)
         {
             tsslhora.Text= "Hora: " + DateTime.Now.ToString("hh:mm:ss") + "   Fecha: " + DateTime.Now.ToLongDateString();
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            principal rc = new principal();
+            rc.MdiParent = this;
+            rc.Show();
         }
     }
 }

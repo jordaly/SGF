@@ -12,7 +12,7 @@ namespace SGF
 {
     public partial class MantenimientoMovimientoArticulos : FormProcesos
     {
-        public string BuscarDatos = "select ar.nombre_articulo,al.nombre_almacen,ava.cantidad,ava.indicaciones from articulo_vs_almacen as ava,articulo as ar, almacen as al where ava.idArticulo=ar.id and ava.idAlmacen=al.id ";
+        public string BuscarDatos = "select a.id,a.descripcion,(a.existencia-(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id)) cantidad_sin_asignar,(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id) as cantidad_asignada,a.existencia as total from articulo as a ";
         public MantenimientoMovimientoArticulos()
         {
             InitializeComponent();
@@ -58,8 +58,8 @@ namespace SGF
             RegistroMovimientoArticulos rc = new RegistroMovimientoArticulos(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString(), dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString());
             //rc.cbxArticulo.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             //rc.cbxAlmacen.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxCantidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            rc.tbxCodigoArticulo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            //rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
             //ds = Utilidades.EjecutarDS(cmd);
             
             rc.ShowDialog();

@@ -33,11 +33,12 @@ namespace SGF
         public bool ComprobarCampos()
         {
 
-                //tbxNombre.Text == "" ||
-                //tbxApellido.Text == "" ||
-                //tbxCedula.Text == "" ||
-                //tbxCorreo.Text == "" ||
-                //tbxTelefono.Text == ""
+            //tbxNombre.Text == "" ||
+            //tbxApellido.Text == "" ||
+            //tbxCedula.Text == "" ||
+            //tbxCorreo.Text == "" ||
+            //tbxTelefono.Text == ""
+            ErrorProvider.Clear();
             bool ok = true;
             if (tbxNombre.Text == "")
             {

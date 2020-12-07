@@ -37,7 +37,10 @@ namespace SGF
         
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Modificar();
+            if (dgvPadre.Rows.Count > 0)
+            {
+                Modificar();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
