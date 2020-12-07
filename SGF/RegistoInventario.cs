@@ -37,13 +37,14 @@ namespace SGF
         }
         public bool ComprobarCampos()
         {
-                //tbxNombre.Text.Trim() == "" ||
-                //tbxPrecio_compra.Text.Trim() == "" ||
-                //tbxPrecio_venta.Text.Trim() == "" ||
-                //tbxExistencia.Text.Trim() == "" ||
-                //tbxDescripcion.Text.Trim() == "" ||
-                //tbxCantidad_maxima.Text.Trim() == "" ||
-                //tbxCantidad_minima.Text.Trim() == ""
+            //tbxNombre.Text.Trim() == "" ||
+            //tbxPrecio_compra.Text.Trim() == "" ||
+            //tbxPrecio_venta.Text.Trim() == "" ||
+            //tbxExistencia.Text.Trim() == "" ||
+            //tbxDescripcion.Text.Trim() == "" ||
+            //tbxCantidad_maxima.Text.Trim() == "" ||
+            //tbxCantidad_minima.Text.Trim() == ""
+            ErrorProvider.Clear();
             bool ok = true;
             if (tbxNombre.Text == "")
             {

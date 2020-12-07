@@ -57,25 +57,28 @@ namespace SGF
 
         public override void Modificar()
         {
-            RegistroClientes rc = new RegistroClientes();
-            rc.canbiarCodigo(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
-            rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxApellido.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            rc.dtFecha.Value = Convert.ToDateTime(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
-            rc.cbxSexo.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            rc.cbxProvincia.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[6].Value.ToString();
-            rc.tbxLocalidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
-            rc.tbxDireccion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString();
-            rc.tbxCodigo_postal.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
-            rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
-            rc.tbxTelefono.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
-            rc.tbxCorreo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString();
-            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
+        
 
-            rc.ShowDialog();
+                RegistroClientes rc = new RegistroClientes();
+                rc.canbiarCodigo(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                rc.tbxApellido.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+                rc.dtFecha.Value = Convert.ToDateTime(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
+                rc.cbxSexo.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
+                rc.cbxProvincia.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[6].Value.ToString();
+                rc.tbxLocalidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
+                rc.tbxDireccion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString();
+                rc.tbxCodigo_postal.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
+                rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
+                rc.tbxTelefono.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
+                rc.tbxCorreo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString();
+                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
+
+                rc.ShowDialog();
 
 
-            refrescarDatos(BuscarDatos);
+                refrescarDatos(BuscarDatos);
+            
         }
 
         public string codigo_cliente="";

@@ -225,7 +225,7 @@ namespace SGF
 
         private void vacacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ModificarVacaciones rc = new ModificarVacaciones();
+            ControlVacasiones rc = new ControlVacasiones();
             rc.MdiParent = this;
             rc.Show();
         }

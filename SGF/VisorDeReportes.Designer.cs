@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class MantenimientoMovimientoArticulos
+    partial class VisorDeReportes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            this.crvVisor = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // cbxBuscar
+            // crvVisor
             // 
-            this.cbxBuscar.Items.AddRange(new object[] {
-            "id",
-            "descripcion",
-            "cantidad_sin_asignar",
-            "cantidad_asignada",
-            "total"});
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            this.crvVisor.ActiveViewIndex = -1;
+            this.crvVisor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvVisor.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvVisor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvVisor.Location = new System.Drawing.Point(0, 0);
+            this.crvVisor.Name = "crvVisor";
+            this.crvVisor.Size = new System.Drawing.Size(800, 450);
+            this.crvVisor.TabIndex = 0;
+            this.crvVisor.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // MantenimientoMovimientoArticulos
+            // VisorDeReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.Name = "MantenimientoMovimientoArticulos";
-            this.Text = "MovilizarArticulos";
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.crvVisor);
+            this.Name = "VisorDeReportes";
+            this.Text = "VisorDeReportes";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crvVisor;
     }
 }

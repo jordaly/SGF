@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
 
 namespace SGF
 {
@@ -24,6 +27,9 @@ namespace SGF
         public virtual void Buscar() { }
         public virtual void Guardar() { }
         public virtual void Seleccionar() { }
+
+
+        public string root = Application.ExecutablePath.Replace(@"\bin\Debug\SGF.exe", @"\");
 
 
         public DataSet ds = new DataSet();

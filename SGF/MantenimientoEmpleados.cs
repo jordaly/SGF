@@ -104,33 +104,35 @@ namespace SGF
 
         public override void Modificar()
         {
-            cmd = "select p.fecha_nacimiento,h.descripcion,te.numero,c.correo_electronico,p.cedula,p.sexo " +
+            
+                cmd = "select p.fecha_nacimiento,h.descripcion,te.numero,c.correo_electronico,p.cedula,p.sexo " +
                 "from telefono as te,telefono_vs_tercero as tev,correo as c,correo_vs_tercero as cv, tercero as t, persona as p, empleado as e, puesto as pu,departamento as d, horario as h " +
                 "where p.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and p.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and e.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and e.idPuesto=pu.id and  e.idHorario=h.id and pu.idDepartamento=d.id and te.id=tev.idTelefono and c.id=cv.idCorreo and tev.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and cv.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
-            //MessageBox.Show(cmd);
-            ds = Utilidades.EjecutarDS(cmd);
-            RegistroEmpleados rc = new RegistroEmpleados();
-            rc.tbxCodigo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxApellido.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            rc.dtFecha.Value = Convert.ToDateTime(ds.Tables[0].Rows[0]["fecha_nacimiento"].ToString() );
-            rc.cbxSexo.Text = ds.Tables[0].Rows[0]["sexo"].ToString();
-            rc.cbxPuesto.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            rc.cbxHorario.Text = ds.Tables[0].Rows[0]["descripcion"].ToString();
-            rc.tbxTelefono.Text = ds.Tables[0].Rows[0]["numero"].ToString(); 
-            rc.tbxCorreo.Text = ds.Tables[0].Rows[0]["correo_electronico"].ToString();
-            rc.tbxCedula.Text = ds.Tables[0].Rows[0]["cedula"].ToString(); 
-            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString());
-            rc.ShowDialog();
+                //MessageBox.Show(cmd);
+                ds = Utilidades.EjecutarDS(cmd);
+                RegistroEmpleados rc = new RegistroEmpleados();
+                rc.tbxCodigo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                rc.tbxApellido.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+                rc.dtFecha.Value = Convert.ToDateTime(ds.Tables[0].Rows[0]["fecha_nacimiento"].ToString());
+                rc.cbxSexo.Text = ds.Tables[0].Rows[0]["sexo"].ToString();
+                rc.cbxPuesto.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+                rc.cbxHorario.Text = ds.Tables[0].Rows[0]["descripcion"].ToString();
+                rc.tbxTelefono.Text = ds.Tables[0].Rows[0]["numero"].ToString();
+                rc.tbxCorreo.Text = ds.Tables[0].Rows[0]["correo_electronico"].ToString();
+                rc.tbxCedula.Text = ds.Tables[0].Rows[0]["cedula"].ToString();
+                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString());
+                rc.ShowDialog();
 
 
 
-            //rc.tbxLocalidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
-            //rc.tbxDireccion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString();
-            //rc.tbxCodigo_postal.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
-            //rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
+                //rc.tbxLocalidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
+                //rc.tbxDireccion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString();
+                //rc.tbxCodigo_postal.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
+                //rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
 
-            refrescarDatos(BuscarDatos);
+                refrescarDatos(BuscarDatos);
+            
         }
     }
 }

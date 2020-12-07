@@ -175,14 +175,15 @@ namespace SGF
 
         public bool ComprobarCampos()
         {
-                //tbxNombre.Text == "" ||
-                //tbxApellido.Text == "" ||
-                //tbxCodigo_postal.Text == "" ||
-                //tbxDireccion.Text == "" ||
-                //tbxLocalidad.Text == "" ||
-                //tbxCodigo.Text == "" ||
-                //tbxTelefono.Text == "" ||
-                //rtbxIndicaciones.Text == ""
+            //tbxNombre.Text == "" ||
+            //tbxApellido.Text == "" ||
+            //tbxCodigo_postal.Text == "" ||
+            //tbxDireccion.Text == "" ||
+            //tbxLocalidad.Text == "" ||
+            //tbxCodigo.Text == "" ||
+            //tbxTelefono.Text == "" ||
+            //rtbxIndicaciones.Text == ""
+            ErrorProvider.Clear();
             bool ok = true;
             if (tbxNombre.Text == "")
             {

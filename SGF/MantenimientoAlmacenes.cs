@@ -21,15 +21,17 @@ namespace SGF
         public string BuscarDatos = "select * from almacen ";
         public override void Modificar()
         {
-            RegistroAlmanenes rc = new RegistroAlmanenes();
-            rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
-            rc.tbxDescripcion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxCapacidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
-            rc.ShowDialog();
+            
+                RegistroAlmanenes rc = new RegistroAlmanenes();
+                rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                rc.tbxDescripcion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                rc.tbxCapacidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
+                rc.ShowDialog();
 
 
-            refrescarDatos(BuscarDatos);
+                refrescarDatos(BuscarDatos);
+            
         }
         public override void Borrar()
         {

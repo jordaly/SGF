@@ -21,6 +21,7 @@ namespace SGF
         }
         public bool ComprobarCampos()
         {
+            ErrorProvider.Clear();
             bool ok = true;
             if (tbxUsuario.Text=="")
             {
