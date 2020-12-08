@@ -68,7 +68,7 @@ namespace SGF
         }
 
         public string codigo_suplidor = "";
-        public string nombre_suplidor_apellido_suplidor = "";
+        public string nombre_suplidor = "";
         public string RNC = "";
         public override void Seleccionar()
         {
@@ -76,11 +76,7 @@ namespace SGF
             if (dgvPadre.Rows.Count != 0)
             {
                 codigo_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                nombre_suplidor_apellido_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-                if (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString()!=null)
-                {
-                    RNC = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-                }
+                nombre_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
              
                 this.Close();
             }
