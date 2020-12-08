@@ -247,6 +247,17 @@
       <DependentUpon>Factura con su detalle.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\prueba.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prueba.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SGFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGFDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -370,6 +381,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Factura con su detalle.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\prueba.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>prueba.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="VisorDeReportes.resx">
       <DependentUpon>VisorDeReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +397,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SGFDataSet.xsc">
+      <DependentUpon>SGFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGFDataSet.xss">
+      <DependentUpon>SGFDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
