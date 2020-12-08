@@ -131,6 +131,12 @@
     <Compile Include="MantenimientoClientes.Designer.cs">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCotizacion.Designer.cs">
+      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoClientes.resx">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCotizacion.resx">
+      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEmpleados.resx">
       <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>

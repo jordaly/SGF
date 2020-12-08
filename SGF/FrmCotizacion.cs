@@ -15,7 +15,11 @@ namespace SGF
         public FrmCotizacion()
         {
             InitializeComponent();
-            lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+ 
+            if (lbcodigo.Text=="Nuevo")
+            {
+                lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+            }
             string cmdtipo_factura = "Select * from tipo_factura";
             string cmdsucursal = "Select * from sucursal";
 
