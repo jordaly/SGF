@@ -45,7 +45,7 @@ namespace SGF
 
         public override void Nuevo()
         {
-            RegistroMovimientoArticulos rc = new RegistroMovimientoArticulos("","");
+            RegistroMovimientoArticulos rc = new RegistroMovimientoArticulos("");
             rc.ShowDialog();
 
 
@@ -55,13 +55,17 @@ namespace SGF
         public override void Modificar()
         {
 
-            RegistroMovimientoArticulos rc = new RegistroMovimientoArticulos(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString(), dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString());
+            RegistroMovimientoArticulos rc = new RegistroMovimientoArticulos(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
             //rc.cbxArticulo.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             //rc.cbxAlmacen.SelectedItem = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxCodigoArticulo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            rc.tbxCodigoArticulo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            //rc.idArticulo= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             //rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
             //ds = Utilidades.EjecutarDS(cmd);
-            
+            rc.tkbCantidad.Maximum =Convert.ToInt32( dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            rc.sinAsignar = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            rc.Asignado = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            rc.total = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
             rc.ShowDialog();
 
 

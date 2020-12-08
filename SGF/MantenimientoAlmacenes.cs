@@ -19,6 +19,23 @@ namespace SGF
             refrescarDatos(BuscarDatos);
         }
         public string BuscarDatos = "select * from almacen ";
+
+
+        public string codigo_almacen = "";
+        public string nombre_almacen = "";
+        public override void Seleccionar()
+        {
+
+            if (dgvPadre.Rows.Count != 0)
+            {
+                codigo_almacen = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                nombre_almacen = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+
+                this.Close();
+            }
+
+
+        }
         public override void Modificar()
         {
             

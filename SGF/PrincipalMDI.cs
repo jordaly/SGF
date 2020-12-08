@@ -205,6 +205,8 @@ namespace SGF
         private void movimientoInventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoMovimientoArticulos rc = new MantenimientoMovimientoArticulos();
+            rc.btnNuevo.Enabled = false;
+            rc.btnBorrar.Enabled = false;
             rc.MdiParent = this;
             rc.Show();
         }
