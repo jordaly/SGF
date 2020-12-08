@@ -28,25 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbcodigosuplidor = new System.Windows.Forms.Label();
             this.txtsuplidor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtitebis = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.lbcodigoarticulo = new System.Windows.Forms.Label();
             this.btnquitararticulo = new System.Windows.Forms.Button();
             this.btnagregararticulo = new System.Windows.Forms.Button();
             this.txtpreciocompra = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.lbstock = new System.Windows.Forms.Label();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnbuscararticulo = new System.Windows.Forms.Button();
             this.txtarticulo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbxsucursal = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.cbxdivisa = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbxtipopago = new System.Windows.Forms.ComboBox();
@@ -68,9 +63,10 @@
             this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clitebis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridarticulosuplidor)).BeginInit();
             this.SuspendLayout();
@@ -94,14 +90,11 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtitebis);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.lbcodigoarticulo);
             this.panel1.Controls.Add(this.btnquitararticulo);
             this.panel1.Controls.Add(this.btnagregararticulo);
             this.panel1.Controls.Add(this.txtpreciocompra);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.lbstock);
             this.panel1.Controls.Add(this.txtcantidad);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnbuscararticulo);
@@ -111,24 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(725, 118);
             this.panel1.TabIndex = 71;
-            // 
-            // txtitebis
-            // 
-            this.txtitebis.BackColor = System.Drawing.Color.White;
-            this.txtitebis.Location = new System.Drawing.Point(416, 74);
-            this.txtitebis.Name = "txtitebis";
-            this.txtitebis.ReadOnly = true;
-            this.txtitebis.Size = new System.Drawing.Size(154, 20);
-            this.txtitebis.TabIndex = 61;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(329, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "ITEBIS :";
             // 
             // lbcodigoarticulo
             // 
@@ -177,15 +152,6 @@
             this.label14.TabIndex = 30;
             this.label14.Text = "Precio Compra :";
             // 
-            // lbstock
-            // 
-            this.lbstock.AutoSize = true;
-            this.lbstock.Location = new System.Drawing.Point(227, 74);
-            this.lbstock.Name = "lbstock";
-            this.lbstock.Size = new System.Drawing.Size(35, 13);
-            this.lbstock.TabIndex = 27;
-            this.lbstock.Text = "Stock";
-            // 
             // txtcantidad
             // 
             this.txtcantidad.Location = new System.Drawing.Point(67, 71);
@@ -229,26 +195,6 @@
             this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 22;
             this.label10.Text = "Articulo :";
-            // 
-            // cbxsucursal
-            // 
-            this.cbxsucursal.FormattingEnabled = true;
-            this.cbxsucursal.Items.AddRange(new object[] {
-            "Cliente Final (Contado)",
-            "Comprabante Fiscal"});
-            this.cbxsucursal.Location = new System.Drawing.Point(422, 73);
-            this.cbxsucursal.Name = "cbxsucursal";
-            this.cbxsucursal.Size = new System.Drawing.Size(130, 21);
-            this.cbxsucursal.TabIndex = 70;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(363, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "Sucursal :";
             // 
             // cbxdivisa
             // 
@@ -429,15 +375,14 @@
             this.ColCodigo,
             this.ColDescripcion,
             this.ColPrecio,
-            this.clitebis,
             this.ColCantidad,
             this.ColImporte});
             this.gridarticulosuplidor.Location = new System.Drawing.Point(41, 429);
             this.gridarticulosuplidor.Name = "gridarticulosuplidor";
             this.gridarticulosuplidor.ReadOnly = true;
             this.gridarticulosuplidor.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gridarticulosuplidor.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gridarticulosuplidor.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridarticulosuplidor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridarticulosuplidor.Size = new System.Drawing.Size(725, 211);
             this.gridarticulosuplidor.TabIndex = 74;
@@ -462,12 +407,6 @@
             this.ColPrecio.Name = "ColPrecio";
             this.ColPrecio.ReadOnly = true;
             this.ColPrecio.Width = 110;
-            // 
-            // clitebis
-            // 
-            this.clitebis.HeaderText = "ITEBIS";
-            this.clitebis.Name = "clitebis";
-            this.clitebis.ReadOnly = true;
             // 
             // ColCantidad
             // 
@@ -497,8 +436,6 @@
             this.Controls.Add(this.lbcodigosuplidor);
             this.Controls.Add(this.txtsuplidor);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cbxsucursal);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.cbxdivisa);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbxtipopago);
@@ -514,6 +451,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCompra";
             this.Text = "FrmCompra";
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridarticulosuplidor)).EndInit();
@@ -527,21 +466,16 @@
         private System.Windows.Forms.Label lbcodigosuplidor;
         private System.Windows.Forms.TextBox txtsuplidor;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtitebis;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbcodigoarticulo;
         private System.Windows.Forms.Button btnquitararticulo;
         private System.Windows.Forms.Button btnagregararticulo;
         private System.Windows.Forms.TextBox txtpreciocompra;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lbstock;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnbuscararticulo;
         private System.Windows.Forms.TextBox txtarticulo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbxsucursal;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbxdivisa;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbxtipopago;
@@ -563,7 +497,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clitebis;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColImporte;
     }

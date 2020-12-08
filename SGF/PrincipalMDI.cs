@@ -251,5 +251,13 @@ namespace SGF
             rc.MdiParent = this;
             rc.Show();
         }
+
+        private void compraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCompra rc = new FrmCompra();
+            rc.MdiParent = this;
+            rc.codigo_usuario = this.codigo_usuario;
+            rc.Show();
+        }
     }
 }
