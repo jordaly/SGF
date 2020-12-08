@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbcodigo = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,6 +65,8 @@
             this.ColImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxsucursal = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.idcotizacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
@@ -351,8 +353,8 @@
             this.gridcotizacion.Name = "gridcotizacion";
             this.gridcotizacion.ReadOnly = true;
             this.gridcotizacion.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gridcotizacion.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gridcotizacion.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridcotizacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridcotizacion.Size = new System.Drawing.Size(725, 211);
             this.gridcotizacion.TabIndex = 90;
@@ -421,12 +423,32 @@
             this.label9.TabIndex = 95;
             this.label9.Text = "Sucursal :";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.TabIndex = 97;
+            this.label1.Text = "Codigo Cotizacion :";
+            // 
+            // idcotizacion
+            // 
+            this.idcotizacion.AutoSize = true;
+            this.idcotizacion.Location = new System.Drawing.Point(143, 53);
+            this.idcotizacion.Name = "idcotizacion";
+            this.idcotizacion.Size = new System.Drawing.Size(39, 13);
+            this.idcotizacion.TabIndex = 98;
+            this.idcotizacion.Text = "Nuevo";
+            // 
             // FrmCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(887, 642);
+            this.Controls.Add(this.idcotizacion);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxsucursal);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnguardar);
@@ -494,5 +516,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColImporte;
         private System.Windows.Forms.Label lbstock;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label idcotizacion;
     }
 }
