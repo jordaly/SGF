@@ -51,8 +51,9 @@
             this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagosNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vacacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contratacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,7 +198,8 @@
             this.pagosNominaToolStripMenuItem,
             this.vacacionesToolStripMenuItem,
             this.contratacionesToolStripMenuItem,
-            this.marcasToolStripMenuItem});
+            this.marcasToolStripMenuItem,
+            this.cajaToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.Image = global::SGF.Properties.Resources.llaves;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -269,6 +271,14 @@
             this.vacacionesToolStripMenuItem.Text = "Vacaciones";
             this.vacacionesToolStripMenuItem.Click += new System.EventHandler(this.vacacionesToolStripMenuItem_Click);
             // 
+            // contratacionesToolStripMenuItem
+            // 
+            this.contratacionesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.contratacionesToolStripMenuItem.Name = "contratacionesToolStripMenuItem";
+            this.contratacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.contratacionesToolStripMenuItem.Text = "Contrataciones";
+            this.contratacionesToolStripMenuItem.Click += new System.EventHandler(this.contratacionesToolStripMenuItem_Click);
+            // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
@@ -277,13 +287,13 @@
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
-            // contratacionesToolStripMenuItem
+            // cajaToolStripMenuItem
             // 
-            this.contratacionesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.contratacionesToolStripMenuItem.Name = "contratacionesToolStripMenuItem";
-            this.contratacionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.contratacionesToolStripMenuItem.Text = "Contrataciones";
-            this.contratacionesToolStripMenuItem.Click += new System.EventHandler(this.contratacionesToolStripMenuItem_Click);
+            this.cajaToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.cajaToolStripMenuItem.Name = "cajaToolStripMenuItem";
+            this.cajaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cajaToolStripMenuItem.Text = "Caja";
+            this.cajaToolStripMenuItem.Click += new System.EventHandler(this.cajaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -506,6 +516,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contratacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cajaToolStripMenuItem;
     }
 }
 

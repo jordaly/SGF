@@ -119,6 +119,12 @@
     <Compile Include="ListadoDGII.Designer.cs">
       <DependentUpon>ListadoDGII.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCaja.Designer.cs">
+      <DependentUpon>MantenimientoCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoContrataciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -363,17 +369,14 @@
     <EmbeddedResource Include="MantenimientoAlmacenes.resx">
       <DependentUpon>MantenimientoAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCaja.resx">
+      <DependentUpon>MantenimientoCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoClientes.resx">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
     </EmbeddedResource>
-
-
     <EmbeddedResource Include="MantenimientoContrataciones.resx">
       <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
-
-
-
-
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEmpleados.resx">
       <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>

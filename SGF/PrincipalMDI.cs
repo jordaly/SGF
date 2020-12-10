@@ -468,6 +468,14 @@ namespace SGF
             rc.Show();
         }
 
+        private void cajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MantenimientoCaja rc = new MantenimientoCaja();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
         private void contratacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoContrataciones rc = new MantenimientoContrataciones();
