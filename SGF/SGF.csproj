@@ -370,8 +370,7 @@
     <EmbeddedResource Include="MantenimientoContrataciones.resx">
       <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
 
-    <EmbeddedResource Include="MantenimientoCotizacion.resx">
-      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
+
 
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEmpleados.resx">
