@@ -57,35 +57,46 @@ namespace SGF
         {
             
 
-                RegistoInventario rc = new RegistoInventario();
-                rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-                rc.tbxPrecio_compra.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-                rc.tbxPrecio_venta.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
-                rc.tbxExistencia.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
-                rc.tbxDescripcion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[5].Value.ToString();
-                rc.tbxCantidad_maxima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[6].Value.ToString();
-                rc.tbxCantidad_minima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
-                rc.dtFecha_renovacion.Value = Convert.ToDateTime(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString());
-                rc.cbxMedida.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
-                rc.cbxMarca.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
-                rc.cbxTipo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
-                rc.tkbItebis.Value = Convert.ToInt32(100 * Convert.ToDouble(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString()));
-                rc.lbItebis.Text = "(" + Convert.ToInt32(100 * Convert.ToDouble(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString())) + "%)";
-                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
-                cmd = "select * from cantidad_caja where idArticulo='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
-                ds = Utilidades.EjecutarDS(cmd);
-                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-                {
-                    rc.tbxCantidad_caja.Visible = true;
-                    rc.tbxCantidad_caja.Text = ds.Tables[0].Rows[0]["cantidad_caja"].ToString();
-                    //MessageBox.Show("errror: "+ds.Tables[0].Rows[0]["cantidad_caja"].ToString());
-                    rc.etCantidad.Visible = true;
-                }
-                rc.ShowDialog();
+            RegistoInventario rc = new RegistoInventario();
+            rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            rc.tbxNombre.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            rc.tbxPrecio_compra.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            rc.tbxPrecio_venta.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            rc.tbxExistencia.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            rc.tbxDescripcion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            rc.tbxCantidad_maxima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[6].Value.ToString();
+            rc.tbxCantidad_minima.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString();
+            rc.dtFecha_renovacion.Value = Convert.ToDateTime(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[8].Value.ToString());
+            rc.cbxMedida.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[9].Value.ToString();
+            //rc.cbxMarca.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
+           
+            
+            
+            cmd = "select * from marca where marca='"+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString() + "'";
+            ds = Utilidades.EjecutarDS(cmd);
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                rc.tbxMarca.Text = ds.Tables[0].Rows[0]["marca"].ToString();
+                rc.idMarca = ds.Tables[0].Rows[0]["id"].ToString();
+            }
+            
+            rc.cbxTipo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
+            rc.tkbItebis.Value = Convert.ToInt32(100 * Convert.ToDouble(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString()));
+            rc.lbItebis.Text = "(" + Convert.ToInt32(100 * Convert.ToDouble(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString())) + "%)";
+            //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
+            cmd = "select * from cantidad_caja where idArticulo='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
+            ds = Utilidades.EjecutarDS(cmd);
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                 rc.tbxCantidad_caja.Visible = true;
+                 rc.tbxCantidad_caja.Text = ds.Tables[0].Rows[0]["cantidad_caja"].ToString();
+                 //MessageBox.Show("errror: "+ds.Tables[0].Rows[0]["cantidad_caja"].ToString());
+                 rc.etCantidad.Visible = true;
+            }
+            rc.ShowDialog();
 
 
-                refrescarDatos(BuscarDatos);
+             refrescarDatos(BuscarDatos);
             
             
         }

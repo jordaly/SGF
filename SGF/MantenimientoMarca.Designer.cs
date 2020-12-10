@@ -28,10 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // cbxBuscar
+            // 
+            this.cbxBuscar.Items.AddRange(new object[] {
+            "id",
+            "marca"});
+            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            // 
+            // MantenimientoMarca
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "MantenimientoMarca";
             this.Text = "MantenimientoMarca";
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

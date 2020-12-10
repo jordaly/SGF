@@ -36,12 +36,12 @@ namespace SGF
 
         public override void Borrar()
         {
-            DialogResult result = MessageBox.Show("Seguro que quiere eliminar el empleado: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString() + " Codigo: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString(), "Atención", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Seguro que quiere despedir al empleado: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString() + " Codigo: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString(), "Atención", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 cmd = "begin " +
-               "delete from empleado where idTercero = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';" +
-               "end";
+                        "delete empleado where idTercero = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';" +
+                    "end";
                 ds = Utilidades.EjecutarDS(cmd);
                 MessageBox.Show("Se ha eliminado Exitosamente");
                 refrescarDatos(BuscarDatos);
@@ -55,7 +55,9 @@ namespace SGF
 
         public override void Nuevo()
         {
-            RegistroEmpleados rc = new RegistroEmpleados();
+            MantenimientoContrataciones rc = new MantenimientoContrataciones();
+            
+            
             rc.ShowDialog();
 
 
@@ -78,10 +80,6 @@ namespace SGF
             else if (cbxBuscar.Text == "hora_entrada" || cbxBuscar.Text == "hora_salida")
             {
                 v = "h.";
-            }
-            else if (cbxBuscar.Text == "estado") 
-            {
-                v = "e.";
             }
             else
             {
@@ -121,7 +119,7 @@ namespace SGF
                 rc.tbxTelefono.Text = ds.Tables[0].Rows[0]["numero"].ToString();
                 rc.tbxCorreo.Text = ds.Tables[0].Rows[0]["correo_electronico"].ToString();
                 rc.tbxCedula.Text = ds.Tables[0].Rows[0]["cedula"].ToString();
-                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString());
+                //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString());
                 rc.ShowDialog();
 
 

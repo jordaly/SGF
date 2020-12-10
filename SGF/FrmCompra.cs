@@ -20,7 +20,7 @@ namespace SGF
             string cmdtipo_factura = "Select * from tipo_factura";
             string cmdtipo_pago = "Select * from tipo_pago";
             string cmddivisa = "Select * from divisa";
-            string cmdNumeroFactura = "select top(1) numero_factura from factura order by fecha DESC";
+            //string cmdNumeroFactura = "select top(1) numero_factura from factura order by fecha DESC";
 
             ds = Utilidades.EjecutarDS(cmdtipo_factura);
             cbxtipofactura.DisplayMember = "descripcion";
@@ -37,8 +37,8 @@ namespace SGF
 
 
 
-            ds = Utilidades.EjecutarDS(cmdNumeroFactura);
-            lbnumfactura.Text = (Convert.ToInt32(ds.Tables[0].Rows[0]["numero_factura"].ToString()) + 1).ToString().PadLeft((20 - ds.Tables[0].Rows[0]["numero_factura"].ToString().Length), '0');
+            //ds = Utilidades.EjecutarDS(cmdNumeroFactura);
+            //lbnumfactura.Text = (Convert.ToInt32(ds.Tables[0].Rows[0]["numero_factura"].ToString()) + 1).ToString().PadLeft((20 - ds.Tables[0].Rows[0]["numero_factura"].ToString().Length), '0');
         }
 
         public string codigo_suplidor = "";
@@ -243,9 +243,8 @@ namespace SGF
 
 
                      cmd = "begin " +
-                    "declare @idCompra uniqueidentifier= newid(); " +
-                    "insert into Compra(id,fecha,idSuplidor,idTipopago,idDivisa,total)values(@idCompra,getdate(),'" + codigo_suplidor + "','" + idTipo_pago + "','" + idDivisa + "','" + total.ToString().Replace(",", ".") + "');" +
-                    "select id from Compra where id=@idCompra; " +
+                        "insert into Compra(fecha,idSuplidor,idTipopago,idDivisa,total)values(getdate(),'" + codigo_suplidor + "','" + idTipo_pago + "','" + idDivisa + "','" + total.ToString().Replace(",", ".") + "');" +
+                        "select top(1) id as id from Compra order by id desc;" +
                     "end";
                 //txtcantidad.Text = cmd;
                 //MessageBox.Show(cmd);

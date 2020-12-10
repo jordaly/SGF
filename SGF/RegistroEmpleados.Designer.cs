@@ -36,7 +36,6 @@
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
             this.tbxApellido = new System.Windows.Forms.TextBox();
-            this.chxEstado = new System.Windows.Forms.CheckBox();
             this.cbxPuesto = new System.Windows.Forms.ComboBox();
             this.tbxCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,11 +49,12 @@
             this.cbxSexo = new System.Windows.Forms.ComboBox();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(179, 513);
+            this.btnGuardar.Location = new System.Drawing.Point(179, 389);
             // 
             // label1
             // 
@@ -123,16 +123,6 @@
             this.tbxApellido.Name = "tbxApellido";
             this.tbxApellido.Size = new System.Drawing.Size(307, 22);
             this.tbxApellido.TabIndex = 9;
-            // 
-            // chxEstado
-            // 
-            this.chxEstado.AutoSize = true;
-            this.chxEstado.Location = new System.Drawing.Point(179, 324);
-            this.chxEstado.Name = "chxEstado";
-            this.chxEstado.Size = new System.Drawing.Size(74, 21);
-            this.chxEstado.TabIndex = 13;
-            this.chxEstado.Text = "Estado";
-            this.chxEstado.UseVisualStyleBackColor = true;
             // 
             // cbxPuesto
             // 
@@ -243,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 554);
+            this.ClientSize = new System.Drawing.Size(550, 430);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.cbxSexo);
             this.Controls.Add(this.label8);
@@ -256,7 +246,6 @@
             this.Controls.Add(this.tbxCorreo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxPuesto);
-            this.Controls.Add(this.chxEstado);
             this.Controls.Add(this.tbxApellido);
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.tbxCodigo);
@@ -277,7 +266,6 @@
             this.Controls.SetChildIndex(this.tbxCodigo, 0);
             this.Controls.SetChildIndex(this.tbxNombre, 0);
             this.Controls.SetChildIndex(this.tbxApellido, 0);
-            this.Controls.SetChildIndex(this.chxEstado, 0);
             this.Controls.SetChildIndex(this.cbxPuesto, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.tbxCorreo, 0);
@@ -291,6 +279,7 @@
             this.Controls.SetChildIndex(this.cbxSexo, 0);
             this.Controls.SetChildIndex(this.dtFecha, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +300,6 @@
         public System.Windows.Forms.TextBox tbxCodigo;
         public System.Windows.Forms.TextBox tbxNombre;
         public System.Windows.Forms.TextBox tbxApellido;
-        public System.Windows.Forms.CheckBox chxEstado;
         public System.Windows.Forms.ComboBox cbxPuesto;
         public System.Windows.Forms.TextBox tbxCorreo;
         public System.Windows.Forms.TextBox tbxCedula;

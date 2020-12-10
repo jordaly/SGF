@@ -12,7 +12,7 @@ namespace SGF
 {
     public partial class MantenimientoMovimientoArticulos : FormProcesos
     {
-        public string BuscarDatos = "select a.id,a.descripcion,(a.existencia-(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id)) cantidad_sin_asignar,(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id) as cantidad_asignada,a.existencia as total from articulo as a ";
+        public string BuscarDatos = "select a.id,a.descripcion,(a.existencia-(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id)) cantidad_sin_asignar,(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id) as cantidad_asignada,a.existencia as total from articulo as a  where a.estado!='0' ";
         public MantenimientoMovimientoArticulos()
         {
             InitializeComponent();

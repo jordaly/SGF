@@ -18,7 +18,7 @@ namespace SGF
             cbxBuscar.SelectedIndex = 0;
             refrescarDatos(BuscarDatos);
         }
-        public string BuscarDatos = "select * from almacen ";
+        public string BuscarDatos = "select * from almacen where estado!='0'";
 
 
         public string codigo_almacen = "";
@@ -43,7 +43,7 @@ namespace SGF
                 rc.tbxCodigo.Text = (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString());
                 rc.tbxDescripcion.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
                 rc.tbxCapacidad.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
+                //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
                 rc.ShowDialog();
 
 
@@ -56,7 +56,7 @@ namespace SGF
             if (result == DialogResult.Yes)
             {
                 cmd = "begin " +
-               "delete from almacen where id = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';" +
+               "update almacen set estado='0' where id = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';" +
                "end";
                 ds = Utilidades.EjecutarDS(cmd);
                 MessageBox.Show("Se ha eliminado Exitosamente");
