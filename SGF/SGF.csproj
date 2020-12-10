@@ -101,6 +101,12 @@
     <Compile Include="FrmCompra.Designer.cs">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCotizacion.Designer.cs">
+      <DependentUpon>FrmCotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="MantenimientoClientes.Designer.cs">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCotizacion.Designer.cs">
+      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoEmpleados.cs">
       <SubType>Form</SubType>
@@ -336,6 +348,9 @@
     <EmbeddedResource Include="FrmCompra.resx">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCotizacion.resx">
+      <DependentUpon>FrmCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,8 +366,13 @@
     <EmbeddedResource Include="MantenimientoClientes.resx">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="MantenimientoContrataciones.resx">
       <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
+
+    <EmbeddedResource Include="MantenimientoCotizacion.resx">
+      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEmpleados.resx">
       <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
