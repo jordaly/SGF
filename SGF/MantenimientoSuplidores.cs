@@ -12,23 +12,23 @@ namespace SGF
 {
     public partial class MantenimientoSuplidores : FormProcesos
     {
-        public string BuscarDatos = "select s.idTercero as id,t.nombre,t.RNC,s.estado from suplidor as s, tercero as t where t.id=s.idTercero ";
+        
         public MantenimientoSuplidores()
         {
             InitializeComponent();
             cbxBuscar.SelectedIndex = 0;
             refrescarDatos(BuscarDatos);
         }
-
+        public string BuscarDatos = "select s.idTercero,t.nombre,t.RNC from suplidor as s, tercero as t where t.id=s.idTercero and s.estado!='0' ";
 
 
 
         public override void Borrar()
         {
-            DialogResult result = MessageBox.Show("Seguro que quiere eliminar el suplidor: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " Codigo: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString(), "Atención", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Seguro que quiere eliminar la marca: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString() + " Codigo: " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString(), "Atención", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                cmd = "delete from suplidor where idTercero = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
+                cmd = "update suplidor set estado='0' where idTercero = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
                 ds = Utilidades.EjecutarDS(cmd);
                 MessageBox.Show("Se ha eliminado Exitosamente");
                 refrescarDatos(BuscarDatos);
@@ -59,7 +59,7 @@ namespace SGF
             {
                 rc.tbxRNC.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
             }
-            rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
+            //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
             rc.ShowDialog();
 
 
@@ -91,13 +91,13 @@ namespace SGF
             bb.ShowDialog();
             string parametro = bb.parametro;
             string v = "";
-            if (cbxBuscar.Text == "id" || cbxBuscar.Text=="estado")
-            {
-                v = "s.";
-            }
-            else 
+            if (cbxBuscar.Text=="nombre" || cbxBuscar.Text=="RNC")
             {
                 v = "t.";
+            }
+            else
+            {
+                v = "s.";
             }
            
 
@@ -105,7 +105,7 @@ namespace SGF
             //MessageBox.Show("se esta ejecuetando");
             if (!String.IsNullOrEmpty(parametro.Trim()))
             {
-                cmd += "and " + v + cbxBuscar.Text + " like('%" + parametro.Trim() + "%')";
+                cmd += " and " +v+ cbxBuscar.Text + " like('%" + parametro.Trim() + "%')";
             }
             ds = Utilidades.EjecutarDS(cmd);
             //MessageBox.Show(cmd);

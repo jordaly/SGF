@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class MantenimientoEmpleados
+    partial class Mantenimiento_transporte
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbxBuscar
-            // 
-            this.cbxBuscar.Items.AddRange(new object[] {
-            "id",
-            "nombre",
-            "apellido",
-            "puesto",
-            "salario",
-            "hora_entrada",
-            "hora_salida"});
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
-            // 
-            // MantenimientoEmpleados
+            // Mantenimiento_transporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MantenimientoEmpleados";
-            this.Text = "MantenimientoEmpleados";
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            this.Name = "Mantenimiento_transporte";
+            this.Text = "MantenimientoTransporte";
             this.ResumeLayout(false);
 
         }

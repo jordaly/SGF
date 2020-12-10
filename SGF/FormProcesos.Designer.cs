@@ -174,8 +174,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Button btnBorrar;
         public System.Windows.Forms.Button btnNuevo;
@@ -184,5 +182,6 @@
         public System.Windows.Forms.ComboBox cbxBuscar;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnSeleccionar;
+        public System.Windows.Forms.Panel panel1;
     }
 }

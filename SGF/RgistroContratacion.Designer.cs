@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class MantenimientoEmpleados
+    partial class RgistroContratacion
     {
         /// <summary>
         /// Required designer variable.
@@ -32,25 +32,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Text = "Nueva Persona";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Enabled = false;
+            // 
             // cbxBuscar
             // 
-            this.cbxBuscar.Items.AddRange(new object[] {
-            "id",
-            "nombre",
-            "apellido",
-            "puesto",
-            "salario",
-            "hora_entrada",
-            "hora_salida"});
             this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             // 
-            // MantenimientoEmpleados
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Enabled = true;
+            this.btnSeleccionar.Text = "Seleccionar Persona";
+            // 
+            // RgistroContratacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MantenimientoEmpleados";
-            this.Text = "MantenimientoEmpleados";
+            this.ClientSize = new System.Drawing.Size(800, 535);
+            this.Name = "RgistroContratacion";
+            this.Text = "RgistroContratacion";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class MantenimientoEmpleados
+    partial class MantenimientoContrataciones
     {
         /// <summary>
         /// Required designer variable.
@@ -32,25 +32,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Text = "Borrar Vacante";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Text = "Nueva Vacante";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Text = "Contratar";
+            // 
             // cbxBuscar
             // 
             this.cbxBuscar.Items.AddRange(new object[] {
-            "id",
-            "nombre",
-            "apellido",
+            "numero_vacante",
+            "idPuesto",
             "puesto",
             "salario",
-            "hora_entrada",
-            "hora_salida"});
+            "departamente",
+            "fecha"});
             this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             // 
-            // MantenimientoEmpleados
+            // MantenimientoContrataciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MantenimientoEmpleados";
-            this.Text = "MantenimientoEmpleados";
+            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Name = "MantenimientoContrataciones";
+            this.Text = "MantenimientoContrataciones";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);

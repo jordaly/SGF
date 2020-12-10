@@ -291,9 +291,8 @@ namespace SGF
             string ncf = ds.Tables[0].Rows[0]["serie"].ToString() + idTipo_NCF + ds.Tables[0].Rows[0]["secuencia"].ToString().PadLeft((9 - ds.Tables[0].Rows[0]["secuencia"].ToString().Length), '0');
             string idNCF = ds.Tables[0].Rows[0]["id"].ToString();
             cmd = "begin" +
-                 " declare @idFactura uniqueidentifier= newid();" +
-                 "insert into factura(id,idTipo_factura,fecha,idcliente,NCF,idDivisa,idTipo_pago,idSucursal,idEmpleado,total)values(@idFactura,'"+idTipo_factura+"',getdate(),'"+codigo_cliente+"','"+ncf+"','"+idDivisa+"','"+idTipo_pago+"','"+ idsucursal + "','"+idEmpleado+"','"+total.ToString().Replace(",",".")+"');" +
-                 "select id from factura where id=@idFactura;" +
+                 "insert into factura(idTipo_factura,fecha,idcliente,NCF,idDivisa,idTipo_pago,idSucursal,idEmpleado,total)values('"+idTipo_factura+"',getdate(),'"+codigo_cliente+"','"+ncf+"','"+idDivisa+"','"+idTipo_pago+"','"+ idsucursal + "','"+idEmpleado+"','"+total.ToString().Replace(",",".")+"');" +
+                 "select top(1) numero_factura as id from factura order by numero_factura desc;" +
                  "end";
             //txtcantidad.Text = cmd;
             //MessageBox.Show(cmd);

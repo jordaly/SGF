@@ -32,11 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbxAlmacen = new System.Windows.Forms.ComboBox();
             this.rtbxIndicaciones = new System.Windows.Forms.RichTextBox();
             this.tbxCodigoArticulo = new System.Windows.Forms.TextBox();
             this.tkbCantidad = new System.Windows.Forms.TrackBar();
             this.lbCantidad = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbxCodigoAlmacen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tkbCantidad)).BeginInit();
@@ -45,7 +46,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(140, 294);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(5);
             // 
             // label1
             // 
@@ -88,21 +89,10 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Indicaciones";
             // 
-            // cbxAlmacen
-            // 
-            this.cbxAlmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxAlmacen.FormattingEnabled = true;
-            this.cbxAlmacen.Location = new System.Drawing.Point(140, 15);
-            this.cbxAlmacen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbxAlmacen.Name = "cbxAlmacen";
-            this.cbxAlmacen.Size = new System.Drawing.Size(345, 24);
-            this.cbxAlmacen.TabIndex = 0;
-            this.cbxAlmacen.SelectedIndexChanged += new System.EventHandler(this.cbxAlmacen_SelectedIndexChanged);
-            // 
             // rtbxIndicaciones
             // 
             this.rtbxIndicaciones.Location = new System.Drawing.Point(140, 139);
-            this.rtbxIndicaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbxIndicaciones.Margin = new System.Windows.Forms.Padding(4);
             this.rtbxIndicaciones.Name = "rtbxIndicaciones";
             this.rtbxIndicaciones.Size = new System.Drawing.Size(345, 146);
             this.rtbxIndicaciones.TabIndex = 3;
@@ -134,16 +124,36 @@
             this.lbCantidad.TabIndex = 7;
             this.lbCantidad.Text = "(0)";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(514, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 27);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "seleccionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbxCodigoAlmacen
+            // 
+            this.tbxCodigoAlmacen.Location = new System.Drawing.Point(140, 18);
+            this.tbxCodigoAlmacen.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxCodigoAlmacen.Name = "tbxCodigoAlmacen";
+            this.tbxCodigoAlmacen.ReadOnly = true;
+            this.tbxCodigoAlmacen.Size = new System.Drawing.Size(345, 22);
+            this.tbxCodigoAlmacen.TabIndex = 9;
+            // 
             // RegistroMovimientoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 369);
+            this.Controls.Add(this.tbxCodigoAlmacen);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbCantidad);
             this.Controls.Add(this.tkbCantidad);
             this.Controls.Add(this.tbxCodigoArticulo);
             this.Controls.Add(this.rtbxIndicaciones);
-            this.Controls.Add(this.cbxAlmacen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -158,11 +168,12 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.cbxAlmacen, 0);
             this.Controls.SetChildIndex(this.rtbxIndicaciones, 0);
             this.Controls.SetChildIndex(this.tbxCodigoArticulo, 0);
             this.Controls.SetChildIndex(this.tkbCantidad, 0);
             this.Controls.SetChildIndex(this.lbCantidad, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.tbxCodigoAlmacen, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tkbCantidad)).EndInit();
@@ -177,10 +188,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.ComboBox cbxAlmacen;
         public System.Windows.Forms.RichTextBox rtbxIndicaciones;
         public System.Windows.Forms.TextBox tbxCodigoArticulo;
         public System.Windows.Forms.TrackBar tkbCantidad;
         public System.Windows.Forms.Label lbCantidad;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox tbxCodigoAlmacen;
     }
 }
