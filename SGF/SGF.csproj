@@ -367,8 +367,10 @@
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
     </EmbeddedResource>
 
+
     <EmbeddedResource Include="MantenimientoContrataciones.resx">
       <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
+
 
 
 
