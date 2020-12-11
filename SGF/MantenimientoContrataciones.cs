@@ -102,7 +102,7 @@ namespace SGF
             //"where p.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and p.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and e.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and e.idPuesto=pu.id and  e.idHorario=h.id and pu.idDepartamento=d.id and te.id=tev.idTelefono and c.id=cv.idCorreo and tev.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and cv.idTercero='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
             ////MessageBox.Show(cmd);
             //ds = Utilidades.EjecutarDS(cmd);
-            RgistroContratacion rc = new RgistroContratacion();
+            MantenimientoVacantes rc = new MantenimientoVacantes();
             rc.btnBorrar.Enabled = false;
             rc.Puesto = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
             rc.idVacante = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();

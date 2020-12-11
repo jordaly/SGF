@@ -478,17 +478,32 @@ namespace SGF
                 return null;
             }
         }
-        public static string SoloNumeros(KeyPressEventArgs e)
+        public static void SoloNumeros(KeyPressEventArgs e,object sender)
         {
-            char tecla = e.KeyChar;
-
-            if (!Char.IsDigit(tecla) && (tecla != Convert.ToChar(Keys.Back)))
+            //char tecla = e.KeyChar;
+            if ((char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar)) ||  ((e.KeyChar == '.')&&((sender as TextBox).Text.IndexOf('.') == -1)))
             {
-                e.Handled = true;
-                return "Solo se permiten números";
+                //MessageBox.Show("" + (sender as TextBox).Text.IndexOf('.'));
+                //e.Handled = true;
             }
             else
-                return "";
+            {
+                e.Handled = true;
+            }
+
+            //// If you want, you can allow decimal (float) numbers
+            //if (((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)))
+            //{
+            //    e.Handled = true;
+            //}
+
+            //if (!Char.IsDigit(tecla) && (tecla != Convert.ToChar(Keys.Back)))
+            //{
+            //    e.Handled = true;
+            //    return "Solo se permiten números";
+            //}
+            //else
+            //    return "";
         }
         public static int ValarCheckBox(bool i)
         {

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace SGF
 {
-    public partial class RgistroContratacion : FormProcesos
+    public partial class MantenimientoVacantes : FormProcesos
     {
         public string Puesto = "",idVacante="";
         
         string BuscarDatos = "select top(200) p.idTercero,t.nombre,p.apellido,p.sexo,p.fecha_nacimiento,p.cedula,tl.numero as numero_telefono,cr.correo_electronico from persona as p, tercero as t, telefono as tl,telefono_vs_tercero as tvt,correo as cr,correo_vs_tercero as cvt   where  t.id=p.idTercero and tl.id=tvt.idTelefono and tvt.idTercero=p.idTercero and cr.id=cvt.idCorreo and cvt.idTercero=p.idTercero and t.nombre!='Consumidor Final' and not exists(select idTercero from empleado as e where p.idTercero=e.idTercero) ";
-        public RgistroContratacion()
+        public MantenimientoVacantes()
         {
             InitializeComponent();
             refrescarDatos(BuscarDatos);

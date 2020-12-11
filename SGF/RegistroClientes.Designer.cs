@@ -264,6 +264,7 @@
             // 
             this.tbxCodigo_postal.Location = new System.Drawing.Point(171, 523);
             this.tbxCodigo_postal.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxCodigo_postal.MaxLength = 10;
             this.tbxCodigo_postal.Name = "tbxCodigo_postal";
             this.tbxCodigo_postal.Size = new System.Drawing.Size(160, 22);
             this.tbxCodigo_postal.TabIndex = 8;
@@ -302,6 +303,7 @@
             // 
             this.tbxTelefono.Location = new System.Drawing.Point(171, 274);
             this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTelefono.MaxLength = 11;
             this.tbxTelefono.Name = "tbxTelefono";
             this.tbxTelefono.Size = new System.Drawing.Size(356, 22);
             this.tbxTelefono.TabIndex = 32;
@@ -349,6 +351,7 @@
             // 
             this.tbxCedula.Location = new System.Drawing.Point(171, 336);
             this.tbxCedula.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxCedula.MaxLength = 11;
             this.tbxCedula.Name = "tbxCedula";
             this.tbxCedula.Size = new System.Drawing.Size(356, 22);
             this.tbxCedula.TabIndex = 36;
