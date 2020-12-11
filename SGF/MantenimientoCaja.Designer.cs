@@ -32,13 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbxCantidadInicial = new System.Windows.Forms.TextBox();
+            this.tbxCantidadActual = new System.Windows.Forms.TextBox();
+            this.tbxGanancias = new System.Windows.Forms.TextBox();
+            this.tbxVentasTotales = new System.Windows.Forms.TextBox();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.lbFechaFin = new System.Windows.Forms.Label();
+            this.lbFechaInicio = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -79,36 +80,40 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Ganancias";
             // 
-            // textBox1
+            // tbxCantidadInicial
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 22);
-            this.textBox1.TabIndex = 4;
+            this.tbxCantidadInicial.Location = new System.Drawing.Point(187, 61);
+            this.tbxCantidadInicial.Name = "tbxCantidadInicial";
+            this.tbxCantidadInicial.Size = new System.Drawing.Size(221, 22);
+            this.tbxCantidadInicial.TabIndex = 4;
+            this.tbxCantidadInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCantidadInicial_KeyPress);
             // 
-            // textBox2
+            // tbxCantidadActual
             // 
-            this.textBox2.Location = new System.Drawing.Point(187, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(221, 22);
-            this.textBox2.TabIndex = 5;
+            this.tbxCantidadActual.Location = new System.Drawing.Point(187, 89);
+            this.tbxCantidadActual.Name = "tbxCantidadActual";
+            this.tbxCantidadActual.ReadOnly = true;
+            this.tbxCantidadActual.Size = new System.Drawing.Size(221, 22);
+            this.tbxCantidadActual.TabIndex = 5;
+            this.tbxCantidadActual.Text = "0";
             // 
-            // textBox3
+            // tbxGanancias
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(221, 22);
-            this.textBox3.TabIndex = 6;
+            this.tbxGanancias.Location = new System.Drawing.Point(187, 145);
+            this.tbxGanancias.Name = "tbxGanancias";
+            this.tbxGanancias.ReadOnly = true;
+            this.tbxGanancias.Size = new System.Drawing.Size(221, 22);
+            this.tbxGanancias.TabIndex = 6;
+            this.tbxGanancias.Text = "0";
             // 
-            // textBox4
+            // tbxVentasTotales
             // 
-            this.textBox4.Location = new System.Drawing.Point(187, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(221, 22);
-            this.textBox4.TabIndex = 7;
+            this.tbxVentasTotales.Location = new System.Drawing.Point(187, 117);
+            this.tbxVentasTotales.Name = "tbxVentasTotales";
+            this.tbxVentasTotales.ReadOnly = true;
+            this.tbxVentasTotales.Size = new System.Drawing.Size(221, 22);
+            this.tbxVentasTotales.TabIndex = 7;
+            this.tbxVentasTotales.Text = "0";
             // 
             // btnInicio
             // 
@@ -122,34 +127,46 @@
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.Enabled = false;
             this.btnFinalizar.Location = new System.Drawing.Point(268, 197);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(75, 23);
             this.btnFinalizar.TabIndex = 9;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
-            // lbFechaFin
+            // lbFechaInicio
             // 
-            this.lbFechaFin.AutoSize = true;
-            this.lbFechaFin.Location = new System.Drawing.Point(12, 9);
-            this.lbFechaFin.Name = "lbFechaFin";
-            this.lbFechaFin.Size = new System.Drawing.Size(87, 17);
-            this.lbFechaFin.TabIndex = 10;
-            this.lbFechaFin.Text = "Fecha cierre";
+            this.lbFechaInicio.AutoSize = true;
+            this.lbFechaInicio.Location = new System.Drawing.Point(12, 9);
+            this.lbFechaInicio.Name = "lbFechaInicio";
+            this.lbFechaInicio.Size = new System.Drawing.Size(91, 17);
+            this.lbFechaInicio.TabIndex = 10;
+            this.lbFechaInicio.Text = "Fecha inicio: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(414, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "DOP$";
             // 
             // MantenimientoCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 293);
-            this.Controls.Add(this.lbFechaFin);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbFechaInicio);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnInicio);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxVentasTotales);
+            this.Controls.Add(this.tbxGanancias);
+            this.Controls.Add(this.tbxCantidadActual);
+            this.Controls.Add(this.tbxCantidadInicial);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -162,17 +179,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Button btnFinalizar;
-        private System.Windows.Forms.Label lbFechaFin;
+        public System.Windows.Forms.TextBox tbxCantidadActual;
+        public System.Windows.Forms.TextBox tbxGanancias;
+        public System.Windows.Forms.TextBox tbxVentasTotales;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox tbxCantidadInicial;
+        public System.Windows.Forms.Button btnInicio;
+        public System.Windows.Forms.Button btnFinalizar;
+        public System.Windows.Forms.Label lbFechaInicio;
+        public System.Windows.Forms.Label label5;
     }
 }

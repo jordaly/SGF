@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class RgistroContratacion
+    partial class MantenimientoVacantes
     {
         /// <summary>
         /// Required designer variable.

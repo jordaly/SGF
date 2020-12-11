@@ -95,6 +95,7 @@
             this.tbxPrecio_compra.Name = "tbxPrecio_compra";
             this.tbxPrecio_compra.Size = new System.Drawing.Size(319, 22);
             this.tbxPrecio_compra.TabIndex = 2;
+            this.tbxPrecio_compra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPrecio_compra_KeyPress);
             // 
             // tbxPrecio_venta
             // 
@@ -103,6 +104,7 @@
             this.tbxPrecio_venta.Name = "tbxPrecio_venta";
             this.tbxPrecio_venta.Size = new System.Drawing.Size(319, 22);
             this.tbxPrecio_venta.TabIndex = 3;
+            this.tbxPrecio_venta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPrecio_venta_KeyPress);
             // 
             // tbxDescripcion
             // 
@@ -119,6 +121,8 @@
             this.tbxCantidad_maxima.Name = "tbxCantidad_maxima";
             this.tbxCantidad_maxima.Size = new System.Drawing.Size(319, 22);
             this.tbxCantidad_maxima.TabIndex = 7;
+            this.tbxCantidad_maxima.TextChanged += new System.EventHandler(this.tbxCantidad_maxima_TextChanged);
+            this.tbxCantidad_maxima.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCantidad_maxima_KeyPress);
             // 
             // tbxCantidad_minima
             // 
@@ -127,6 +131,8 @@
             this.tbxCantidad_minima.Name = "tbxCantidad_minima";
             this.tbxCantidad_minima.Size = new System.Drawing.Size(319, 22);
             this.tbxCantidad_minima.TabIndex = 8;
+            this.tbxCantidad_minima.TextChanged += new System.EventHandler(this.tbxCantidad_minima_TextChanged);
+            this.tbxCantidad_minima.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCantidad_minima_KeyPress);
             // 
             // label1
             // 
@@ -286,6 +292,8 @@
             this.tbxExistencia.Name = "tbxExistencia";
             this.tbxExistencia.Size = new System.Drawing.Size(319, 22);
             this.tbxExistencia.TabIndex = 27;
+            this.tbxExistencia.TextChanged += new System.EventHandler(this.tbxExistencia_TextChanged);
+            this.tbxExistencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxExistencia_KeyPress);
             // 
             // cbxMarca
             // 

@@ -270,5 +270,45 @@ namespace SGF
             //MessageBox.Show(idMarca);
             tbxMarca.Text = rc.nombre_marca;
         }
+
+        private void tbxPrecio_compra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.SoloNumeros(e,sender);
+        }
+
+        private void tbxPrecio_venta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.SoloNumeros(e, sender);
+        }
+
+        private void tbxExistencia_TextChanged(object sender, EventArgs e)
+        {
+            Utilidades.SoloNumeros(e, sender);
+        }
+
+        private void tbxExistencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.SoloNumeros(e, sender);
+        }
+
+        private void tbxCantidad_maxima_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbxCantidad_minima_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbxCantidad_maxima_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.SoloNumeros(e, sender);
+        }
+
+        private void tbxCantidad_minima_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.SoloNumeros(e, sender);
+        }
     }
 }
