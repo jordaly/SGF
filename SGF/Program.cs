@@ -16,7 +16,7 @@ namespace SGF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCotizacion());
+            Application.Run(new FrmMenu());
 
 
         }
