@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.chxEstado = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tbxRNC = new System.Windows.Forms.TextBox();
             this.lbRNC = new System.Windows.Forms.Label();
@@ -43,7 +42,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(119, 217);
+            this.btnGuardar.Location = new System.Drawing.Point(119, 178);
             // 
             // label1
             // 
@@ -79,16 +78,6 @@
             this.tbxNombre.Size = new System.Drawing.Size(241, 22);
             this.tbxNombre.TabIndex = 5;
             // 
-            // chxEstado
-            // 
-            this.chxEstado.AutoSize = true;
-            this.chxEstado.Location = new System.Drawing.Point(119, 94);
-            this.chxEstado.Name = "chxEstado";
-            this.chxEstado.Size = new System.Drawing.Size(74, 21);
-            this.chxEstado.TabIndex = 6;
-            this.chxEstado.Text = "Estado";
-            this.chxEstado.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(366, 37);
@@ -101,7 +90,7 @@
             // 
             // tbxRNC
             // 
-            this.tbxRNC.Location = new System.Drawing.Point(119, 121);
+            this.tbxRNC.Location = new System.Drawing.Point(119, 93);
             this.tbxRNC.Name = "tbxRNC";
             this.tbxRNC.ReadOnly = true;
             this.tbxRNC.Size = new System.Drawing.Size(241, 22);
@@ -110,7 +99,7 @@
             // lbRNC
             // 
             this.lbRNC.AutoSize = true;
-            this.lbRNC.Location = new System.Drawing.Point(42, 124);
+            this.lbRNC.Location = new System.Drawing.Point(42, 96);
             this.lbRNC.Name = "lbRNC";
             this.lbRNC.Size = new System.Drawing.Size(37, 17);
             this.lbRNC.TabIndex = 8;
@@ -118,7 +107,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(366, 120);
+            this.button2.Location = new System.Drawing.Point(366, 92);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 10;
@@ -130,12 +119,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 282);
+            this.ClientSize = new System.Drawing.Size(473, 257);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tbxRNC);
             this.Controls.Add(this.lbRNC);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.chxEstado);
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.tbxCodigo);
             this.Controls.Add(this.label2);
@@ -146,7 +134,6 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.tbxCodigo, 0);
             this.Controls.SetChildIndex(this.tbxNombre, 0);
-            this.Controls.SetChildIndex(this.chxEstado, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.lbRNC, 0);
@@ -165,7 +152,6 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox tbxCodigo;
         public System.Windows.Forms.TextBox tbxNombre;
-        public System.Windows.Forms.CheckBox chxEstado;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox tbxRNC;
         public System.Windows.Forms.Label lbRNC;

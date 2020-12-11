@@ -58,8 +58,8 @@ namespace SGF
                     if (tbxCodigo.Text != "Nuevo")
                     {
                         cmd = "begin " +
-                                "update tercero set nombre='" + tbxNombre.Text.Trim() + "',estado='" + chxEstado.Checked + "',RNC='" + tbxRNC.Text + "' where id='" + tbxCodigo.Text + "';" +
-                                "update suplidor set estado='" + chxEstado.Checked + "' where idTercero='" + tbxCodigo.Text + "';" +
+                                "update tercero set nombre='" + tbxNombre.Text.Trim() + "',estado='1',RNC='" + tbxRNC.Text + "' where id='" + tbxCodigo.Text + "';" +
+                                "update suplidor set estado='1' where idTercero='" + tbxCodigo.Text + "';" +
                             "end";
 
                         ds = Utilidades.EjecutarDS(cmd);
@@ -73,8 +73,8 @@ namespace SGF
                     {
                         cmd = "begin " +
                                 "declare @id uniqueidentifier= newid();" +
-                                "insert into tercero(id,nombre,fecha_in,RNC,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + tbxRNC.Text + "','" + chxEstado.Checked + "');" +
-                                "insert into suplidor(idTercero,estado)values(@id,'" + chxEstado.Checked + "');" +
+                                "insert into tercero(id,nombre,fecha_in,RNC,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + tbxRNC.Text + "','1');" +
+                                "insert into suplidor(idTercero,estado)values(@id,'1');" +
                             "end";
 
                         ds = Utilidades.EjecutarDS(cmd);
@@ -88,8 +88,8 @@ namespace SGF
                     if (tbxCodigo.Text != "Nuevo")
                     {
                         cmd = "begin " +
-                                "update tercero set nombre='" + tbxNombre.Text.Trim() + "',estado='" + chxEstado.Checked + "' where id='" + tbxCodigo.Text + "';" +
-                                "update suplidor set estado='" + chxEstado.Checked + "' where idTercero='" + tbxCodigo.Text + "';" +
+                                "update tercero set nombre='" + tbxNombre.Text.Trim() + "',estado='1' where id='" + tbxCodigo.Text + "';" +
+                                "update suplidor set estado='1' where idTercero='" + tbxCodigo.Text + "';" +
                             "end";
 
                         ds = Utilidades.EjecutarDS(cmd);
@@ -103,8 +103,8 @@ namespace SGF
                     {
                         cmd = "begin " +
                                 "declare @id uniqueidentifier= newid();" +
-                                "insert into tercero(id,nombre,fecha_in,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'" + chxEstado.Checked + "');" +
-                                "insert into suplidor(idTercero,estado)values(@id,'" + chxEstado.Checked + "');" +
+                                "insert into tercero(id,nombre,fecha_in,estado)values(@id,'" + tbxNombre.Text.Trim() + "',GETDATE(),'1');" +
+                                "insert into suplidor(idTercero,estado)values(@id,'1');" +
                             "end";
 
                         ds = Utilidades.EjecutarDS(cmd);

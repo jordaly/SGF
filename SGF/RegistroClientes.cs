@@ -41,7 +41,7 @@ namespace SGF
                         "update telefono set numero='" + tbxTelefono.Text.Trim() + "'where id=@idTelefono;" +
                         "update correo set correo_electronico='" + tbxCorreo.Text.Trim() + "'where id=@idCorreo;" +
                         "update tercero " +
-                        "set nombre='" + tbxNombre.Text.Trim() + "',estado='" + chxEstado.Checked + "'" +
+                        "set nombre='" + tbxNombre.Text.Trim() + "',estado='1'" +
                         "where id='" + tbxCodigo.Text.Trim() + "';" +
                         "update persona " +
                         "set apellido='" + tbxApellido.Text.Trim() + "',fecha_nacimiento='" + dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year + "',sexo='" + cbxSexo.Text.Trim() + "'" +
@@ -65,7 +65,7 @@ namespace SGF
                     cmd = String.Format("exec crearCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'",
                        tbxNombre.Text.Trim(), tbxApellido.Text.Trim(), dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year,
                        cbxSexo.Text.Trim(), cbxProvincia.Text.Trim(), tbxLocalidad.Text.Trim(), tbxDireccion.Text.Trim(), rtbxIndicaciones.Text.Trim(),
-                       tbxCodigo_postal.Text.Trim(), chxEstado.Checked, tbxCorreo.Text.Trim(), tbxTelefono.Text.Trim());
+                       tbxCodigo_postal.Text.Trim(), "1", tbxCorreo.Text.Trim(), tbxTelefono.Text.Trim());
                     //rtbxIndicaciones.Text = cmd;
                     //MessageBox.Show(cmd);
                     ds = Utilidades.EjecutarDS(cmd);
@@ -227,7 +227,13 @@ namespace SGF
 
                 ErrorProvider.SetError(tbxTelefono, "Este campo no puede estar vasio.");
             }
-           
+            if (tbxCedula.Text == "")
+            {
+                ok = false;
+
+                ErrorProvider.SetError(tbxCedula, "Este campo no puede estar vasio.");
+            }
+
             return ok;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -252,10 +258,10 @@ namespace SGF
                         "update telefono set numero='" + tbxTelefono.Text.Trim() + "'where id=@idTelefono;" +
                         "update correo set correo_electronico='" + tbxCorreo.Text.Trim() + "'where id=@idCorreo;" +
                         "update tercero " +
-                        "set nombre='" + tbxNombre.Text.Trim() + "',estado='" + chxEstado.Checked + "'" +
+                        "set nombre='" + tbxNombre.Text.Trim() + "',estado='1' " +
                         "where id='" + tbxCodigo.Text.Trim() + "';" +
                         "update persona " +
-                        "set apellido='" + tbxApellido.Text.Trim() + "',fecha_nacimiento='" + dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year + "',sexo='" + cbxSexo.Text.Trim() + "'" +
+                        "set apellido='" + tbxApellido.Text.Trim() + "',fecha_nacimiento='" + dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year + "',sexo='" + cbxSexo.Text.Trim() + "',cedula='"+tbxCedula.Text.Trim()+"'" +
                         "where idTercero='" + tbxCodigo.Text.Trim() + "';" +
                         "update direccion_cliente " +
                         "set provincia='" + cbxProvincia.Text.Trim() + "',localidad='" + tbxLocalidad.Text.Trim() + "',direccion='" + tbxDireccion.Text.Trim() + "',indicaciones='" + rtbxIndicaciones.Text.Trim() + "',codigo_postal='" + tbxCodigo_postal.Text.Trim() + "'" +
@@ -273,10 +279,10 @@ namespace SGF
                 }
                 else
                 {
-                    cmd = String.Format("exec crearCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'",
+                    cmd = String.Format("exec crearCliente '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}'",
                        tbxNombre.Text.Trim(), tbxApellido.Text.Trim(), dtFecha.Value.Day + "/" + dtFecha.Value.Month + "/" + dtFecha.Value.Year,
                        cbxSexo.Text.Trim(), cbxProvincia.Text.Trim(), tbxLocalidad.Text.Trim(), tbxDireccion.Text.Trim(), rtbxIndicaciones.Text.Trim(),
-                       tbxCodigo_postal.Text.Trim(), chxEstado.Checked, tbxCorreo.Text.Trim(), tbxTelefono.Text.Trim());
+                       tbxCodigo_postal.Text.Trim(), "1", tbxCorreo.Text.Trim(), tbxTelefono.Text.Trim(),tbxCedula.Text.Trim());
                     //rtbxIndicaciones.Text = cmd;
                     //MessageBox.Show(cmd);
                     ds = Utilidades.EjecutarDS(cmd);
@@ -300,7 +306,7 @@ namespace SGF
             tbxCodigo_postal.Text = "";
             tbxTelefono.Text = "";
             tbxCorreo.Text = "";
-            chxEstado.Checked = true;
+            //chxEstado.Checked = true;
         }
 
         private void tbxNombre_TextChanged(object sender, EventArgs e)

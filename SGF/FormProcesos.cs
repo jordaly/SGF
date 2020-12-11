@@ -50,7 +50,10 @@ namespace SGF
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            Borrar();
+            if (dgvPadre.Rows.Count > 0)
+            {
+                Borrar();
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -60,7 +63,10 @@ namespace SGF
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            Seleccionar();
+            if (dgvPadre.Rows.Count > 0)
+            {
+                Seleccionar();
+            }
         }
     }
 }

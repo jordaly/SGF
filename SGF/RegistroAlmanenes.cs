@@ -47,7 +47,7 @@ namespace SGF
 
                 if (tbxCodigo.Text.Trim() == "Nuevo")
                 {
-                    cmd = "insert into almacen(id,descripcion,capacidad,estado)values(newid(),'" + tbxDescripcion.Text.Trim() + "','" + tbxCapacidad.Text.Trim() + "','" + chxEstado.Checked + "');";
+                    cmd = "insert into almacen(id,descripcion,capacidad,estado)values(newid(),'" + tbxDescripcion.Text.Trim() + "','" + tbxCapacidad.Text.Trim() + "','1');";
                     ds = Utilidades.EjecutarDS(cmd);
                     MessageBox.Show("Guardado exitosamente");
                     ////Limpiar();
@@ -55,7 +55,7 @@ namespace SGF
                 }
                 else
                 {
-                    cmd = "update from almacen set descripcion='" + tbxDescripcion.Text.Trim() + "',capacidad='" + tbxCapacidad.Text.Trim() + "',estado='" + chxEstado.Checked + "' where id='" + tbxCodigo.Text.Trim() + "';";
+                    cmd = "update from almacen set descripcion='" + tbxDescripcion.Text.Trim() + "',capacidad='" + tbxCapacidad.Text.Trim() + "',estado='1' where id='" + tbxCodigo.Text.Trim() + "';";
                     ds = Utilidades.EjecutarDS(cmd);
                     MessageBox.Show("Guardado exitosamente");
                     ////Limpiar();

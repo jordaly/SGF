@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBorrar
@@ -46,8 +47,7 @@
             "nombre",
             "apellido",
             "fecha_inicio",
-            "fecha_fin",
-            "estado"});
+            "fecha_fin"});
             this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             // 
             // ControlVacasiones
@@ -58,6 +58,7 @@
             this.Name = "ControlVacasiones";
             this.Text = "ControlVacasiones";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }

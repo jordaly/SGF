@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculadora de Devueltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculadora de Devueltas.Designer.cs">
+      <DependentUpon>Calculadora de Devueltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCuadresCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCuadresCaja.Designer.cs">
+      <DependentUpon>ConsultaCuadresCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaVentasHoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVentasHoy.Designer.cs">
+      <DependentUpon>ConsultaVentasHoy.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +137,24 @@
     <Compile Include="ListadoDGII.Designer.cs">
       <DependentUpon>ListadoDGII.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCaja.Designer.cs">
+      <DependentUpon>MantenimientoCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoContrataciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoContrataciones.Designer.cs">
+      <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoTransporte.Designer.cs">
+      <DependentUpon>MantenimientoTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoAlmacenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +184,12 @@
     </Compile>
     <Compile Include="MantenimientoInventario.Designer.cs">
       <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMarca.Designer.cs">
+      <DependentUpon>MantenimientoMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoMovimientoArticulos.cs">
       <SubType>Form</SubType>
@@ -211,6 +253,12 @@
     <Compile Include="RegistroEmpleados.Designer.cs">
       <DependentUpon>RegistroEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroMarca.Designer.cs">
+      <DependentUpon>RegistroMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroMovimientoArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +289,12 @@
     <Compile Include="RegistroVacaciones.Designer.cs">
       <DependentUpon>RegistroVacaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroVacante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVacante.Designer.cs">
+      <DependentUpon>RegistroVacante.cs</DependentUpon>
+    </Compile>
     <Compile Include="registro_fabricacion_inmuebles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,12 +319,12 @@
       <DependentUpon>prueba.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SGFDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SGFDataSet.xsd</DependentUpon>
+    <Compile Include="MantenimientoVacantes.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utilidades.cs" />
+    <Compile Include="MantenimientoVacantes.Designer.cs">
+      <DependentUpon>MantenimientoVacantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,12 +333,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades.cs" />
     <Compile Include="VisorDeReportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VisorDeReportes.Designer.cs">
       <DependentUpon>VisorDeReportes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Calculadora de Devueltas.resx">
+      <DependentUpon>Calculadora de Devueltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCuadresCaja.resx">
+      <DependentUpon>ConsultaCuadresCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVentasHoy.resx">
+      <DependentUpon>ConsultaVentasHoy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta_taller_inmuebles.resx">
       <DependentUpon>Consulta_taller_inmuebles.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,11 +391,14 @@
     <EmbeddedResource Include="MantenimientoAlmacenes.resx">
       <DependentUpon>MantenimientoAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCaja.resx">
+      <DependentUpon>MantenimientoCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoClientes.resx">
       <DependentUpon>MantenimientoClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoCotizacion.resx">
-      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
+    <EmbeddedResource Include="MantenimientoContrataciones.resx">
+      <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEmpleados.resx">
       <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
@@ -339,11 +406,17 @@
     <EmbeddedResource Include="MantenimientoInventario.resx">
       <DependentUpon>MantenimientoInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMarca.resx">
+      <DependentUpon>MantenimientoMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMovimientoArticulos.resx">
       <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoSuplidores.resx">
       <DependentUpon>MantenimientoSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoTransporte.resx">
+      <DependentUpon>MantenimientoTransporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoUsuarios.resx">
       <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
@@ -383,6 +456,9 @@
     <EmbeddedResource Include="RegistroEmpleados.resx">
       <DependentUpon>RegistroEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroMarca.resx">
+      <DependentUpon>RegistroMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroMovimientoArticulos.resx">
       <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroVacante.resx">
+      <DependentUpon>RegistroVacante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registro_fabricacion_inmuebles.resx">
       <DependentUpon>registro_fabricacion_inmuebles.cs</DependentUpon>
@@ -402,6 +481,9 @@
     <EmbeddedResource Include="Reportes\prueba.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>prueba.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoVacantes.resx">
+      <DependentUpon>MantenimientoVacantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisorDeReportes.resx">
       <DependentUpon>VisorDeReportes.cs</DependentUpon>
@@ -415,17 +497,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SGFDataSet.xsc">
-      <DependentUpon>SGFDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SGFDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SGFDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SGFDataSet.xss">
-      <DependentUpon>SGFDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

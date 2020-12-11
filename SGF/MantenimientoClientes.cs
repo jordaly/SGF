@@ -20,7 +20,7 @@ namespace SGF
             cbxBuscar.SelectedIndex = 0;
 
         }
-        public string BuscarDatos = "select t.id, t.nombre,p.apellido,p.fecha_nacimiento,p.sexo,pais.pais,d.provincia,d.localidad,d.direccion,d.codigo_postal,d.indicaciones,telefono.numero,correo.correo_electronico,p.estado from persona as p,tercero as t, cliente as c,direccion_cliente as d,pais,telefono,correo,correo_vs_tercero,telefono_vs_tercero where c.idTercero = t.id and c.idTercero = p.idtercero and d.idPais=pais.id and d.id=c.idDireccion_cleinte and telefono_vs_tercero.idTelefono=telefono.id and telefono_vs_tercero.idTercero=t.id and correo_vs_tercero.idCorreo=correo.id and correo_vs_tercero.idTercero=t.id ";
+        public string BuscarDatos = "select top(200) t.id, t.nombre,p.apellido,p.fecha_nacimiento,p.sexo,pais.pais,d.provincia,d.localidad,d.direccion,d.codigo_postal,d.indicaciones,telefono.numero,correo.correo_electronico, p.cedula, p.estado from persona as p,tercero as t, cliente as c,direccion_cliente as d,pais,telefono,correo,correo_vs_tercero,telefono_vs_tercero where c.idTercero = t.id and c.idTercero = p.idtercero and d.idPais=pais.id and d.id=c.idDireccion_cleinte and telefono_vs_tercero.idTelefono=telefono.id and telefono_vs_tercero.idTercero=t.id and correo_vs_tercero.idCorreo=correo.id and correo_vs_tercero.idTercero=t.id and c.estado!='0' ";
         
         
         
@@ -30,10 +30,7 @@ namespace SGF
             if (result == DialogResult.Yes)
             {
                 cmd = "begin " +
-               "declare @idDireccion uniqueidentifier; " +
-               "select @idDireccion = c.idDireccion_cleinte from cliente as c, direccion_cliente as d, tercero as t where c.idTercero = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "' and c.idTercero = t.id and c.idDireccion_cleinte = d.id;" +
-               "delete from cliente where idTercero = '" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';" +
-               "delete from direccion_cliente where id = @idDireccion;" +
+               "update cliente set estado='0' where idTercero='"+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';" +
                "end";
                 ds=Utilidades.EjecutarDS(cmd);
                 MessageBox.Show("Se ha eliminado Exitosamente");
@@ -72,7 +69,8 @@ namespace SGF
                 rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[10].Value.ToString();
                 rc.tbxTelefono.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[11].Value.ToString();
                 rc.tbxCorreo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString();
-                rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString());
+            rc.tbxCedula.Text= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[13].Value.ToString();
+            //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[14].Value.ToString());
 
                 rc.ShowDialog();
 

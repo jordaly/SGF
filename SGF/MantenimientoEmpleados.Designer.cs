@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxBuscar
@@ -40,8 +41,7 @@
             "puesto",
             "salario",
             "hora_entrada",
-            "hora_salida",
-            "estado"});
+            "hora_salida"});
             this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             // 
             // MantenimientoEmpleados
@@ -52,6 +52,7 @@
             this.Name = "MantenimientoEmpleados";
             this.Text = "MantenimientoEmpleados";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
