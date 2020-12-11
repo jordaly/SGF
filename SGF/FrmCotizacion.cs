@@ -15,18 +15,13 @@ namespace SGF
         public FrmCotizacion()
         {
             InitializeComponent();
- 
-            if (lbcodigo.Text=="Nuevo")
+
+            if (lbcodigo.Text == "Nuevo")
             {
                 lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
             }
-            string cmdtipo_factura = "Select * from tipo_factura";
+
             string cmdsucursal = "Select * from sucursal";
-
-            ds = Utilidades.EjecutarDS(cmdtipo_factura);
-            cbxtipofactura.DisplayMember = "descripcion";
-            cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
-
 
             ds = Utilidades.EjecutarDS(cmdsucursal);
             cbxsucursal.DisplayMember = "nombre_sucursal";
@@ -57,7 +52,7 @@ namespace SGF
 
         private void btnbuscararticulo_Click(object sender, EventArgs e)
         {
-             MantenimientoInventario frm = new MantenimientoInventario();
+            MantenimientoInventario frm = new MantenimientoInventario();
 
             frm.btnBorrar.Enabled = false;
             frm.btnModificar.Enabled = false;
@@ -65,15 +60,15 @@ namespace SGF
             frm.btnSeleccionar.Enabled = true;
             frm.ShowDialog();
 
-            codigo_articulo =  frm.codigo_articulo;
+            codigo_articulo = frm.codigo_articulo;
             nombre_articulo = frm.nombre_articulo;
             stock_articulo = frm.stock_articulo;
             precio_articulo = frm.precio_articulo;
             itebis = frm.itebis;
 
-            lbcodigoarticulo.Text =" Codigo Articulo: " +codigo_articulo;
+            lbcodigoarticulo.Text = " Codigo Articulo: " + codigo_articulo;
             txtarticulo.Text = nombre_articulo;
-            lbstock.Text = "STOCK: "+stock_articulo;
+            lbstock.Text = "STOCK: " + stock_articulo;
             txtprecioventa.Text = precio_articulo;
             txtitebis.Text = itebis;
         }
@@ -81,7 +76,6 @@ namespace SGF
         public void validar()
         {
             cbxsucursal.Text = "";
-            cbxtipofactura.Text = "";
             txtcliente.Text = "";
             txtrnc.Text = "";
         }
@@ -229,58 +223,104 @@ namespace SGF
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
+            //insertar
             if (ComprobarCamposFactura())
             {
-
-                cmd = "select * from tipo_factura where descripcion='" + cbxtipofactura.Text + "'";
-                ds = Utilidades.EjecutarDS(cmd);
-                string idTipo_factura = ds.Tables[0].Rows[0]["id"].ToString();
-
-
-
-                cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
-                ds = Utilidades.EjecutarDS(cmd);
-                string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
-
-               
-                cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +
-                    "insert into cotizacion(id,idcliente,fecha_in,total,idSucursal)values(@idCotizacion,'"+codigo_cliente+ "',getdate(),'" + total.ToString().Replace(",", ".") + "','"+idsucursal+ "'); " +
-                    "select id from cotizacion where id=@idCotizacion; " +
-                    "end";
-                MessageBox.Show("guardado exitosamente");
-                //txtcantidad.Text = cmd;
-                //MessageBox.Show(cmd);
-                ds = Utilidades.EjecutarDS(cmd);
-                if (ds != null)
+                if (lbidcotizacion.Text == "Nuevo")
                 {
-                    string idcotizacion = ds.Tables[0].Rows[0]["id"].ToString();
+                    cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+                    ds = Utilidades.EjecutarDS(cmd);
+                    string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
 
-                    foreach (DataGridViewRow fila in gridcotizacion.Rows)
+
+                    cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +
+                        "insert into cotizacion(id,idcliente,fecha_in,total,idSucursal)values(@idCotizacion,'" + codigo_cliente + "',getdate(),'" + total.ToString().Replace(",", ".") + "','" + idsucursal + "'); " +
+                        "select id from cotizacion where id=@idCotizacion; " +
+                        "end";
+                    MessageBox.Show("guardado exitosamente");
+                    //txtcantidad.Text = cmd;
+                    //MessageBox.Show(cmd);
+                    ds = Utilidades.EjecutarDS(cmd);
+                    if (ds != null)
                     {
-                        cmd = "begin " +
-                            "insert into detalle_cotizacion(idArticulo,idCotizacion,cantidadCotizada,importe)values('" + fila.Cells[0].Value.ToString() + "','"+idcotizacion+ "','"+ fila.Cells[4].Value.ToString() + "','" + fila.Cells[5].Value.ToString().Replace(",", ".") + "'); " +
-                            "end";
-                        ds = Utilidades.EjecutarDS(cmd);
+                        string idcotizacion = ds.Tables[0].Rows[0]["id"].ToString();
+
+                        foreach (DataGridViewRow fila in gridcotizacion.Rows)
+                        {
+                            cmd = "begin " +
+                                "insert into detalle_cotizacion(idArticulo,idCotizacion,cantidadCotizada,importe)values('" + fila.Cells[0].Value.ToString() + "','" + idcotizacion + "','" + fila.Cells[4].Value.ToString() + "','" + fila.Cells[5].Value.ToString().Replace(",", ".") + "'); " +
+                                "end";
+                            ds = Utilidades.EjecutarDS(cmd);
+                        }
+                        /*
+                        //C:\Users\Jorda\source\repos\SGF\SGF\Reportes\Factura con su detalle3.rpt
+                        string RutaReporte = root + @"Reportes\Factura con su detalle.rpt";
+                        //MessageBox.Show(RutaReporte);
+                        VisorDeReportes form = new VisorDeReportes();
+                        ReportDocument oRep = new ReportDocument();
+                        ParameterField pf = new ParameterField();
+                        ParameterFields pfs = new ParameterFields();
+                        ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                        pf.Name = "@numFact"; // variable del store procedure
+                        pdv.Value = idfactura; // variable donde se  guarda el numero de factura
+                        pf.CurrentValues.Add(pdv);
+                        pfs.Add(pf);
+                        form.crvVisor.ParameterFieldInfo = pfs;
+                        oRep.Load(RutaReporte);
+                        form.crvVisor.ReportSource = oRep;
+                        form.Show();
+                        this.Close();*/
+                        //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\(" + idfactura + ") Factura.pdf");
                     }
-                    /*
-                    //C:\Users\Jorda\source\repos\SGF\SGF\Reportes\Factura con su detalle3.rpt
-                    string RutaReporte = root + @"Reportes\Factura con su detalle.rpt";
-                    //MessageBox.Show(RutaReporte);
-                    VisorDeReportes form = new VisorDeReportes();
-                    ReportDocument oRep = new ReportDocument();
-                    ParameterField pf = new ParameterField();
-                    ParameterFields pfs = new ParameterFields();
-                    ParameterDiscreteValue pdv = new ParameterDiscreteValue();
-                    pf.Name = "@numFact"; // variable del store procedure
-                    pdv.Value = idfactura; // variable donde se  guarda el numero de factura
-                    pf.CurrentValues.Add(pdv);
-                    pfs.Add(pf);
-                    form.crvVisor.ParameterFieldInfo = pfs;
-                    oRep.Load(RutaReporte);
-                    form.crvVisor.ReportSource = oRep;
-                    form.Show();
-                    this.Close();*/
-                    //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\(" + idfactura + ") Factura.pdf");
+                }
+                else
+                {
+                    //actualizar (hacer cambios)
+
+                    cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+                    ds = Utilidades.EjecutarDS(cmd);
+                    string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+
+
+                    cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +
+                        "insert into cotizacion(id,idcliente,fecha_in,total,idSucursal)values(@idCotizacion,'" + codigo_cliente + "',getdate(),'" + total.ToString().Replace(",", ".") + "','" + idsucursal + "'); " +
+                        "select id from cotizacion where id=@idCotizacion; " +
+                        "end";
+                    MessageBox.Show("guardado exitosamente");
+                    //txtcantidad.Text = cmd;
+                    //MessageBox.Show(cmd);
+                    ds = Utilidades.EjecutarDS(cmd);
+                    if (ds != null)
+                    {
+                        string idcotizacion = ds.Tables[0].Rows[0]["id"].ToString();
+
+                        foreach (DataGridViewRow fila in gridcotizacion.Rows)
+                        {
+                            cmd = "begin " +
+                                "insert into detalle_cotizacion(idArticulo,idCotizacion,cantidadCotizada,importe)values('" + fila.Cells[0].Value.ToString() + "','" + idcotizacion + "','" + fila.Cells[4].Value.ToString() + "','" + fila.Cells[5].Value.ToString().Replace(",", ".") + "'); " +
+                                "end";
+                            ds = Utilidades.EjecutarDS(cmd);
+                        }
+                        /*
+                        //C:\Users\Jorda\source\repos\SGF\SGF\Reportes\Factura con su detalle3.rpt
+                        string RutaReporte = root + @"Reportes\Factura con su detalle.rpt";
+                        //MessageBox.Show(RutaReporte);
+                        VisorDeReportes form = new VisorDeReportes();
+                        ReportDocument oRep = new ReportDocument();
+                        ParameterField pf = new ParameterField();
+                        ParameterFields pfs = new ParameterFields();
+                        ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                        pf.Name = "@numFact"; // variable del store procedure
+                        pdv.Value = idfactura; // variable donde se  guarda el numero de factura
+                        pf.CurrentValues.Add(pdv);
+                        pfs.Add(pf);
+                        form.crvVisor.ParameterFieldInfo = pfs;
+                        oRep.Load(RutaReporte);
+                        form.crvVisor.ReportSource = oRep;
+                        form.Show();
+                        this.Close();*/
+                        //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\(" + idfactura + ") Factura.pdf");
+                    }
                 }
             }
         }

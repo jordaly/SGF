@@ -12,7 +12,7 @@ namespace SGF
 {
     public partial class MantenimientoCotizacion : FormProcesos
     {
-        public string BuscarDatos = "select c.id,t.id as idCliente, t.nombre,c.fecha_in,s.nombre_sucursal,c.total from cotizacion as c,sucursal as s, tercero as t where t.id=c.idCliente and s.id=c.idSucursal";
+        public string BuscarDatos = "select c.id,t.id as idCliente, t.nombre,p.apellido,c.fecha_in,s.nombre_sucursal,c.total from persona as p, cotizacion as c,sucursal as s, tercero as t where t.id=c.idCliente and s.id=c.idSucursal and p.idTercero=c.idCliente";
         public MantenimientoCotizacion()
         {
             InitializeComponent();
@@ -46,14 +46,82 @@ namespace SGF
             refrescarDatos(BuscarDatos);
         }
 
+
         public override void Modificar()
         {
             FrmCotizacion rc = new FrmCotizacion();
-            cmd = "select *from detalle_cotizacion where idCotizacion='"+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
-            rc.ShowDialog();
+            cmd = "select d.idArticulo, a.descripcion, d.cantidadCotizada, a.ITEBIs,a.precio_venta from detalle_cotizacion as d,articulo as a where idCotizacion='" + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'and a.id=d.idArticulo";
+            ds = Utilidades.EjecutarDS(cmd);
 
-            refrescarDatos(BuscarDatos);
 
+
+            int cont_fila = 0;
+            double total;
+            string codigo_empleado;
+            string codigo_usuario;
+
+            string codigo_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            string nombre_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            string apellido_cliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            string sucursal = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[5].Value.ToString();
+
+            rc.lbcodigo.Text = codigo_cliente;
+            rc.txtcliente.Text = nombre_cliente + " " + apellido_cliente;
+            rc.cbxsucursal.Text = sucursal;
+
+            foreach (DataRow filas in ds.Tables[0].Rows)
+            {
+                filas[""].ToString();
+                
+                    bool existe = false;
+                    int num_fila = 0;
+
+                    if (cont_fila == 0)
+                    {
+                        rc.gridcotizacion.Rows.Add(filas["idArticulo"].ToString(), filas["descripcion"].ToString(),filas["precio_venta"].ToString(),  filas["ITEBIs"].ToString(),  filas["cantidadCotizada"].ToString());
+                        double importe = (Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[2].Value) + (Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[3].Value))) * Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[4].Value);
+                        rc.gridcotizacion.Rows[cont_fila].Cells[5].Value = importe;
+
+                        cont_fila++;
+                    }
+                    else
+                    {
+                        foreach (DataGridViewRow fila in rc.gridcotizacion.Rows)
+                        {
+                            if (fila.Cells[0].Value.ToString() == filas["idArticulo"].ToString())
+                            {
+                                existe = true;
+                                num_fila = fila.Index;
+                            }
+                        }
+
+                        if (existe == true)
+                        {
+                        //MessageBox.Show(""+num_fila);
+                        rc.gridcotizacion.Rows[num_fila].Cells[4].Value = Convert.ToDouble( filas["cantidadCotizada"].ToString()) + (Convert.ToDouble(rc.gridcotizacion.Rows[num_fila].Cells[4].Value));
+
+                            double importe = (Convert.ToDouble(rc.gridcotizacion.Rows[num_fila].Cells[2].Value) + (Convert.ToDouble(rc.gridcotizacion.Rows[num_fila].Cells[2].Value) * Convert.ToDouble(rc.gridcotizacion.Rows[num_fila].Cells[3].Value))) * (Convert.ToDouble(rc.gridcotizacion.Rows[num_fila].Cells[4].Value));
+
+                            rc.gridcotizacion.Rows[num_fila].Cells[5].Value = importe;
+
+                        }
+                        else
+                        {
+                        rc.gridcotizacion.Rows.Add(filas["idArticulo"].ToString(), filas["descripcion"].ToString(),  filas["precio_venta"].ToString(),  filas["ITEBIs"].ToString(),  filas["cantidadCotizada"].ToString());
+                            double importe = (Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[2].Value) + (Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[3].Value))) * Convert.ToDouble(rc.gridcotizacion.Rows[cont_fila].Cells[4].Value);
+                        rc.gridcotizacion.Rows[cont_fila].Cells[5].Value = importe;
+
+                            cont_fila++;
+                        }
+                    }
+                    total = 0;
+
+                    foreach (DataGridViewRow fila in rc.gridcotizacion.Rows)
+                    {
+                        total += Convert.ToDouble(fila.Cells[5].Value);
+                    }
+                    rc.txttotal.Text = "RD$ " + total.ToString();
+            }
         }
 
         public string codigo_suplidor = "";
