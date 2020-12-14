@@ -21,6 +21,14 @@ namespace SGF
                 lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
             }
 
+            //string cmdtipo_factura = "Select * from tipo_factura";
+            string cmdsucursal = "Select * from sucursal";
+
+            //ds = Utilidades.EjecutarDS(cmdtipo_factura);
+            //cbxtipofactura.DisplayMember = "descripcion";
+            //cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
+
+
             string cmdsucursal = "Select * from sucursal";
 
             ds = Utilidades.EjecutarDS(cmdsucursal);
@@ -52,7 +60,12 @@ namespace SGF
 
         private void btnbuscararticulo_Click(object sender, EventArgs e)
         {
-            MantenimientoInventario frm = new MantenimientoInventario();
+
+            ListadoArticulosSucursal frm = new ListadoArticulosSucursal();
+            cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+            ds = Utilidades.EjecutarDS(cmd);
+            frm.idSucursal = ds.Tables[0].Rows[0]["id"].ToString();
+
 
             frm.btnBorrar.Enabled = false;
             frm.btnModificar.Enabled = false;
@@ -76,6 +89,9 @@ namespace SGF
         public void validar()
         {
             cbxsucursal.Text = "";
+
+            //cbxtipofactura.Text = "";
+
             txtcliente.Text = "";
             txtrnc.Text = "";
         }
@@ -226,7 +242,29 @@ namespace SGF
             //insertar
             if (ComprobarCamposFactura())
             {
-                if (lbidcotizacion.Text == "Nuevo")
+
+
+                //cmd = "select * from tipo_factura where descripcion='" + cbxtipofactura.Text + "'";
+                //ds = Utilidades.EjecutarDS(cmd);
+                //string idTipo_factura = ds.Tables[0].Rows[0]["id"].ToString();
+
+
+
+                cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+
+               
+                cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +
+                    "insert into cotizacion(id,idcliente,fecha_in,total,idSucursal)values(@idCotizacion,'"+codigo_cliente+ "',getdate(),'" + total.ToString().Replace(",", ".") + "','"+idsucursal+ "'); " +
+                    "select id from cotizacion where id=@idCotizacion; " +
+                    "end";
+                MessageBox.Show("guardado exitosamente");
+                //txtcantidad.Text = cmd;
+                //MessageBox.Show(cmd);
+                ds = Utilidades.EjecutarDS(cmd);
+                if (ds != null)
+
                 {
                     cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
                     ds = Utilidades.EjecutarDS(cmd);
@@ -323,6 +361,14 @@ namespace SGF
                     }
                 }
             }
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            txtarticulo.Text = "";
+            txtcantidad.Text = "";
+            txtitebis.Text = "";
+            lbstock.Text = "STOCK: ";
         }
     }
 }

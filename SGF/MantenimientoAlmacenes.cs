@@ -12,6 +12,8 @@ namespace SGF
 {
     public partial class MantenimientoAlmacenes : FormProcesos
     {
+        public bool almacenSucursal = false;
+        
         public MantenimientoAlmacenes()
         {
             InitializeComponent();
@@ -26,13 +28,12 @@ namespace SGF
         public override void Seleccionar()
         {
 
-            if (dgvPadre.Rows.Count != 0)
-            {
+            
                 codigo_almacen = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
                 nombre_almacen = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-
+                
                 this.Close();
-            }
+            
 
 
         }
@@ -72,28 +73,52 @@ namespace SGF
             RegistroAlmanenes rc = new RegistroAlmanenes();
             rc.ShowDialog();
 
-
-            refrescarDatos(BuscarDatos);
+            if (almacenSucursal)
+            {
+                cmd = "select * from almacen as al, sucursal_vs_almacen as sva where al.id!=sva.idAlmacen and al.estado='1'";
+                refrescarDatos(cmd);
+            }
+            else
+            {
+                refrescarDatos(BuscarDatos);
+            }
+            
         }
         public override void Buscar()
         {
             FormBarraBusqueda bb = new FormBarraBusqueda();
             bb.ShowDialog();
             string parametro = bb.parametro;
-            string v = "where almacen.";
-            
+            string v = "";
 
-            cmd = BuscarDatos;
+            if (almacenSucursal)
+            {
+                cmd = "select * from almacen as al, sucursal_vs_almacen as sva where al.id!=sva.idAlmacen and al.estado='1' ";
+                v = "al.";
+            }
+            else
+            {
+                cmd = BuscarDatos;
+            }
             //MessageBox.Show("se esta ejecuetando");
             if (!String.IsNullOrEmpty(parametro.Trim()))
             {
-                cmd +=  v + cbxBuscar.Text.Trim() + " like('%" + parametro.Trim() + "%')";
+                cmd +=" and "+  v + cbxBuscar.Text.Trim() + " like('%" + parametro.Trim() + "%')";
             }
             ds = Utilidades.EjecutarDS(cmd);
             //MessageBox.Show(cmd);
             if (ds.Tables.Count > 0)
             {
                 dgvPadre.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void MantenimientoAlmacenes_Load(object sender, EventArgs e)
+        {
+            if (almacenSucursal)
+            {
+                cmd = "select * from almacen as al, sucursal_vs_almacen as sva where al.id!=sva.idAlmacen and al.estado='1'";
+                refrescarDatos(cmd);
             }
         }
     }

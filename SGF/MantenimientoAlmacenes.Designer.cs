@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,9 @@
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "MantenimientoAlmacenes";
             this.Text = "MantenimientoAlmacenes";
+            this.Load += new System.EventHandler(this.MantenimientoAlmacenes_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);

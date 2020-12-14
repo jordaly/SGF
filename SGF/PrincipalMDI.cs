@@ -273,9 +273,11 @@ namespace SGF
             if (Convert.ToBoolean(ds.Tables[0].Rows[0]["modificar_usuarios"].ToString()))
             {
                 usuariosToolStripMenuItem.Visible = true;
+                empresaDelSistemaToolStripMenuItem.Visible = true;
             }
             else
             {
+                empresaDelSistemaToolStripMenuItem.Visible = false;
                 usuariosToolStripMenuItem.Visible = false;
             }
 
@@ -302,11 +304,17 @@ namespace SGF
             //trasnporte ***
             if (Convert.ToBoolean(ds.Tables[0].Rows[0]["despacho_transporte"].ToString()))
             {
-
+                transporteToolStripMenuItem1.Visible = true;
+                vehiculosToolStripMenuItem.Visible = true;
+                modeloToolStripMenuItem.Visible = true;
+                talleresToolStripMenuItem.Visible = true;
             }
             else
             {
-
+                transporteToolStripMenuItem1.Visible = false;
+                vehiculosToolStripMenuItem.Visible = false;
+                modeloToolStripMenuItem.Visible = false;
+                talleresToolStripMenuItem.Visible = false;
             }
 
 
@@ -365,6 +373,25 @@ namespace SGF
 
 
 
+        }
+
+        public void alertaAcumulacionQuejas() 
+        {
+            cmd = "select * from quejas where estado='1'";
+            ds2 = Utilidades.EjecutarDS(cmd);
+            if (ds2.Tables[0].Rows.Count > 0)
+            {
+                cmd = "";
+                foreach (DataRow fila in ds2.Tables[0].Rows)
+                {
+                    cmd += "Codigo: " + fila["id"].ToString() + "     |    Fecha: " + fila["fecha_in"].ToString() + "    |        stock actual:" + fila["queja"].ToString() + "           |    stock minimo: " + fila["cantidad_minima"].ToString() + "\r\n";
+
+                }
+                principal rc = new principal();
+                rc.richTextBox1.Text = cmd;
+                rc.Text = "Alerta de acumulacion de quejas";
+                rc.ShowDialog();
+            }
         }
         public void alertaStockBajoArticulo()
         {
@@ -507,6 +534,7 @@ namespace SGF
                 rc.idCaja= ds.Tables[0].Rows[0]["id"].ToString();
                 rc.btnInicio.Enabled = false;
                 rc.btnFinalizar.Enabled = true;
+                rc.tbxCantidadInicial.Enabled = false;
                 rc.MdiParent = this;
                 rc.Show();
             }
@@ -529,6 +557,64 @@ namespace SGF
         private void consultaCuadresCajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConsultaCuadresCaja rc = new ConsultaCuadresCaja();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void quejasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            MantenimientoQuejas rc = new MantenimientoQuejas();
+            rc.codigoUsuario = codigo_usuario;
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void sucursalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoSucursales rc = new MantenimientoSucursales();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void transporteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Mantenimiento_transporte rc = new Mantenimiento_transporte();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoVehiculos rc = new MantenimientoVehiculos();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void confirmarLlegadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfirmacionTransporte rc = new ConfirmacionTransporte();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void modeloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoModelo rc = new MantenimientoModelo();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void empresaDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmpresaSistema rc = new EmpresaSistema();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void talleresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoTalleres rc = new MantenimientoTalleres();
             rc.MdiParent = this;
             rc.Show();
         }
