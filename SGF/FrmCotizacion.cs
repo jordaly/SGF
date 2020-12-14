@@ -29,7 +29,7 @@ namespace SGF
             //cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
 
 
-            string cmdsucursal = "Select * from sucursal";
+           // string cmdsucursal = "Select * from sucursal";
 
             ds = Utilidades.EjecutarDS(cmdsucursal);
             cbxsucursal.DisplayMember = "nombre_sucursal";
@@ -282,7 +282,7 @@ namespace SGF
                 {
                     cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
                     ds = Utilidades.EjecutarDS(cmd);
-                    string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+                    idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
 
 
                     cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +
@@ -331,7 +331,7 @@ namespace SGF
 
                     cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
                     ds = Utilidades.EjecutarDS(cmd);
-                    string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+                    idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
 
 
                     cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +

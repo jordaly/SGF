@@ -406,5 +406,15 @@ namespace SGF
             lbcodigo.Text = "Codigo Cliente: " + frm.codigo_cliente;
             codigo_cliente = frm.codigo_cliente;
         }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
