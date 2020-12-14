@@ -283,7 +283,7 @@ namespace SGF
 
         private void tbxExistencia_TextChanged(object sender, EventArgs e)
         {
-            Utilidades.SoloNumeros(e, sender);
+            //Utilidades.SoloNumeros(e, sender);
         }
 
         private void tbxExistencia_KeyPress(object sender, KeyPressEventArgs e)

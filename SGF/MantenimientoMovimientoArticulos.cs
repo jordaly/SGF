@@ -12,7 +12,7 @@ namespace SGF
 {
     public partial class MantenimientoMovimientoArticulos : FormProcesos
     {
-        public string BuscarDatos = "select a.id,a.descripcion,(a.existencia-(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id)) cantidad_sin_asignar,(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id) as cantidad_asignada,a.existencia as total from articulo as a  where a.estado!='0' ";
+        public string BuscarDatos = "select a.id,a.descripcion,(a.existencia-(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id)) as cantidad_sin_asignar,(select sum(cantidad)  from articulo_vs_almacen where idArticulo=a.id) as cantidad_asignada,a.existencia as total from articulo as a  where a.estado!='0' ";
         public MantenimientoMovimientoArticulos()
         {
             InitializeComponent();
@@ -62,7 +62,11 @@ namespace SGF
             //rc.idArticulo= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             //rc.rtbxIndicaciones.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
             //ds = Utilidades.EjecutarDS(cmd);
-            rc.tkbCantidad.Maximum =Convert.ToInt32( dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            if (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString()!="")
+            {
+                rc.tkbCantidad.Maximum = Convert.ToInt32(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            }
+            
             rc.sinAsignar = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
             rc.Asignado = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
             rc.total = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();

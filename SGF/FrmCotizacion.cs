@@ -20,12 +20,12 @@ namespace SGF
             {
                 lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
             }
-            string cmdtipo_factura = "Select * from tipo_factura";
+            //string cmdtipo_factura = "Select * from tipo_factura";
             string cmdsucursal = "Select * from sucursal";
 
-            ds = Utilidades.EjecutarDS(cmdtipo_factura);
-            cbxtipofactura.DisplayMember = "descripcion";
-            cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
+            //ds = Utilidades.EjecutarDS(cmdtipo_factura);
+            //cbxtipofactura.DisplayMember = "descripcion";
+            //cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
 
 
             ds = Utilidades.EjecutarDS(cmdsucursal);
@@ -57,7 +57,10 @@ namespace SGF
 
         private void btnbuscararticulo_Click(object sender, EventArgs e)
         {
-             MantenimientoInventario frm = new MantenimientoInventario();
+            ListadoArticulosSucursal frm = new ListadoArticulosSucursal();
+            cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+            ds = Utilidades.EjecutarDS(cmd);
+            frm.idSucursal = ds.Tables[0].Rows[0]["id"].ToString();
 
             frm.btnBorrar.Enabled = false;
             frm.btnModificar.Enabled = false;
@@ -81,7 +84,7 @@ namespace SGF
         public void validar()
         {
             cbxsucursal.Text = "";
-            cbxtipofactura.Text = "";
+            //cbxtipofactura.Text = "";
             txtcliente.Text = "";
             txtrnc.Text = "";
         }
@@ -232,9 +235,9 @@ namespace SGF
             if (ComprobarCamposFactura())
             {
 
-                cmd = "select * from tipo_factura where descripcion='" + cbxtipofactura.Text + "'";
-                ds = Utilidades.EjecutarDS(cmd);
-                string idTipo_factura = ds.Tables[0].Rows[0]["id"].ToString();
+                //cmd = "select * from tipo_factura where descripcion='" + cbxtipofactura.Text + "'";
+                //ds = Utilidades.EjecutarDS(cmd);
+                //string idTipo_factura = ds.Tables[0].Rows[0]["id"].ToString();
 
 
 
@@ -283,6 +286,14 @@ namespace SGF
                     //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\(" + idfactura + ") Factura.pdf");
                 }
             }
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            txtarticulo.Text = "";
+            txtcantidad.Text = "";
+            txtitebis.Text = "";
+            lbstock.Text = "STOCK: ";
         }
     }
 }
