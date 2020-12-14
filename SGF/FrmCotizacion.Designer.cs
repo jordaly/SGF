@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+
             this.lbcodigo = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,7 +66,7 @@
             this.cbxsucursal = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.idcotizacion = new System.Windows.Forms.Label();
+            this.lbidcotizacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
@@ -358,9 +360,11 @@
             this.gridcotizacion.Name = "gridcotizacion";
             this.gridcotizacion.ReadOnly = true;
             this.gridcotizacion.RowHeadersVisible = false;
+
             this.gridcotizacion.RowHeadersWidth = 51;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.gridcotizacion.RowsDefaultCellStyle = dataGridViewCellStyle3;
+
             this.gridcotizacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridcotizacion.Size = new System.Drawing.Size(967, 260);
             this.gridcotizacion.TabIndex = 90;
@@ -422,8 +426,10 @@
             this.cbxsucursal.Items.AddRange(new object[] {
             "Cliente Final (Contado)",
             "Comprabante Fiscal"});
+
             this.cbxsucursal.Location = new System.Drawing.Point(185, 96);
             this.cbxsucursal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
             this.cbxsucursal.Name = "cbxsucursal";
             this.cbxsucursal.Size = new System.Drawing.Size(271, 24);
             this.cbxsucursal.TabIndex = 96;
@@ -431,8 +437,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
+
             this.label9.Location = new System.Drawing.Point(42, 99);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 17);
             this.label9.TabIndex = 95;
@@ -448,8 +456,9 @@
             this.label1.TabIndex = 97;
             this.label1.Text = "Codigo Cotizacion :";
             // 
-            // idcotizacion
+            // lbidcotizacion
             // 
+
             this.idcotizacion.AutoSize = true;
             this.idcotizacion.Location = new System.Drawing.Point(185, 65);
             this.idcotizacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -457,14 +466,17 @@
             this.idcotizacion.Size = new System.Drawing.Size(49, 17);
             this.idcotizacion.TabIndex = 98;
             this.idcotizacion.Text = "Nuevo";
+
             // 
             // FrmCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+
             this.ClientSize = new System.Drawing.Size(1183, 790);
             this.Controls.Add(this.idcotizacion);
+
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxsucursal);
             this.Controls.Add(this.label9);
@@ -495,10 +507,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbcodigo;
-        private System.Windows.Forms.TextBox txtcliente;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbcodigoarticulo;
         private System.Windows.Forms.Button btnquitararticulo;
         private System.Windows.Forms.Button btnagregararticulo;
@@ -507,6 +515,7 @@
         private System.Windows.Forms.Button btnbuscararticulo;
         private System.Windows.Forms.TextBox txtarticulo;
         private System.Windows.Forms.Label label10;
+
         private System.Windows.Forms.Button btnbuscarcliente;
         private System.Windows.Forms.TextBox txtrnc;
         private System.Windows.Forms.Label label5;
@@ -519,6 +528,7 @@
         private System.Windows.Forms.DataGridView gridcotizacion;
         private System.Windows.Forms.ComboBox cbxsucursal;
         private System.Windows.Forms.Label label9;
+
         private System.Windows.Forms.TextBox txtitebis;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtprecioventa;
@@ -530,7 +540,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColImporte;
         private System.Windows.Forms.Label lbstock;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label idcotizacion;
+        public System.Windows.Forms.Label lbcodigo;
+        public System.Windows.Forms.TextBox txtcliente;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnbuscarcliente;
+        public System.Windows.Forms.TextBox txtrnc;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lbfecha;
+        public System.Windows.Forms.Button btnguardar;
+        public System.Windows.Forms.Button btnnuevo;
+        public System.Windows.Forms.TextBox txttotal;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.DataGridView gridcotizacion;
+        public System.Windows.Forms.ComboBox cbxsucursal;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lbidcotizacion;
     }
 }
