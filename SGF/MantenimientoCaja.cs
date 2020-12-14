@@ -63,5 +63,35 @@ namespace SGF
         {
             Utilidades.SoloNumeros(e, sender);
         }
+
+        private void MantenimientoCaja_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxVentasTotales_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxCantidadInicial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxGanancias_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxCantidadActual_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

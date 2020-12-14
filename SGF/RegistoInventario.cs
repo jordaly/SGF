@@ -310,5 +310,10 @@ namespace SGF
         {
             Utilidades.SoloNumeros(e, sender);
         }
+
+        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,35 +36,44 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(137, 189);
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.Location = new System.Drawing.Point(103, 118);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // cbxPuesto
             // 
             this.cbxPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPuesto.FormattingEnabled = true;
-            this.cbxPuesto.Location = new System.Drawing.Point(137, 65);
+            this.cbxPuesto.Location = new System.Drawing.Point(103, 53);
+            this.cbxPuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxPuesto.Name = "cbxPuesto";
-            this.cbxPuesto.Size = new System.Drawing.Size(251, 24);
+            this.cbxPuesto.Size = new System.Drawing.Size(189, 24);
             this.cbxPuesto.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 68);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Puesto";
+            this.label1.Text = "Puesto :";
             // 
             // RegistroVacante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 235);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(314, 191);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxPuesto);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegistroVacante";
-            this.Text = "RegistroVacante";
+            this.Text = "Registro Vacante";
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.cbxPuesto, 0);
             this.Controls.SetChildIndex(this.label1, 0);

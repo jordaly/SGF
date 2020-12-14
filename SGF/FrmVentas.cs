@@ -57,7 +57,6 @@ namespace SGF
             {
                 lbnumfactura.Text = "00000000000000000001";
             }
-            
 
 
         }
@@ -191,11 +190,12 @@ namespace SGF
         public static  double total;
         public string codigo_empleado;
         public string codigo_usuario;
+        public int sumacantidad=0;
         private void btnagregararticulo_Click(object sender, EventArgs e)
         {
-
             if (ComprobarCamposArticulos())
             {
+                cbxsucursal.Enabled = false;
                 if (Convert.ToInt32(stock_articulo) >= Convert.ToInt32(txtcantidad.Text))
                 {
                     bool existe = false;
@@ -217,7 +217,17 @@ namespace SGF
                             {
                                 existe = true;
                                 num_fila = fila.Index;
+
+                                if (Convert.ToInt32(fila.Cells[4].Value.ToString()) + Convert.ToInt32(txtcantidad.Text) > Convert.ToInt32(stock_articulo))
+                                {
+                                    MessageBox.Show("La cantidad total es mayor que el STOCK!");
+                                    ErrorProvider.SetError(txtcantidad, "La cantidad FACTURADA es mayor que el STOCK actual!");
+
+                                    return;
+                                }
                             }
+
+
                         }
 
                         if (existe == true)
@@ -269,6 +279,11 @@ namespace SGF
                 gridarticulo.Rows.RemoveAt(gridarticulo.CurrentRow.Index);
                 
                 cont_fila--;
+            }
+
+            if (gridarticulo.Rows.Count == 0)
+            {
+                cbxsucursal.Enabled = true;
             }
         }
 
@@ -361,6 +376,45 @@ namespace SGF
             txtcantidad.Text = "";
             txtitebis.Text = "";
             lbstock.Text = "STOCK: ";
+        }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.SoloNumerosEnteros(e, sender);
+        }
+
+        private void txtprecioventa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnbuscarcliente_Click_1(object sender, EventArgs e)
+        {
+            MantenimientoClientes frm = new MantenimientoClientes();
+            frm.btnBorrar.Enabled = false;
+            frm.btnModificar.Enabled = false;
+            frm.btnNuevo.Enabled = true;
+            frm.btnSeleccionar.Enabled = true;
+            frm.ShowDialog();
+
+            txtcliente.Text = frm.nombre_cliente_apellido_cliente;
+            lbcodigo.Text = "Codigo Cliente: " + frm.codigo_cliente;
+            codigo_cliente = frm.codigo_cliente;
+        }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

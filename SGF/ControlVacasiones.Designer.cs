@@ -28,17 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            // 
             // btnBorrar
             // 
             this.btnBorrar.Enabled = false;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // btnNuevo
             // 
             this.btnNuevo.Enabled = false;
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // cbxBuscar
             // 
@@ -48,15 +60,27 @@
             "apellido",
             "fecha_inicio",
             "fecha_fin"});
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            this.cbxBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxBuscar.Size = new System.Drawing.Size(136, 24);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(929, 67);
             // 
             // ControlVacasiones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 549);
+            this.ClientSize = new System.Drawing.Size(929, 446);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "ControlVacasiones";
-            this.Text = "ControlVacasiones";
+            this.Text = "Control de Vacasiones";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);

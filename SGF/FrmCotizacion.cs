@@ -29,7 +29,7 @@ namespace SGF
             //cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
 
 
-            string cmdsucursal = "Select * from sucursal";
+           // string cmdsucursal = "Select * from sucursal";
 
             ds = Utilidades.EjecutarDS(cmdsucursal);
             cbxsucursal.DisplayMember = "nombre_sucursal";
@@ -163,6 +163,7 @@ namespace SGF
         {
             if (ComprobarCamposArticulos())
             {
+                cbxsucursal.Enabled = false;
                 if (Convert.ToInt32(stock_articulo) >= Convert.ToInt32(txtcantidad.Text))
                 {
                     bool existe = false;
@@ -184,6 +185,14 @@ namespace SGF
                             {
                                 existe = true;
                                 num_fila = fila.Index;
+
+                                if (Convert.ToInt32(fila.Cells[4].Value.ToString()) + Convert.ToInt32(txtcantidad.Text) > Convert.ToInt32(stock_articulo))
+                                {
+                                    MessageBox.Show("La cantidad total es mayor que el STOCK!");
+                                    ErrorProvider.SetError(txtcantidad, "La cantidad COTIZADA es mayor que el STOCK actual!");
+
+                                    return;
+                                }
                             }
                         }
 
@@ -235,6 +244,11 @@ namespace SGF
 
                 cont_fila--;
             }
+
+            if (gridcotizacion.Rows.Count == 0)
+            {
+                cbxsucursal.Enabled = true;
+            }
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
@@ -268,7 +282,7 @@ namespace SGF
                 {
                     cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
                     ds = Utilidades.EjecutarDS(cmd);
-                    string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+                    idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
 
 
                     cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +
@@ -317,7 +331,7 @@ namespace SGF
 
                     cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
                     ds = Utilidades.EjecutarDS(cmd);
-                    string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+                    idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
 
 
                     cmd = "begin  declare @idCotizacion uniqueidentifier= newid(); " +

@@ -33,38 +33,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            // 
             // btnBorrar
             // 
-            this.btnBorrar.Enabled = false;
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Text = "Despachar Factura";
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // btnModificar
             // 
-            this.btnModificar.Enabled = false;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
-            // cbxBuscar
+            // btnSeleccionar
             // 
-            this.cbxBuscar.Items.AddRange(new object[] {
-            "numero_factura",
-            "idcliente",
-            "NCF",
-            "fecha"});
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(800, 82);
+            this.panel1.Size = new System.Drawing.Size(706, 67);
+
             // 
             // Mantenimiento_transporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(706, 366);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "Mantenimiento_transporte";
-            this.Text = "MantenimientoTransporte";
+
+            this.Text = "Mantenimiento Transporte";
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
