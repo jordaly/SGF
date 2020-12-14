@@ -15,7 +15,7 @@ namespace SGF
         public ConsultaVentasHoy()
         {
             InitializeComponent();
-            cmd = "select sum(ganancias) as gananciahoy,sum(ventas_totales) as ventashoy from caja where fecha_in<getdate() and fecha_fin>getdate();";
+            cmd = "select sum(ganancias) as gananciahoy,sum(ventas_totales) as ventashoy from caja where fecha_in<getdate() and '"+(DateTime.Now.Day+1)+"/"+DateTime.Now.Month+"/"+DateTime.Now.Year+"'>getdate();";
             ds = Utilidades.EjecutarDS(cmd);
             if (ds.Tables[0].Rows.Count>0)
             {

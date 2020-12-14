@@ -110,8 +110,7 @@ namespace SGF
         public override void Seleccionar()
         {
 
-            if (dgvPadre.Rows.Count != 0)
-            {
+            
                 codigo_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
                 nombre_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
                 precio_articulo_compra = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
@@ -119,7 +118,7 @@ namespace SGF
                 stock_articulo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString();
                 itebis = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[12].Value.ToString();
                 this.Close();
-            }
+            
 
 
 

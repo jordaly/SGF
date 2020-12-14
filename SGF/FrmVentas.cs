@@ -57,6 +57,8 @@ namespace SGF
             {
                 lbnumfactura.Text = "00000000000000000001";
             }
+
+
         }
 
        
@@ -86,7 +88,12 @@ namespace SGF
         public string itebis = "";
         private void btnbuscararticulo_Click(object sender, EventArgs e)
         {
-            MantenimientoInventario frm = new MantenimientoInventario();
+
+            ListadoArticulosSucursal frm = new ListadoArticulosSucursal();
+            cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+            ds = Utilidades.EjecutarDS(cmd);
+            frm.idSucursal= ds.Tables[0].Rows[0]["id"].ToString();
+            //MessageBox.Show(ds.Tables[0].Rows[0]["id"].ToString());
 
             frm.btnBorrar.Enabled = false;
             frm.btnModificar.Enabled = false;
@@ -158,7 +165,7 @@ namespace SGF
         {
             ErrorProvider.Clear();
             bool ok = true;
-            if (gridarticulo.Rows.Count < 1)
+            if (gridarticulo.Rows.Count <1)
             {
                 ok = false;
 
@@ -282,42 +289,46 @@ namespace SGF
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            if (ComprobarCamposFactura()) { 
-            cmd = "select * from divisa where descripcion='"+cbxdivisa.Text+"'";
-            ds = Utilidades.EjecutarDS(cmd);
-            string idDivisa = ds.Tables[0].Rows[0]["id"].ToString();
+            if (ComprobarCamposFactura())
+            {
 
-            cmd = "select * from usuario where id='"+codigo_usuario+"'";
-            ds = Utilidades.EjecutarDS(cmd);
-            string idEmpleado = ds.Tables[0].Rows[0]["idEmpleado"].ToString();
+                //MessageBox.Show("esta entrando en el if");
+                cmd = "select * from divisa where descripcion='" + cbxdivisa.Text + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idDivisa = ds.Tables[0].Rows[0]["id"].ToString();
 
-            cmd = "select * from tipo_factura where descripcion='"+cbxtipofactura.Text+"'";
-            ds = Utilidades.EjecutarDS(cmd);
-            string idTipo_factura = ds.Tables[0].Rows[0]["id"].ToString();
+                cmd = "select * from usuario where id='" + codigo_usuario + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idEmpleado = ds.Tables[0].Rows[0]["idEmpleado"].ToString();
 
-            cmd = "select * from tipo_NCF where tipo='"+cbxtipo_ncf.Text+"'";
-            ds = Utilidades.EjecutarDS(cmd);
-            string idTipo_NCF = ds.Tables[0].Rows[0]["numero"].ToString();
+                cmd = "select * from tipo_factura where descripcion='" + cbxtipofactura.Text + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idTipo_factura = ds.Tables[0].Rows[0]["id"].ToString();
 
-            cmd = "select * from tipo_pago where descripcion='"+cbxtipopago.Text+"'";
-            ds = Utilidades.EjecutarDS(cmd);
-            string idTipo_pago = ds.Tables[0].Rows[0]["id"].ToString();
+                cmd = "select * from tipo_NCF where tipo='" + cbxtipo_ncf.Text + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idTipo_NCF = ds.Tables[0].Rows[0]["numero"].ToString();
 
-            cmd = "select * from sucursal where nombre_sucursal='"+cbxsucursal.Text+"'";
-            ds = Utilidades.EjecutarDS(cmd);
-            string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+                cmd = "select * from tipo_pago where descripcion='" + cbxtipopago.Text + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idTipo_pago = ds.Tables[0].Rows[0]["id"].ToString();
 
-            cmd = "select * from NCF";
-            ds = Utilidades.EjecutarDS(cmd);
-            string ncf = ds.Tables[0].Rows[0]["serie"].ToString() + idTipo_NCF + ds.Tables[0].Rows[0]["secuencia"].ToString().PadLeft((9 - ds.Tables[0].Rows[0]["secuencia"].ToString().Length), '0');
-            string idNCF = ds.Tables[0].Rows[0]["id"].ToString();
-            cmd = "begin" +
-                 "insert into factura(idTipo_factura,fecha,idcliente,NCF,idDivisa,idTipo_pago,idSucursal,idEmpleado,total)values('"+idTipo_factura+"',getdate(),'"+codigo_cliente+"','"+ncf+"','"+idDivisa+"','"+idTipo_pago+"','"+ idsucursal + "','"+idEmpleado+"','"+total.ToString().Replace(",",".")+"');" +
-                 "select top(1) numero_factura as id from factura order by numero_factura desc;" +
-                 "end";
-            //txtcantidad.Text = cmd;
-            //MessageBox.Show(cmd);
-            ds = Utilidades.EjecutarDS(cmd);
+                cmd = "select * from sucursal where nombre_sucursal='" + cbxsucursal.Text + "'";
+                ds = Utilidades.EjecutarDS(cmd);
+                string idsucursal = ds.Tables[0].Rows[0]["id"].ToString();
+
+                cmd = "select * from NCF";
+                ds = Utilidades.EjecutarDS(cmd);
+                string ncf = ds.Tables[0].Rows[0]["serie"].ToString() + idTipo_NCF + ds.Tables[0].Rows[0]["secuencia"].ToString().PadLeft((9 - ds.Tables[0].Rows[0]["secuencia"].ToString().Length), '0');
+                string idNCF = ds.Tables[0].Rows[0]["id"].ToString();
+                cmd = "begin " +
+                     "insert into factura(idTipo_factura,fecha,idcliente,NCF,idDivisa,idTipo_pago,idSucursal,idEmpleado,total,transporte,estado)values('" + idTipo_factura + "',getdate(),'" + codigo_cliente + "','" + ncf + "','" + idDivisa + "','" + idTipo_pago + "','" + idsucursal + "','" + idEmpleado + "','" + total.ToString().Replace(",", ".") + "','" + chxTransporte.Checked + "','Normal');" +
+                     "select top(1) numero_factura as id from factura order by numero_factura desc;" +
+                     "end";
+                txtcantidad.Text = cmd;
+                //txtcantidad.Text = cmd;
+                //MessageBox.Show(cmd);
+                ds = Utilidades.EjecutarDS(cmd);
                 if (ds != null)
                 {
                     string idfactura = ds.Tables[0].Rows[0]["id"].ToString();
@@ -325,7 +336,7 @@ namespace SGF
                     foreach (DataGridViewRow fila in gridarticulo.Rows)
                     {
                         cmd = "begin " +
-                        "insert into detalle_factura(idFactura,idArticulo,cantidad,importe)values('" + idfactura + "','" + fila.Cells[0].Value.ToString() + "','" + fila.Cells[4].Value.ToString() + "','" + fila.Cells[5].Value.ToString().Replace(",", ".") + "');" +
+                        "insert into detalle_factura(idFactura,idArticulo,cantidad,cantidadTransportada,importe)values('" + idfactura + "','" + fila.Cells[0].Value.ToString() + "','" + fila.Cells[4].Value.ToString() + "','0','" + fila.Cells[5].Value.ToString().Replace(",", ".") + "');" +
                         "end";
                         ds = Utilidades.EjecutarDS(cmd);
                     }
@@ -335,22 +346,24 @@ namespace SGF
                     ds = Utilidades.EjecutarDS(cmd);
 
                     //C:\Users\Jorda\source\repos\SGF\SGF\Reportes\Factura con su detalle3.rpt
-                    string RutaReporte = root + @"Reportes\Factura con su detalle.rpt";
-                    //MessageBox.Show(RutaReporte);
-                    VisorDeReportes form = new VisorDeReportes();
-                    ReportDocument oRep = new ReportDocument();
-                    ParameterField pf = new ParameterField();
-                    ParameterFields pfs = new ParameterFields();
-                    ParameterDiscreteValue pdv = new ParameterDiscreteValue();
-                    pf.Name = "@numFact"; // variable del store procedure
-                    pdv.Value = idfactura; // variable donde se  guarda el numero de factura
-                    pf.CurrentValues.Add(pdv);
-                    pfs.Add(pf);
-                    form.crvVisor.ParameterFieldInfo = pfs;
-                    oRep.Load(RutaReporte);
-                    form.crvVisor.ReportSource = oRep;
-                    form.Show();
+                    //string RutaReporte = root + @"Reportes\Factura con su detalle.rpt";
+                    ////MessageBox.Show(RutaReporte);
+                    //VisorDeReportes form = new VisorDeReportes();
+                    //ReportDocument oRep = new ReportDocument();
+                    //ParameterField pf = new ParameterField();
+                    //ParameterFields pfs = new ParameterFields();
+                    //ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                    //pf.Name = "@numFact"; // variable del store procedure
+                    //pdv.Value = idfactura; // variable donde se  guarda el numero de factura
+                    //pf.CurrentValues.Add(pdv);
+                    //pfs.Add(pf);
+                    //form.crvVisor.ParameterFieldInfo = pfs;
+                    //oRep.Load(RutaReporte);
+                    //form.crvVisor.ReportSource = oRep;
+                    //form.Show();
+                    MessageBox.Show("Facturado Exitosamente.");
                     this.Close();
+
                     //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\(" + idfactura + ") Factura.pdf");
                 }
             }
@@ -359,7 +372,10 @@ namespace SGF
 
         private void btnnuevo_Click(object sender, EventArgs e)
         {
-
+            txtarticulo.Text = "";
+            txtcantidad.Text = "";
+            txtitebis.Text = "";
+            lbstock.Text = "STOCK: ";
         }
 
         private void txtcantidad_TextChanged(object sender, EventArgs e)

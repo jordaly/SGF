@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class Mantenimiento_transporte
+    partial class MantenimientoSucursales
     {
         /// <summary>
         /// Required designer variable.
@@ -33,42 +33,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBuscar
+            // cbxBuscar
             // 
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.cbxBuscar.Items.AddRange(new object[] {
+            "id",
+            "nombre_sucursal"});
+            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(706, 67);
-
+            this.panel1.Size = new System.Drawing.Size(800, 82);
             // 
-            // Mantenimiento_transporte
+            // MantenimientoSucursales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 366);
-            this.Margin = new System.Windows.Forms.Padding(3);
-            this.Name = "Mantenimiento_transporte";
-
-            this.Text = "Mantenimiento Transporte";
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "MantenimientoSucursales";
+            this.Text = "MantenimientoSucursales";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();

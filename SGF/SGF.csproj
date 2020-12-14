@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Jorda\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D0D3722A77961607FC53D9C7A8969453467E3B93</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SGF_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -59,6 +87,12 @@
     <Compile Include="Calculadora de Devueltas.Designer.cs">
       <DependentUpon>Calculadora de Devueltas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmacionTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmacionTransporte.Designer.cs">
+      <DependentUpon>ConfirmacionTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaCuadresCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +116,12 @@
     </Compile>
     <Compile Include="ControlVacasiones.Designer.cs">
       <DependentUpon>ControlVacasiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpresaSistema.Designer.cs">
+      <DependentUpon>EmpresaSistema.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBarraBusqueda.cs">
       <SubType>Form</SubType>
@@ -131,6 +171,12 @@
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoArticulosSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoArticulosSucursal.Designer.cs">
+      <DependentUpon>ListadoArticulosSucursal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoDGII.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +194,36 @@
     </Compile>
     <Compile Include="MantenimientoContrataciones.Designer.cs">
       <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoModelo.Designer.cs">
+      <DependentUpon>MantenimientoModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoQuejas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoQuejas.Designer.cs">
+      <DependentUpon>MantenimientoQuejas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoReparacionVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoReparacionVehiculo.Designer.cs">
+      <DependentUpon>MantenimientoReparacionVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoSucursales.Designer.cs">
+      <DependentUpon>MantenimientoSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoTalleres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoTalleres.Designer.cs">
+      <DependentUpon>MantenimientoTalleres.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoTransporte.cs">
       <SubType>Form</SubType>
@@ -209,6 +285,12 @@
     <Compile Include="MantenimientoUsuarios.Designer.cs">
       <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoVehiculos.Designer.cs">
+      <DependentUpon>MantenimientoVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="mantenimiento_fabricacion_inmuebles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +329,12 @@
       <DependentUpon>PrincipalMDI.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="RegistroConfirmacionTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroConfirmacionTransporte.Designer.cs">
+      <DependentUpon>RegistroConfirmacionTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,17 +347,53 @@
     <Compile Include="RegistroMarca.Designer.cs">
       <DependentUpon>RegistroMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroModelo.Designer.cs">
+      <DependentUpon>RegistroModelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroMovimientoArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistroMovimientoArticulos.Designer.cs">
       <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroQuejas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroQuejas.Designer.cs">
+      <DependentUpon>RegistroQuejas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroReparacionVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroReparacionVehiculo.Designer.cs">
+      <DependentUpon>RegistroReparacionVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroSucursal.Designer.cs">
+      <DependentUpon>RegistroSucursal.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroSuplidores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistroSuplidores.Designer.cs">
       <DependentUpon>RegistroSuplidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroTalleres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroTalleres.Designer.cs">
+      <DependentUpon>RegistroTalleres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroTransporte.Designer.cs">
+      <DependentUpon>RegistroTransporte.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroUsuarios.cs">
       <SubType>Form</SubType>
@@ -294,6 +418,12 @@
     </Compile>
     <Compile Include="RegistroVacante.Designer.cs">
       <DependentUpon>RegistroVacante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVehiculo.Designer.cs">
+      <DependentUpon>RegistroVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="registro_fabricacion_inmuebles.cs">
       <SubType>Form</SubType>
@@ -358,6 +488,9 @@
     <EmbeddedResource Include="ControlVacasiones.resx">
       <DependentUpon>ControlVacasiones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpresaSistema.resx">
+      <DependentUpon>EmpresaSistema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBarraBusqueda.resx">
       <DependentUpon>FormBarraBusqueda.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoArticulosSucursal.resx">
+      <DependentUpon>ListadoArticulosSucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoDGII.resx">
       <DependentUpon>ListadoDGII.cs</DependentUpon>
@@ -415,14 +551,29 @@
     <EmbeddedResource Include="MantenimientoMovimientoArticulos.resx">
       <DependentUpon>MantenimientoMovimientoArticulos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoQuejas.resx">
+      <DependentUpon>MantenimientoQuejas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoReparacionVehiculo.resx">
+      <DependentUpon>MantenimientoReparacionVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoSucursales.resx">
+      <DependentUpon>MantenimientoSucursales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoSuplidores.resx">
       <DependentUpon>MantenimientoSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoTalleres.resx">
+      <DependentUpon>MantenimientoTalleres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoTransporte.resx">
       <DependentUpon>MantenimientoTransporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoUsuarios.resx">
       <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoVehiculos.resx">
+      <DependentUpon>MantenimientoVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento_fabricacion_inmuebles.resx">
       <DependentUpon>mantenimiento_fabricacion_inmuebles.cs</DependentUpon>
@@ -456,23 +607,47 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistroConfirmacionTransporte.resx">
+      <DependentUpon>RegistroConfirmacionTransporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroEmpleados.resx">
       <DependentUpon>RegistroEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroMarca.resx">
       <DependentUpon>RegistroMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroModelo.resx">
+      <DependentUpon>RegistroModelo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroMovimientoArticulos.resx">
       <DependentUpon>RegistroMovimientoArticulos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroQuejas.resx">
+      <DependentUpon>RegistroQuejas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroReparacionVehiculo.resx">
+      <DependentUpon>RegistroReparacionVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroSucursal.resx">
+      <DependentUpon>RegistroSucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroSuplidores.resx">
       <DependentUpon>RegistroSuplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroTalleres.resx">
+      <DependentUpon>RegistroTalleres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroTransporte.resx">
+      <DependentUpon>RegistroTransporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroVacante.resx">
       <DependentUpon>RegistroVacante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroVehiculo.resx">
+      <DependentUpon>RegistroVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registro_fabricacion_inmuebles.resx">
       <DependentUpon>registro_fabricacion_inmuebles.cs</DependentUpon>
@@ -500,6 +675,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SGF_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -559,7 +735,9 @@
     <None Include="Recursos\key_password_lock_800.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Recursos\taconeador.png" />
+
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

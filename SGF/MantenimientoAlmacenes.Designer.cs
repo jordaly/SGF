@@ -70,7 +70,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MantenimientoAlmacenes";
+
             this.Text = "Mantenimiento Almacenes";
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
