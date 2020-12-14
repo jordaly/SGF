@@ -147,6 +147,7 @@ namespace SGF
         {
             if (ComprobarCamposArticulos())
             {
+                cbxsucursal.Enabled = false;
                 if (Convert.ToInt32(stock_articulo) >= Convert.ToInt32(txtcantidad.Text))
                 {
                     bool existe = false;
@@ -168,6 +169,14 @@ namespace SGF
                             {
                                 existe = true;
                                 num_fila = fila.Index;
+
+                                if (Convert.ToInt32(fila.Cells[4].Value.ToString()) + Convert.ToInt32(txtcantidad.Text) > Convert.ToInt32(stock_articulo))
+                                {
+                                    MessageBox.Show("La cantidad total es mayor que el STOCK!");
+                                    ErrorProvider.SetError(txtcantidad, "La cantidad COTIZADA es mayor que el STOCK actual!");
+
+                                    return;
+                                }
                             }
                         }
 
@@ -218,6 +227,11 @@ namespace SGF
                 gridcotizacion.Rows.RemoveAt(gridcotizacion.CurrentRow.Index);
 
                 cont_fila--;
+            }
+
+            if (gridcotizacion.Rows.Count == 0)
+            {
+                cbxsucursal.Enabled = true;
             }
         }
 

@@ -283,7 +283,7 @@ namespace SGF
 
         private void tbxExistencia_TextChanged(object sender, EventArgs e)
         {
-            Utilidades.SoloNumeros(e, sender);
+            //Utilidades.SoloNumeros(e, sender);
         }
 
         private void tbxExistencia_KeyPress(object sender, KeyPressEventArgs e)
@@ -309,6 +309,11 @@ namespace SGF
         private void tbxCantidad_minima_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilidades.SoloNumeros(e, sender);
+        }
+
+        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

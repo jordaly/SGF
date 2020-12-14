@@ -45,120 +45,152 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 64);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 17);
+            this.label1.Size = new System.Drawing.Size(123, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cantidad inicial";
+            this.label1.Text = "Cantidad inicial :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 92);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 92);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 17);
+            this.label2.Size = new System.Drawing.Size(124, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Cantidad actual";
+            this.label2.Text = "Cantidad actual :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 120);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 129);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
+            this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Ventas totales";
+            this.label3.Text = "Ventas totales :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 148);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 168);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 17);
+            this.label4.Size = new System.Drawing.Size(90, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Ganancias";
+            this.label4.Text = "Ganancias :";
             // 
             // tbxCantidadInicial
             // 
-            this.tbxCantidadInicial.Location = new System.Drawing.Point(187, 61);
+            this.tbxCantidadInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCantidadInicial.Location = new System.Drawing.Point(145, 51);
+            this.tbxCantidadInicial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxCantidadInicial.Name = "tbxCantidadInicial";
-            this.tbxCantidadInicial.Size = new System.Drawing.Size(221, 22);
+            this.tbxCantidadInicial.Size = new System.Drawing.Size(167, 22);
             this.tbxCantidadInicial.TabIndex = 4;
+            this.tbxCantidadInicial.TextChanged += new System.EventHandler(this.tbxCantidadInicial_TextChanged);
             this.tbxCantidadInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCantidadInicial_KeyPress);
             // 
             // tbxCantidadActual
             // 
-            this.tbxCantidadActual.Location = new System.Drawing.Point(187, 89);
+            this.tbxCantidadActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCantidadActual.Location = new System.Drawing.Point(145, 89);
+            this.tbxCantidadActual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxCantidadActual.Name = "tbxCantidadActual";
             this.tbxCantidadActual.ReadOnly = true;
-            this.tbxCantidadActual.Size = new System.Drawing.Size(221, 22);
+            this.tbxCantidadActual.Size = new System.Drawing.Size(167, 22);
             this.tbxCantidadActual.TabIndex = 5;
             this.tbxCantidadActual.Text = "0";
+            this.tbxCantidadActual.TextChanged += new System.EventHandler(this.tbxCantidadActual_TextChanged);
             // 
             // tbxGanancias
             // 
-            this.tbxGanancias.Location = new System.Drawing.Point(187, 145);
+            this.tbxGanancias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxGanancias.Location = new System.Drawing.Point(145, 166);
+            this.tbxGanancias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxGanancias.Name = "tbxGanancias";
             this.tbxGanancias.ReadOnly = true;
-            this.tbxGanancias.Size = new System.Drawing.Size(221, 22);
+            this.tbxGanancias.Size = new System.Drawing.Size(167, 22);
             this.tbxGanancias.TabIndex = 6;
             this.tbxGanancias.Text = "0";
+            this.tbxGanancias.TextChanged += new System.EventHandler(this.tbxGanancias_TextChanged);
             // 
             // tbxVentasTotales
             // 
-            this.tbxVentasTotales.Location = new System.Drawing.Point(187, 117);
+            this.tbxVentasTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxVentasTotales.Location = new System.Drawing.Point(145, 126);
+            this.tbxVentasTotales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxVentasTotales.Name = "tbxVentasTotales";
             this.tbxVentasTotales.ReadOnly = true;
-            this.tbxVentasTotales.Size = new System.Drawing.Size(221, 22);
+            this.tbxVentasTotales.Size = new System.Drawing.Size(167, 22);
             this.tbxVentasTotales.TabIndex = 7;
             this.tbxVentasTotales.Text = "0";
+            this.tbxVentasTotales.TextChanged += new System.EventHandler(this.tbxVentasTotales_TextChanged);
             // 
             // btnInicio
             // 
-            this.btnInicio.Location = new System.Drawing.Point(187, 197);
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(127, 205);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(75, 23);
+            this.btnInicio.Size = new System.Drawing.Size(88, 29);
             this.btnInicio.TabIndex = 8;
             this.btnInicio.Text = "Iniciar";
-            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnFinalizar.Enabled = false;
-            this.btnFinalizar.Location = new System.Drawing.Point(268, 197);
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Location = new System.Drawing.Point(231, 205);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(75, 23);
+            this.btnFinalizar.Size = new System.Drawing.Size(82, 29);
             this.btnFinalizar.TabIndex = 9;
             this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // lbFechaInicio
             // 
             this.lbFechaInicio.AutoSize = true;
-            this.lbFechaInicio.Location = new System.Drawing.Point(12, 9);
+            this.lbFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFechaInicio.Location = new System.Drawing.Point(18, 9);
+            this.lbFechaInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFechaInicio.Name = "lbFechaInicio";
-            this.lbFechaInicio.Size = new System.Drawing.Size(91, 17);
+            this.lbFechaInicio.Size = new System.Drawing.Size(100, 16);
             this.lbFechaInicio.TabIndex = 10;
             this.lbFechaInicio.Text = "Fecha inicio: ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(414, 64);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(316, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "DOP$";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // MantenimientoCaja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 293);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(371, 254);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbFechaInicio);
             this.Controls.Add(this.btnFinalizar);
@@ -171,8 +203,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MantenimientoCaja";
-            this.Text = "MantenimientoCaja";
+            this.Text = "Mantenimiento de Caja";
+            this.Load += new System.EventHandler(this.MantenimientoCaja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

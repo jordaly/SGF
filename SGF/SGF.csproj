@@ -400,6 +400,9 @@
     <EmbeddedResource Include="MantenimientoContrataciones.resx">
       <DependentUpon>MantenimientoContrataciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCotizacion.resx">
+      <DependentUpon>MantenimientoCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEmpleados.resx">
       <DependentUpon>MantenimientoEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -555,9 +558,71 @@
   <ItemGroup>
     <None Include="Recursos\key_password_lock_800.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Recursos\taconeador.png" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\buscar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\iconfinder_reload_254190.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\arrowreload_flecha_1318.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\new-file_40454.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\plus_40632.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\minuslinear_106174.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\1486564177-finance-finance-calculator_81497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\blankpage_enblanc_178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Truck_Yellow_icon-icons.com_54884.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\diagram-61_24456.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\cleinte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\employee_3_icon-icons.com_76973.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\customer_person_people_man_user_client_1629.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Box_1_35524.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\iconfinder-warehouse-3992927_112594.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\pay_bill_dollar_money_payment_icon_143261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\palm_beach_travel_vacation_leisure_icon-icons.com_53586.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\cashier2_117951.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

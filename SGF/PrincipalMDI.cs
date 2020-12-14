@@ -177,6 +177,7 @@ namespace SGF
             MantenimientoClientes rc = new MantenimientoClientes();
             rc.MdiParent = this;
             rc.Show();
+
         }
 
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)

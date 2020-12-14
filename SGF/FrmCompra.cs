@@ -281,5 +281,10 @@ namespace SGF
                 }
             }
         }
+
+        private void btnbuscarsuplidor_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,6 +16,9 @@ namespace SGF
         public FormProcesos()
         {
             InitializeComponent();
+            dgvPadre.Focus();
+            btnBuscar.BackColor = Color.White;
+            cbxBuscar.BackColor = Color.White;
         }
         public void refrescarDatos(string Buscar)
         {

@@ -29,26 +29,37 @@
         private void InitializeComponent()
         {
             this.tbxp = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(117, 13);
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Location = new System.Drawing.Point(148, 11);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(1194, 13);
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBorrar.Location = new System.Drawing.Point(896, 11);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBorrar.Visible = false;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(1148, 12);
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnNuevo.Location = new System.Drawing.Point(857, 7);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Visible = false;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(13, 13);
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnModificar.Location = new System.Drawing.Point(10, 11);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Text = "Pagar";
             // 
             // cbxBuscar
@@ -59,33 +70,45 @@
             "apellido",
             "puesto",
             "salario"});
-            this.cbxBuscar.Location = new System.Drawing.Point(221, 39);
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            this.cbxBuscar.Location = new System.Drawing.Point(224, 30);
+            this.cbxBuscar.Margin = new System.Windows.Forms.Padding(2);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(221, 13);
+            this.label1.Location = new System.Drawing.Point(224, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(1044, 13);
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSeleccionar.Location = new System.Drawing.Point(835, 11);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionar.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(1005, 67);
             // 
             // tbxp
             // 
             this.tbxp.Location = new System.Drawing.Point(134, 28);
             this.tbxp.Name = "tbxp";
-            this.tbxp.Size = new System.Drawing.Size(100, 22);
+            this.tbxp.Size = new System.Drawing.Size(100, 20);
             this.tbxp.TabIndex = 6;
             // 
             // ControlPagos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 617);
+            this.ClientSize = new System.Drawing.Size(1005, 501);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "ControlPagos";
-            this.Text = "ControlPagos";
+            this.Text = "Control de Pagos";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }

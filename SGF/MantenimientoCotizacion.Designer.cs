@@ -28,7 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // MantenimientoCotizacion
             // 
@@ -36,8 +60,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MantenimientoCotizacion";
-            this.Text = "MantenimientoCotizacion";
+            this.Text = "Mantenimiento Cotizacion";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }

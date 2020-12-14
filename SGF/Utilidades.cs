@@ -20,7 +20,19 @@ namespace SGF
         //Para saber cual es la cadena de conexión en tu coputadora mira en sigiente vídeo (minuto 7:28) : https://www.youtube.com/watch?v=wzA5ZEJ6lvk
         public static SqlConnection coneccion = new SqlConnection("Data Source=.;Initial Catalog=SGF;Integrated Security=True");
 
+        public static void AbrirFormEnPanel(object Formhijo, Panel panelContenedor, PictureBox picture)
+        {
+            panelContenedor.Controls.Clear();
 
+            Form formulario = Formhijo as Form;
+            formulario.TopLevel = false;
+            formulario.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(picture);
+            panelContenedor.Controls.Add(formulario);
+            //this.panelContenedor.Tag = formulario;
+            formulario.BringToFront();
+            formulario.Show();
+        }
         public static bool Primo(int n)
         {
 
@@ -491,6 +503,7 @@ namespace SGF
                 e.Handled = true;
             }
 
+
             //// If you want, you can allow decimal (float) numbers
             //if (((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)))
             //{
@@ -505,6 +518,37 @@ namespace SGF
             //else
             //    return "";
         }
+
+        public static void SoloNumerosEnteros(KeyPressEventArgs e, object sender)
+        {
+            //char tecla = e.KeyChar;
+            if ((char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar)))
+            {
+                //MessageBox.Show("" + (sender as TextBox).Text.IndexOf('.'));
+                //e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
+
+            //// If you want, you can allow decimal (float) numbers
+            //if (((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)))
+            //{
+            //    e.Handled = true;
+            //}
+
+            //if (!Char.IsDigit(tecla) && (tecla != Convert.ToChar(Keys.Back)))
+            //{
+            //    e.Handled = true;
+            //    return "Solo se permiten números";
+            //}
+            //else
+            //    return "";
+        }
+
+
         public static int ValarCheckBox(bool i)
         {
             if (i)

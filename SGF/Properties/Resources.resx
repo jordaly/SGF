@@ -118,67 +118,166 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="arrow_entrance_exit_internet_log_out_security_icon_127059" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\arrow_entrance_exit_internet_log_out_security_icon_127059.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new-file_40454" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\new-file_40454.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="llaves" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\llaves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="impresora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\impresora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="herramientas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\herramientas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sign-check-icon_34365" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\sign-check-icon_34365.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key_password_lock_800" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\key_password_lock_800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lapa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\lapa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ventana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\ventana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO-LA-FERRETERIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\LOGO-LA-FERRETERIA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_entrance_exit_internet_log_out_security_icon_127059 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\arrow_entrance_exit_internet_log_out_security_icon_127059 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key_password_lock_8001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\key_password_lock_800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="moneda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\moneda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maintenance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\maintenance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder-warehouse-3992927_112594" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\iconfinder-warehouse-3992927_112594.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow_entrance_in_internet_log_login_security_icon_127060" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\arrow_entrance_in_internet_log_login_security_icon_127060.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maintenance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\maintenance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrowreload_flecha_1318" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\arrowreload_flecha_1318.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minuslinear_1061742" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\minuslinear_106174.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Truck_Yellow_icon-icons.com_54884" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Truck_Yellow_icon-icons.com_54884.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscar (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\buscar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cleinte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\cleinte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moneda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\moneda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lapa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\lapa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_entrance_exit_internet_log_out_security_icon_127059 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\arrow_entrance_exit_internet_log_out_security_icon_127059 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="palm_beach_travel_vacation_leisure_icon-icons.com_53586" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\palm_beach_travel_vacation_leisure_icon-icons.com_53586.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diskette_save_saveas_1514" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diskette_save_saveas_15141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\buscar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO-LA-FERRETERIA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\LOGO-LA-FERRETERIA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="llaves" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\llaves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_40632" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\plus_40632.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO-LA-FERRETERIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\LOGO-LA-FERRETERIA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Box_1_35524" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Box_1_35524.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diskette_save_saveas_15143" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diagram-61_24456" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diagram-61_24456.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new-file_404541" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\new-file_40454.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diskette_save_saveas_15144" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ventana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\ventana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="herramientas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\herramientas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blankpage_enblanc_178" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\blankpage_enblanc_178.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diskette_save_saveas_15145" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pay_bill_dollar_money_payment_icon_143261" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\pay_bill_dollar_money_payment_icon_143261.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_entrance_in_internet_log_login_security_icon_127060" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\arrow_entrance_in_internet_log_login_security_icon_127060.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscar (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\buscar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_person_people_man_user_client_1629" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\customer_person_people_man_user_client_1629.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_password_lock_800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\key_password_lock_800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minuslinear_106174" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\minuslinear_106174.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minuslinear_1061741" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\minuslinear_106174.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taconeador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\taconeador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diskette_save_saveas_15142" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\diskette_save_saveas_1514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_entrance_exit_internet_log_out_security_icon_127059" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\arrow_entrance_exit_internet_log_out_security_icon_127059.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sign-check-icon_34365" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\sign-check-icon_34365.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employee_3_icon-icons.com_76973" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\employee_3_icon-icons.com_76973.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_reload_254190" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\iconfinder_reload_254190.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new-file_404542" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\new-file_40454.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1486564177-finance-finance-calculator_81497" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\1486564177-finance-finance-calculator_81497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_password_lock_8001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\key_password_lock_800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cashier2_117951" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\cashier2_117951.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
