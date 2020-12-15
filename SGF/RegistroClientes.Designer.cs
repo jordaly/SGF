@@ -128,6 +128,7 @@
             this.rtbxIndicaciones.Margin = new System.Windows.Forms.Padding(4);
             this.rtbxIndicaciones.Name = "rtbxIndicaciones";
 
+
             this.rtbxIndicaciones.Size = new System.Drawing.Size(268, 121);
             this.rtbxIndicaciones.TabIndex = 10;
 
@@ -287,6 +288,7 @@
             this.tbxCodigo_postal.MaxLength = 10;
             this.tbxCodigo_postal.Name = "tbxCodigo_postal";
 
+
             this.tbxCodigo_postal.Size = new System.Drawing.Size(121, 22);
             this.tbxCodigo_postal.TabIndex = 11;
 
@@ -328,6 +330,7 @@
             // 
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
+
             this.tbxTelefono.Location = new System.Drawing.Point(581, 32);
             this.tbxTelefono.MaxLength = 7;
             this.tbxTelefono.Name = "tbxTelefono";
@@ -341,6 +344,7 @@
             this.tbxCorreo.Location = new System.Drawing.Point(775, 92);
             this.tbxCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCorreo.Name = "tbxCorreo";
+
 
             this.tbxCorreo.Size = new System.Drawing.Size(268, 22);
             this.tbxCorreo.TabIndex = 8;
@@ -369,6 +373,7 @@
             this.label12.Text = "Correo :";
             // 
 
+
             // btnGuardar1
             // 
             this.btnGuardar1.FlatAppearance.BorderSize = 0;
@@ -392,6 +397,7 @@
             this.tbxCedula.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCedula.MaxLength = 11;
             this.tbxCedula.Name = "tbxCedula";
+
 
             this.tbxCedula.Size = new System.Drawing.Size(268, 22);
             this.tbxCedula.TabIndex = 9;
@@ -440,6 +446,7 @@
             this.Controls.Add(this.rtbxIndicaciones);
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.cbxProvincia);
+
 
             this.Margin = new System.Windows.Forms.Padding(5);
 
