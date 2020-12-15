@@ -66,6 +66,10 @@ namespace SGF
             {
                 rc.tkbCantidad.Maximum = Convert.ToInt32(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString());
             }
+            else
+            {
+                rc.tkbCantidad.Maximum = Convert.ToInt32(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[4].Value.ToString());
+            }
             
             rc.sinAsignar = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
             rc.Asignado = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();

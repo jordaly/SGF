@@ -18,6 +18,7 @@ namespace SGF
             InitializeComponent();
             refrescarDatos(BuscarDatos);
             cbxBuscar.SelectedIndex = 0;
+
         }
         public override void Nuevo()
         {

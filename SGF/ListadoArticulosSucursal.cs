@@ -40,7 +40,7 @@ namespace SGF
                 BuscarDatos =
                 "begin " +
                     "declare @idAlmacen uniqueidentifier;" +
-                    "select @idAlmacen=al.id from sucursal_vs_almacen as sva,almacen as al where sva.idSucursal='" + idSucursal + "';" +
+                    "select @idAlmacen=sva.idAlmacen from sucursal_vs_almacen as sva where sva.idSucursal='"+idSucursal+"';" +
                     "select a.id,a.nombre_articulo,ava.cantidad,a.precio_venta,a.precio_compra,a.ITEBIs from articulo_vs_almacen as ava, articulo as a where idAlmacen=@idAlmacen and a.id=ava.idArticulo;" +
                 "end";
             }

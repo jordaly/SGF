@@ -12,6 +12,7 @@ namespace SGF
 {
     public partial class RegistroReparacionVehiculo : FormRegistros
     {
+        public bool confirmacion=false;
         public RegistroReparacionVehiculo()
         {
             InitializeComponent();
@@ -21,24 +22,36 @@ namespace SGF
         {
             if (ComprobarCampos())
             {
-                if (tbxCodigo.Text != "Nuevo")
+                if (confirmacion)
                 {
-                    //cmd = "update reparacion set taller='" + tbxNombre.Text + "' where id='" + tbxCodigo.Text + "';";
+                    cmd = "update reparacion set fecha_fin=getdate(),reseña='"+rtbxParrafo.Text.Trim()+"',estado='0' where id='" + tbxCodigo.Text + "'";
 
                     ds = Utilidades.EjecutarDS(cmd);
-                    MessageBox.Show("Sin Modificaciones.");
+                    MessageBox.Show("Confirmado exitosamente.");
                     //Limpiar();
                     this.Close();
-
-
                 }
                 else
                 {
-                    //cmd = "insert into tallleres(taller,estado)values(" + tbxNombre.Text + "','1');";
+                    if (tbxCodigo.Text != "Nuevo")
+                    {
+                        cmd = "update reparacion set idTaller='" + idTaller + "',matricula_vehiculo='" + tbxMatricula.Text + "',razon_reparacion='" + rtbxParrafo.Text.Trim() + "' where id='" + tbxCodigo.Text + "'";
 
-                    ds = Utilidades.EjecutarDS(cmd);
-                    MessageBox.Show("Guardado exitosamente");
-                    this.Close();
+                        ds = Utilidades.EjecutarDS(cmd);
+                        MessageBox.Show("Modificado exitosamente.");
+                        //Limpiar();
+                        this.Close();
+
+
+                    }
+                    else
+                    {
+                        cmd = "insert into reparacion(idTaller,matricula_vehiculo,razon_reparacion,fecha_inicio,estado)values('" + idTaller + "','" + tbxMatricula.Text + "','" + rtbxParrafo.Text.Trim() + "',getdate(),'1')";
+
+                        ds = Utilidades.EjecutarDS(cmd);
+                        MessageBox.Show("Guardado exitosamente");
+                        this.Close();
+                    }
                 }
             }
         }

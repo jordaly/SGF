@@ -101,8 +101,8 @@ namespace SGF
                             "select @idMedida = m.id from medida as m where m.medida = '" + cbxMedida.Text.Trim() + "';" +
                             "select @idTipo_articulo = t.id from tipo_articulo as t where t.categoria = '" + cbxTipo.Text.Trim() + "';" +
                             "update articulo set nombre_articulo = '" + tbxNombre.Text.Trim()
-                            + "', precio_compra = '" + tbxPrecio_compra.Text.Trim()
-                            + "', precio_venta = '" + tbxPrecio_venta.Text.Trim()
+                            + "', precio_compra = '" + tbxPrecio_compra.Text.Trim().Replace(",", ".")
+                            + "', precio_venta = '" + tbxPrecio_venta.Text.Trim().Replace(",", ".")
                             + "', existencia = '" + tbxExistencia.Text.Trim()
                             + "', descripcion = '" + tbxDescripcion.Text.Trim()
                             + "', cantidad_maxima = '" + tbxCantidad_maxima.Text.Trim()
@@ -114,7 +114,7 @@ namespace SGF
                             "update cantidad_caja set cantidad_caja='"+tbxCantidad_caja.Text.Trim()
                             +"' where idArticulo='"+tbxCodigo.Text.Trim()+"';"+
                             "end";
-
+                        
                         ds = Utilidades.EjecutarDS(cmd);
                         MessageBox.Show("Modificado exitosamente");
                         //Limpiar();
@@ -132,8 +132,8 @@ namespace SGF
                             "select @idTipo_articulo = t.id from tipo_articulo as t where t.categoria = '" + cbxTipo.Text.Trim() + "';" +
                             "insert into articulo(id, nombre_articulo, precio_compra, precio_venta, existencia, descripcion, cantidad_maxima, cantidad_minima, fecha_renovacion, idMedida, idMarca, idTipo_articulo,ITEBIs, estado)" +
                             "values(@idArticulo, '" + tbxNombre.Text.Trim() 
-                            + "', '" + tbxPrecio_compra.Text.Trim() 
-                            + "', '" + tbxPrecio_venta.Text.Trim() 
+                            + "', '" + tbxPrecio_compra.Text.Trim().Replace(",", ".")
+                            + "', '" + tbxPrecio_venta.Text.Trim().Replace(",", ".")
                             + "', '" + tbxExistencia.Text.Trim() 
                             + "', '" + tbxDescripcion.Text.Trim() 
                             + "', '" + tbxCantidad_maxima.Text.Trim() 
@@ -160,8 +160,8 @@ namespace SGF
                             "select @idMedida = m.id from medida as m where m.medida = '" + cbxMedida.Text.Trim() + "';" +
                             "select @idTipo_articulo = t.id from tipo_articulo as t where t.categoria = '" + cbxTipo.Text.Trim() + "';" +
                             "update articulo set nombre_articulo = '" + tbxNombre.Text.Trim()
-                            + "', precio_compra = '" + tbxPrecio_compra.Text.Trim()
-                            + "', precio_venta = '" + tbxPrecio_venta.Text.Trim()
+                            + "', precio_compra = '" + tbxPrecio_compra.Text.Trim().Replace(",", ".")
+                            + "', precio_venta = '" + tbxPrecio_venta.Text.Trim().Replace(",", ".")
                             + "', existencia = '" + tbxExistencia.Text.Trim() 
                             + "', descripcion = '" + tbxDescripcion.Text.Trim() 
                             + "', cantidad_maxima = '" + tbxCantidad_maxima.Text.Trim() 
@@ -172,6 +172,7 @@ namespace SGF
                             "delete from cantidad_caja where idArticulo='"+tbxCodigo.Text.Trim()+"'" +
                             "end";
 
+                        //tbxNombre.Text = cmd;
                         ds = Utilidades.EjecutarDS(cmd);
                         MessageBox.Show("Modificado exitosamente");
                         //Limpiar();
@@ -188,8 +189,8 @@ namespace SGF
                             "select @idTipo_articulo = t.id from tipo_articulo as t where t.categoria = '" + cbxTipo.Text.Trim() + "';" +
                             "insert into articulo(id, nombre_articulo, precio_compra, precio_venta, existencia, descripcion, cantidad_maxima, cantidad_minima, fecha_renovacion, idMedida, idMarca, idTipo_articulo, estado, ITEBIs)" +
                             "values(newid(), '" + tbxNombre.Text.Trim() 
-                            + "', '" + tbxPrecio_compra.Text.Trim() 
-                            + "', '" + tbxPrecio_venta.Text.Trim() 
+                            + "', '" + tbxPrecio_compra.Text.Trim().Replace(",", ".")
+                            + "', '" + tbxPrecio_venta.Text.Trim().Replace(",", ".")
                             + "', '" + tbxExistencia.Text.Trim() 
                             + "', '" + tbxDescripcion.Text.Trim() 
                             + "', '" + tbxCantidad_maxima.Text.Trim() 
@@ -288,7 +289,7 @@ namespace SGF
 
         private void tbxExistencia_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utilidades.SoloNumeros(e, sender);
+            Utilidades.SoloNumerosEnteros(e, sender);
         }
 
         private void tbxCantidad_maxima_TextChanged(object sender, EventArgs e)
@@ -303,12 +304,12 @@ namespace SGF
 
         private void tbxCantidad_maxima_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utilidades.SoloNumeros(e, sender);
+            Utilidades.SoloNumerosEnteros(e, sender);
         }
 
         private void tbxCantidad_minima_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utilidades.SoloNumeros(e, sender);
+            Utilidades.SoloNumerosEnteros(e, sender);
         }
 
         private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)

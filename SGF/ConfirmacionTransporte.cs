@@ -24,7 +24,7 @@ namespace SGF
 
             rc.matriculaVehiculo = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
             rc.tbxCodigo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
+            //rc.
             rc.ShowDialog();
 
             refrescarDatos(BuscarDatos);

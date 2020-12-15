@@ -127,9 +127,9 @@ namespace SGF
                                 "update vacante set estado='0' where numero_vacante='"+idVacante+"';" +
                             "end";
                         //rtbxIndicaciones.Text = cmd;
-                        MessageBox.Show(idPersona);
+                        //MessageBox.Show(idPersona);
                         ds = Utilidades.EjecutarDS(cmd);
-                        MessageBox.Show("Guardado exitosamente1.");
+                        MessageBox.Show("Guardado exitosamente.");
                         //Limpiar();
                         this.Close();
                     }
@@ -159,7 +159,7 @@ namespace SGF
                         //rtbxIndicaciones.Text = cmd;
                         //MessageBox.Show(cmd);
                         ds = Utilidades.EjecutarDS(cmd);
-                        MessageBox.Show("Guardado exitosamente2.");
+                        MessageBox.Show("Guardado exitosamente.");
                         //Limpiar();
                         this.Close();
                     }

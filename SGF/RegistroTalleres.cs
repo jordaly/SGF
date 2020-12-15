@@ -49,7 +49,7 @@ namespace SGF
                 }
                 else
                 {
-                    cmd = "insert into tallleres(taller,estado)values("+ tbxNombre.Text + "','1');";
+                    cmd = "insert into talleres(taller,estado)values('"+ tbxNombre.Text + "','1');";
 
                     ds = Utilidades.EjecutarDS(cmd);
                     MessageBox.Show("Guardado exitosamente");

@@ -473,6 +473,9 @@
     <EmbeddedResource Include="Calculadora de Devueltas.resx">
       <DependentUpon>Calculadora de Devueltas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmacionTransporte.resx">
+      <DependentUpon>ConfirmacionTransporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCuadresCaja.resx">
       <DependentUpon>ConsultaCuadresCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -735,9 +738,7 @@
     <None Include="Recursos\key_password_lock_800.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Recursos\taconeador.png" />
-
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

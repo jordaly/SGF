@@ -63,7 +63,7 @@ namespace SGF
             rc.cbxPuesto.Text = Puesto;
             rc.idPersona = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             rc.idVacante = idVacante;
-            MessageBox.Show(Puesto);
+            //MessageBox.Show(Puesto);
             rc.cbxPuesto.Enabled = false;
             //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[7].Value.ToString());
             rc.nuevoEmpleado = true;
@@ -75,6 +75,10 @@ namespace SGF
         public override void Nuevo()
         {
             RegistroEmpleados rc = new RegistroEmpleados();
+            rc.cbxPuesto.Text = Puesto;
+            rc.cbxPuesto.Enabled = false;
+            //rc.idPersona = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            rc.idVacante = idVacante;
             rc.ShowDialog();
             this.Close();
             
