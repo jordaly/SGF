@@ -33,22 +33,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            // 
             // cbxBuscar
             // 
             this.cbxBuscar.Items.AddRange(new object[] {
             "id",
             "nombre_sucursal"});
-            this.cbxBuscar.Size = new System.Drawing.Size(160, 24);
+            this.cbxBuscar.Size = new System.Drawing.Size(160, 28);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(800, 82);
+            this.panel1.Size = new System.Drawing.Size(867, 82);
             // 
             // MantenimientoSucursales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(867, 450);
             this.Name = "MantenimientoSucursales";
             this.Text = "MantenimientoSucursales";
             this.panel1.ResumeLayout(false);

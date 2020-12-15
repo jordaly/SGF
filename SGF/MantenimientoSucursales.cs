@@ -29,8 +29,14 @@ namespace SGF
             RegistroSucursal rc = new RegistroSucursal();
             cmd = "select * from sucursal_vs_almacen as sva, almacen as al where al.id=sva.idAlmacen and sva.idSucursal='"+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString() + "';";
             ds = Utilidades.EjecutarDS(cmd);
-            rc.tbxAlmacen.Text = ds.Tables[0].Rows[0]["nombre_almacen"].ToString();
-            rc.codigoAlmacen = ds.Tables[0].Rows[0]["idAlmacen"].ToString();
+
+            if (ds.Tables[0].Rows.Count>0)
+            {
+                rc.tbxAlmacen.Text = ds.Tables[0].Rows[0]["nombre_almacen"].ToString();
+                rc.codigoAlmacen = ds.Tables[0].Rows[0]["idAlmacen"].ToString();
+            }
+
+
             rc.tbxCodigo.Text= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
             rc.tbxNombre.Text= dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
             rc.ShowDialog();

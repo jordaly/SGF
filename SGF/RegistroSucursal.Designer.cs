@@ -41,12 +41,13 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(290, 229);
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.Location = new System.Drawing.Point(163, 173);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 85);
+            this.label1.Location = new System.Drawing.Point(24, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             // tbxCodigo
             // 
-            this.tbxCodigo.Location = new System.Drawing.Point(290, 82);
+            this.tbxCodigo.Location = new System.Drawing.Point(163, 26);
             this.tbxCodigo.Name = "tbxCodigo";
             this.tbxCodigo.ReadOnly = true;
             this.tbxCodigo.Size = new System.Drawing.Size(238, 22);
@@ -63,7 +64,7 @@
             // 
             // tbxAlmacen
             // 
-            this.tbxAlmacen.Location = new System.Drawing.Point(290, 138);
+            this.tbxAlmacen.Location = new System.Drawing.Point(163, 82);
             this.tbxAlmacen.Name = "tbxAlmacen";
             this.tbxAlmacen.ReadOnly = true;
             this.tbxAlmacen.Size = new System.Drawing.Size(238, 22);
@@ -72,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(151, 141);
+            this.label2.Location = new System.Drawing.Point(24, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 3;
@@ -81,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 113);
+            this.label3.Location = new System.Drawing.Point(24, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 17);
             this.label3.TabIndex = 5;
@@ -89,14 +90,14 @@
             // 
             // tbxNombre
             // 
-            this.tbxNombre.Location = new System.Drawing.Point(290, 110);
+            this.tbxNombre.Location = new System.Drawing.Point(163, 54);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(238, 22);
             this.tbxNombre.TabIndex = 8;
             // 
             // btnSeleccionarAlmacen
             // 
-            this.btnSeleccionarAlmacen.Location = new System.Drawing.Point(543, 138);
+            this.btnSeleccionarAlmacen.Location = new System.Drawing.Point(416, 82);
             this.btnSeleccionarAlmacen.Name = "btnSeleccionarAlmacen";
             this.btnSeleccionarAlmacen.Size = new System.Drawing.Size(99, 23);
             this.btnSeleccionarAlmacen.TabIndex = 9;
@@ -108,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.ClientSize = new System.Drawing.Size(547, 277);
             this.Controls.Add(this.btnSeleccionarAlmacen);
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.label3);
