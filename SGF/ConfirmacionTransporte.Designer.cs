@@ -57,15 +57,17 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(930, 82);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Size = new System.Drawing.Size(698, 67);
             // 
             // ConfirmacionTransporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 450);
+            this.ClientSize = new System.Drawing.Size(698, 366);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "ConfirmacionTransporte";
-            this.Text = "ConfirmacionTransporte";
+            this.Text = "Confirmacion Transporte";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();

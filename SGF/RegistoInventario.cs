@@ -16,6 +16,8 @@ namespace SGF
         public RegistoInventario()
         {
             InitializeComponent();
+
+            tbxNombre.Focus();
             //string cmdMarca = "Select * from marca";
             string cmdMedida = "Select * from medida";
             string cmdTipo = "Select * from tipo_articulo";

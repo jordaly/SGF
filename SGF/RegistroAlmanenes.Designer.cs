@@ -42,7 +42,8 @@
             // 
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.Location = new System.Drawing.Point(124, 155);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.TabIndex = 2;
             // 
             // label1
             // 
@@ -80,7 +81,7 @@
             this.tbxCapacidad.Location = new System.Drawing.Point(124, 108);
             this.tbxCapacidad.Name = "tbxCapacidad";
             this.tbxCapacidad.Size = new System.Drawing.Size(232, 22);
-            this.tbxCapacidad.TabIndex = 5;
+            this.tbxCapacidad.TabIndex = 1;
             // 
             // tbxCodigo
             // 
@@ -89,7 +90,7 @@
             this.tbxCodigo.Name = "tbxCodigo";
             this.tbxCodigo.ReadOnly = true;
             this.tbxCodigo.Size = new System.Drawing.Size(232, 22);
-            this.tbxCodigo.TabIndex = 6;
+            this.tbxCodigo.TabIndex = 3;
             this.tbxCodigo.Text = "Nuevo";
             // 
             // tbxDescripcion
@@ -98,7 +99,7 @@
             this.tbxDescripcion.Location = new System.Drawing.Point(124, 65);
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(232, 22);
-            this.tbxDescripcion.TabIndex = 7;
+            this.tbxDescripcion.TabIndex = 0;
             // 
             // RegistroAlmanenes
             // 
@@ -112,8 +113,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "RegistroAlmanenes";
             this.Text = "Registro de Almanenes";
             this.Controls.SetChildIndex(this.btnGuardar, 0);

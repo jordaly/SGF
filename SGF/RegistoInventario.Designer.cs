@@ -69,6 +69,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.Location = new System.Drawing.Point(629, 244);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbxCodigo
@@ -121,7 +122,7 @@
             this.tbxCantidad_maxima.Location = new System.Drawing.Point(191, 286);
             this.tbxCantidad_maxima.Name = "tbxCantidad_maxima";
             this.tbxCantidad_maxima.Size = new System.Drawing.Size(240, 22);
-            this.tbxCantidad_maxima.TabIndex = 7;
+            this.tbxCantidad_maxima.TabIndex = 8;
             this.tbxCantidad_maxima.TextChanged += new System.EventHandler(this.tbxCantidad_maxima_TextChanged);
             this.tbxCantidad_maxima.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCantidad_maxima_KeyPress);
             // 
@@ -131,7 +132,7 @@
             this.tbxCantidad_minima.Location = new System.Drawing.Point(190, 328);
             this.tbxCantidad_minima.Name = "tbxCantidad_minima";
             this.tbxCantidad_minima.Size = new System.Drawing.Size(240, 22);
-            this.tbxCantidad_minima.TabIndex = 8;
+            this.tbxCantidad_minima.TabIndex = 9;
             this.tbxCantidad_minima.TextChanged += new System.EventHandler(this.tbxCantidad_minima_TextChanged);
             this.tbxCantidad_minima.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCantidad_minima_KeyPress);
             // 
@@ -254,7 +255,7 @@
             this.cbxTipo.Location = new System.Drawing.Point(629, 118);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(240, 24);
-            this.cbxTipo.TabIndex = 23;
+            this.cbxTipo.TabIndex = 13;
             // 
             // dtFecha_renovacion
             // 
@@ -262,7 +263,7 @@
             this.dtFecha_renovacion.Location = new System.Drawing.Point(629, 28);
             this.dtFecha_renovacion.Name = "dtFecha_renovacion";
             this.dtFecha_renovacion.Size = new System.Drawing.Size(240, 22);
-            this.dtFecha_renovacion.TabIndex = 24;
+            this.dtFecha_renovacion.TabIndex = 11;
             // 
             // cbxMedida
             // 
@@ -274,7 +275,7 @@
             this.cbxMedida.Location = new System.Drawing.Point(629, 75);
             this.cbxMedida.Name = "cbxMedida";
             this.cbxMedida.Size = new System.Drawing.Size(240, 24);
-            this.cbxMedida.TabIndex = 26;
+            this.cbxMedida.TabIndex = 12;
             this.cbxMedida.SelectedIndexChanged += new System.EventHandler(this.cbxMedida_SelectedIndexChanged);
             this.cbxMedida.Leave += new System.EventHandler(this.cbxMedida_Leave);
             this.cbxMedida.Validating += new System.ComponentModel.CancelEventHandler(this.cbxMedida_Validating);
@@ -296,7 +297,7 @@
             this.tbxExistencia.Location = new System.Drawing.Point(191, 241);
             this.tbxExistencia.Name = "tbxExistencia";
             this.tbxExistencia.Size = new System.Drawing.Size(240, 22);
-            this.tbxExistencia.TabIndex = 27;
+            this.tbxExistencia.TabIndex = 7;
             this.tbxExistencia.TextChanged += new System.EventHandler(this.tbxExistencia_TextChanged);
             this.tbxExistencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxExistencia_KeyPress);
             // 
@@ -363,7 +364,7 @@
             this.tkbItebis.Maximum = 100;
             this.tkbItebis.Name = "tkbItebis";
             this.tkbItebis.Size = new System.Drawing.Size(240, 45);
-            this.tkbItebis.TabIndex = 35;
+            this.tkbItebis.TabIndex = 10;
             this.tkbItebis.Scroll += new System.EventHandler(this.tkbItebis_Scroll);
             // 
             // lbItebis
@@ -379,6 +380,7 @@
             // 
             // tbxMarca
             // 
+            this.tbxMarca.BackColor = System.Drawing.Color.White;
             this.tbxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxMarca.Location = new System.Drawing.Point(629, 174);
             this.tbxMarca.Name = "tbxMarca";
@@ -398,7 +400,7 @@
             this.btnSeleccionarMarca.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionarMarca.Name = "btnSeleccionarMarca";
             this.btnSeleccionarMarca.Size = new System.Drawing.Size(125, 48);
-            this.btnSeleccionarMarca.TabIndex = 38;
+            this.btnSeleccionarMarca.TabIndex = 14;
             this.btnSeleccionarMarca.Text = "Seleccionar";
             this.btnSeleccionarMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSeleccionarMarca.UseVisualStyleBackColor = true;

@@ -15,6 +15,7 @@ namespace SGF
         public FrmCompra()
         {
             InitializeComponent();
+            btnbuscarsuplidor.TabIndex = 0;
             lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
 
             //string cmdtipo_factura = "Select * from tipo_factura";
@@ -210,6 +211,21 @@ namespace SGF
             }
         }
 
+        public void nuevo()
+        {
+            txtsuplidor.Text = "";
+            txtrnc.Text = "";
+            cbxtipopago.Text = "";
+            cbxdivisa.Text = "";
+            txtarticulo.Text = "";
+            txtcantidad.Text = "";
+            txtpreciocompra.Text = "";
+            lbcodigoarticulo.Text = "Codigo Articulo";
+            lbcodigosuplidor.Text = "Codigo Suplidor";
+            gridarticulosuplidor.Rows.Clear();
+            txttotal.Text = "RD$ 0.0";
+        }
+
         private void btnquitararticulo_Click(object sender, EventArgs e)
         {
             if (cont_fila > 0)
@@ -225,7 +241,7 @@ namespace SGF
 
         private void btnnuevo_Click(object sender, EventArgs e)
         {
-
+            nuevo();
         }
 
         private void btnguardar_Click(object sender, EventArgs e)

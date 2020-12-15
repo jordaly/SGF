@@ -25,7 +25,9 @@ namespace SGF
             //string cmdCliente = string.Format("select * from cliente where idTercero='{0}'",
             //    tbxCodigo.Text.Trim());
             //ds = Utilidades.EjecutarDS(cmdCliente);
+
             if (ComprobarCampos())
+
             {
 
                 if (tbxCodigo.Text != "Nuevo")
@@ -143,6 +145,7 @@ namespace SGF
         {
             
             InitializeComponent();
+            tbxNombre.Focus();
             cbxSexo.SelectedIndex = 0;
             cbxProvincia.SelectedIndex = 0;
             //try
@@ -264,25 +267,25 @@ namespace SGF
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxCodigo_postal, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxCodigo_postal, "Este campo no puede estar vacio.");
             }/////////////////////////////////////////////////////////////////
             if (tbxDireccion.Text == "")
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxDireccion, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxDireccion, "Este campo no puede estar vacio.");
             }
             if (tbxLocalidad.Text == "")
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxLocalidad, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxLocalidad, "Este campo no puede estar vacio.");
             }
             if (tbxCorreo.Text == "")
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxCorreo, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxCorreo, "Este campo no puede estar vacio.");
             }
             if (tbxTelefono.Text == "")
             {
@@ -294,7 +297,7 @@ namespace SGF
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxCedula, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxCedula, "Este campo no puede estar vacio.");
             }
 
             return ok;

@@ -44,7 +44,7 @@
             // 
             this.tbxCantidadPagada.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCantidadPagada.Location = new System.Drawing.Point(15, 48);
-            this.tbxCantidadPagada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxCantidadPagada.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCantidadPagada.Name = "tbxCantidadPagada";
             this.tbxCantidadPagada.Size = new System.Drawing.Size(195, 32);
             this.tbxCantidadPagada.TabIndex = 0;
@@ -77,10 +77,10 @@
             // 
             this.tbxTotalCobrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTotalCobrar.Location = new System.Drawing.Point(236, 48);
-            this.tbxTotalCobrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxTotalCobrar.Margin = new System.Windows.Forms.Padding(2);
             this.tbxTotalCobrar.Name = "tbxTotalCobrar";
             this.tbxTotalCobrar.Size = new System.Drawing.Size(195, 32);
-            this.tbxTotalCobrar.TabIndex = 2;
+            this.tbxTotalCobrar.TabIndex = 1;
             this.tbxTotalCobrar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.tbxTotalCobrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxTotalCobrar_KeyPress);
             // 
@@ -118,7 +118,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(135, 43);
-            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(137, 43);
-            this.btnCalcular.TabIndex = 5;
+            this.btnCalcular.TabIndex = 2;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -156,8 +156,7 @@
             this.Controls.Add(this.tbxTotalCobrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxCantidadPagada);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Calculadora_de_Devueltas";
