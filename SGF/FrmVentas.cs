@@ -370,12 +370,30 @@ namespace SGF
 
         }
 
-        private void btnnuevo_Click(object sender, EventArgs e)
+        public void nuevo()
         {
+            cbxtipofactura.Text = "";
+            lbcodigo.Text = "";
+            txtcliente.Text = "";
+            txtrnc.Text = "";
+            cbxtipopago.Text = "";
+            cbxsucursal.Enabled = true;
+            cbxtipo_ncf.Text = "";
+            cbxdivisa.Text = "";
+            chxTransporte.Checked = false;
+            lbcodigoarticulo.Text = "Codigo Articulo";
             txtarticulo.Text = "";
             txtcantidad.Text = "";
+            lbstock.Text = "Stock";
+            txtprecioventa.Text = "";
             txtitebis.Text = "";
-            lbstock.Text = "STOCK: ";
+            gridarticulo.Rows.Clear();
+            txttotal.Text = "RD$ 0.0";
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            nuevo();
         }
 
         private void txtcantidad_TextChanged(object sender, EventArgs e)

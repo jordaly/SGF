@@ -25,7 +25,7 @@ namespace SGF
             //ds = Utilidades.EjecutarDS(cmdCliente);
             if (tbxNombre.Text == "" || tbxApellido.Text == "" || tbxCodigo_postal.Text == "" || tbxDireccion.Text == "" || tbxLocalidad.Text == "" || tbxCodigo.Text == "" || tbxTelefono.Text == "" || rtbxIndicaciones.Text == "")
             {
-                MessageBox.Show("Faltan campos por reyenar");
+                MessageBox.Show("Faltan campos por rellenar");
             }
             else
             {
@@ -80,6 +80,7 @@ namespace SGF
         {
             
             InitializeComponent();
+            tbxNombre.Focus();
             cbxSexo.SelectedIndex = 0;
             cbxProvincia.SelectedIndex = 0;
             //try
@@ -201,25 +202,25 @@ namespace SGF
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxCodigo_postal, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxCodigo_postal, "Este campo no puede estar vacio.");
             }/////////////////////////////////////////////////////////////////
             if (tbxDireccion.Text == "")
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxDireccion, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxDireccion, "Este campo no puede estar vacio.");
             }
             if (tbxLocalidad.Text == "")
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxLocalidad, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxLocalidad, "Este campo no puede estar vacio.");
             }
             if (tbxCorreo.Text == "")
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxCorreo, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxCorreo, "Este campo no puede estar vacio.");
             }
             if (tbxTelefono.Text == "")
             {
@@ -231,7 +232,7 @@ namespace SGF
             {
                 ok = false;
 
-                ErrorProvider.SetError(tbxCedula, "Este campo no puede estar vasio.");
+                ErrorProvider.SetError(tbxCedula, "Este campo no puede estar vacio.");
             }
 
             return ok;

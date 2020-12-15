@@ -39,64 +39,87 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(110, 131);
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.Location = new System.Drawing.Point(168, 130);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(382, 73);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::SGF.Properties.Resources.taconeador;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(297, 65);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 25);
-            this.button1.TabIndex = 3;
+            this.button1.Size = new System.Drawing.Size(171, 38);
+            this.button1.TabIndex = 1;
             this.button1.Text = "Seleccionar RNC";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbxNombre
             // 
-            this.tbxNombre.Location = new System.Drawing.Point(110, 46);
+            this.tbxNombre.BackColor = System.Drawing.Color.White;
+            this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNombre.Location = new System.Drawing.Point(93, 37);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.ReadOnly = true;
-            this.tbxNombre.Size = new System.Drawing.Size(266, 22);
-            this.tbxNombre.TabIndex = 4;
+            this.tbxNombre.Size = new System.Drawing.Size(200, 22);
+            this.tbxNombre.TabIndex = 0;
             // 
             // tbxRNC
             // 
-            this.tbxRNC.Location = new System.Drawing.Point(110, 74);
+            this.tbxRNC.BackColor = System.Drawing.Color.White;
+            this.tbxRNC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxRNC.Location = new System.Drawing.Point(93, 73);
+            this.tbxRNC.Margin = new System.Windows.Forms.Padding(2);
             this.tbxRNC.Name = "tbxRNC";
             this.tbxRNC.ReadOnly = true;
-            this.tbxRNC.Size = new System.Drawing.Size(266, 22);
-            this.tbxRNC.TabIndex = 5;
+            this.tbxRNC.Size = new System.Drawing.Size(200, 22);
+            this.tbxRNC.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 49);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nombre :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 77);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 76);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 8;
-            this.label3.Text = "RNC";
+            this.label3.Text = "RNC :";
             // 
             // EmpresaSistema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 194);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(479, 187);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxRNC);
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmpresaSistema";
-            this.Text = "EmpresaSistema";
+            this.Text = "Empresa Sistema";
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.tbxNombre, 0);

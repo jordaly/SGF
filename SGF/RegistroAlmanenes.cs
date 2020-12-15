@@ -15,6 +15,7 @@ namespace SGF
         public RegistroAlmanenes()
         {
             InitializeComponent();
+            tbxDescripcion.Focus();
         }
 
 
