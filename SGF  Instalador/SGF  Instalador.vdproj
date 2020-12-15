@@ -76,12 +76,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8C48156AF26B589B11659926DEBF15F2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8D64614869F34D30A907A588F39D19DF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -113,6 +107,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4E32E6BB90D7689F63949DFFE58B5DD8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8C48156AF26B589B11659926DEBF15F2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -175,6 +175,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -418,7 +426,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_21C8C410038C4EC292CD0DA223DDE1A5"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -478,7 +486,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SGF  Instalador"
         "ProductCode" = "8:{E317CC48-1F2B-4E2E-BBE1-50165E809567}"
-        "PackageCode" = "8:{D930098E-5A86-49EC-A267-33B194B9E813}"
+        "PackageCode" = "8:{66F22760-3376-417F-A6D8-48DDF98A3CF4}"
         "UpgradeCode" = "8:{28153821-267A-420B-803B-851B408FF8B0}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -499,7 +507,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -1027,7 +1035,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8D64614869F34D30A907A588F39D19DF"
             {
-            "SourcePath" = "8:..\\SGF\\obj\\Debug\\SGF.exe"
+            "SourcePath" = "8:..\\SGF\\obj\\Release\\SGF.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_21C8C410038C4EC292CD0DA223DDE1A5"
