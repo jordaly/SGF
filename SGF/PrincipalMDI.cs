@@ -309,6 +309,7 @@ namespace SGF
                 vehiculosToolStripMenuItem.Visible = true;
                 modeloToolStripMenuItem.Visible = true;
                 talleresToolStripMenuItem.Visible = true;
+                reparacionVehiculosToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -316,6 +317,7 @@ namespace SGF
                 vehiculosToolStripMenuItem.Visible = false;
                 modeloToolStripMenuItem.Visible = false;
                 talleresToolStripMenuItem.Visible = false;
+                reparacionVehiculosToolStripMenuItem.Visible = false;
             }
 
 
@@ -480,7 +482,7 @@ namespace SGF
             }
             else
             {
-                MessageBox.Show("¡Primero debe abrir la una caja para poder ventder!");
+                MessageBox.Show("¡Primero debe abrir la una caja para poder vender!");
                 
                 if (cajaToolStripMenuItem.Visible==true)
                 {
@@ -595,6 +597,9 @@ namespace SGF
         private void confirmarLlegadaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConfirmacionTransporte rc = new ConfirmacionTransporte();
+            rc.btnBorrar.Enabled = false;
+            rc.btnModificar.Enabled = true;
+            rc.btnNuevo.Enabled = false;
             rc.MdiParent = this;
             rc.Show();
         }
@@ -616,6 +621,13 @@ namespace SGF
         private void talleresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoTalleres rc = new MantenimientoTalleres();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void reparacionVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoReparacionVehiculo rc = new MantenimientoReparacionVehiculo();
             rc.MdiParent = this;
             rc.Show();
         }

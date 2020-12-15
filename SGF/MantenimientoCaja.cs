@@ -57,6 +57,7 @@ namespace SGF
             tbxVentasTotales.Text = "0";
             tbxGanancias.Text = "0";
             lbFechaInicio.Text = "Fecha Inicio: ";
+            tbxCantidadInicial.Enabled = true;
         }
 
         private void tbxCantidadInicial_KeyPress(object sender, KeyPressEventArgs e)

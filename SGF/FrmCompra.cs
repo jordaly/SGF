@@ -17,14 +17,14 @@ namespace SGF
             InitializeComponent();
             lbfecha.Text += " " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
 
-            string cmdtipo_factura = "Select * from tipo_factura";
+            //string cmdtipo_factura = "Select * from tipo_factura";
             string cmdtipo_pago = "Select * from tipo_pago";
             string cmddivisa = "Select * from divisa";
             //string cmdNumeroFactura = "select top(1) numero_factura from factura order by fecha DESC";
 
-            ds = Utilidades.EjecutarDS(cmdtipo_factura);
-            cbxtipofactura.DisplayMember = "descripcion";
-            cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
+            //ds = Utilidades.EjecutarDS(cmdtipo_factura);
+            //cbxtipofactura.DisplayMember = "descripcion";
+            //cbxtipofactura.DataSource = ds.Tables[0].DefaultView;
 
 
             ds = Utilidades.EjecutarDS(cmdtipo_pago);
@@ -86,9 +86,9 @@ namespace SGF
 
         public void validar()
         {
-            lbnumfactura.Text = "";
-           // cbxsucursal.Text = "";
-            cbxtipofactura.Text = "";
+           // lbnumfactura.Text = "";
+           //// cbxsucursal.Text = "";
+           // cbxtipofactura.Text = "";
             txtsuplidor.Text = "";
             txtrnc.Text = "";
             cbxtipopago.Text = "";
@@ -155,12 +155,40 @@ namespace SGF
         {
             if (ComprobarCamposArticulos())
             {
-                if (lbnumfactura.Text == "" ||  cbxtipofactura.Text == "" || txtsuplidor.Text == "" || txtrnc.Text == "" || cbxtipopago.Text == "" || cbxdivisa.Text == "" || txtarticulo.Text == "" || txtcantidad.Text == "")
-                {
-                    bool existe = false;
-                    int num_fila = 0;
 
-                    if (cont_fila == 0)
+                bool existe = false;
+                int num_fila = 0;
+
+                if (cont_fila == 0)
+                {
+                    gridarticulosuplidor.Rows.Add(codigo_articulo, txtarticulo.Text, txtpreciocompra.Text, txtcantidad.Text);
+                    double importe = (Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[3].Value));
+                    gridarticulosuplidor.Rows[cont_fila].Cells[4].Value = importe;
+
+                    cont_fila++;
+                }
+                else
+                {
+                    foreach (DataGridViewRow fila in gridarticulosuplidor.Rows)
+                    {
+                        if (fila.Cells[0].Value.ToString() == codigo_articulo)
+                        {
+                            existe = true;
+                            num_fila = fila.Index;
+                        }
+                    }
+
+                    if (existe == true)
+                    {
+                        //MessageBox.Show(""+num_fila);
+                        gridarticulosuplidor.Rows[num_fila].Cells[4].Value = Convert.ToDouble(txtcantidad.Text) + (Convert.ToDouble(gridarticulosuplidor.Rows[num_fila].Cells[4].Value));
+
+                        double importe = (Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[3].Value));
+
+                        gridarticulosuplidor.Rows[num_fila].Cells[4].Value = importe;
+
+                    }
+                    else
                     {
                         gridarticulosuplidor.Rows.Add(codigo_articulo, txtarticulo.Text, txtpreciocompra.Text, txtcantidad.Text);
                         double importe = (Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[3].Value));
@@ -168,44 +196,15 @@ namespace SGF
 
                         cont_fila++;
                     }
-                    else
-                    {
-                        foreach (DataGridViewRow fila in gridarticulosuplidor.Rows)
-                        {
-                            if (fila.Cells[0].Value.ToString() == codigo_articulo)
-                            {
-                                existe = true;
-                                num_fila = fila.Index;
-                            }
-                        }
-
-                        if (existe == true)
-                        {
-                            //MessageBox.Show(""+num_fila);
-                            gridarticulosuplidor.Rows[num_fila].Cells[4].Value = Convert.ToDouble(txtcantidad.Text) + (Convert.ToDouble(gridarticulosuplidor.Rows[num_fila].Cells[4].Value));
-
-                            double importe = (Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[3].Value));
-
-                            gridarticulosuplidor.Rows[num_fila].Cells[4].Value = importe;
-
-                        }
-                        else
-                        {
-                            gridarticulosuplidor.Rows.Add(codigo_articulo, txtarticulo.Text, txtpreciocompra.Text, txtcantidad.Text);
-                            double importe = (Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[2].Value) * Convert.ToDouble(gridarticulosuplidor.Rows[cont_fila].Cells[3].Value));
-                            gridarticulosuplidor.Rows[cont_fila].Cells[4].Value = importe;
-
-                            cont_fila++;
-                        }
-                    }
-                    total = 0;
-
-                    foreach (DataGridViewRow fila in gridarticulosuplidor.Rows)
-                    {
-                        total += Convert.ToDouble(fila.Cells[4].Value);
-                    }
-                    txttotal.Text = "RD$ " + total.ToString();
                 }
+                total = 0;
+
+                foreach (DataGridViewRow fila in gridarticulosuplidor.Rows)
+                {
+                    total += Convert.ToDouble(fila.Cells[4].Value);
+                }
+                txttotal.Text = "RD$ " + total.ToString();
+
 
                 txtcantidad.Text = "";
             }
@@ -247,7 +246,7 @@ namespace SGF
                         "select top(1) id as id from Compra order by id desc;" +
                     "end";
                 //txtcantidad.Text = cmd;
-                //MessageBox.Show(cmd);
+                MessageBox.Show(cmd);
                 ds = Utilidades.EjecutarDS(cmd);
                 if (ds != null)
                 {
@@ -259,6 +258,9 @@ namespace SGF
                             "end";
                         ds = Utilidades.EjecutarDS(cmd);
                     }
+
+                    MessageBox.Show("Se ha hecho la compra con exito");
+                    this.Close();
                     /*
                     //C:\Users\Jorda\source\repos\SGF\SGF\Reportes\Factura con su detalle3.rpt
                     string RutaReporte = root + @"Reportes\Factura con su detalle.rpt";
@@ -284,7 +286,7 @@ namespace SGF
 
         private void btnbuscarsuplidor_Click_1(object sender, EventArgs e)
         {
-
+            btnbuscarsuplidor_Click(sender,e);
         }
     }
 }

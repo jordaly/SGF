@@ -73,16 +73,18 @@ namespace SGF
         public override void Seleccionar()
         {
 
-            if (dgvPadre.Rows.Count != 0)
+
+            codigo_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            nombre_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            if (dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString()!="")
             {
-                codigo_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                nombre_suplidor = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-             
-                this.Close();
+                RNC = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
             }
+            this.Close();
 
 
-            
+
+
         }
 
         public override void Buscar()

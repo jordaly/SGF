@@ -55,7 +55,7 @@ namespace SGF
                 }
                 else
                 {
-                    cmd = "update from almacen set nombre_almacen='" + tbxDescripcion.Text.Trim() + "',capacidad='" + tbxCapacidad.Text.Trim() + "' where id='" + tbxCodigo.Text.Trim() + "';";
+                    cmd = "update almacen set nombre_almacen='" + tbxDescripcion.Text.Trim() + "',capacidad='" + tbxCapacidad.Text.Trim() + "' where id='" + tbxCodigo.Text.Trim() + "';";
                     ds = Utilidades.EjecutarDS(cmd);
                     MessageBox.Show("Guardado exitosamente");
                     ////Limpiar();

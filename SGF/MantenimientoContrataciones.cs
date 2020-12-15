@@ -55,8 +55,11 @@ namespace SGF
         public override void Nuevo()
         {
             RegistroVacante rc = new RegistroVacante();
-            rc.ShowDialog();
+            //rc.Puesto = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            //rc.idVacante = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
 
+            rc.ShowDialog();
+            
 
             refrescarDatos(BuscarDatos);
         }
