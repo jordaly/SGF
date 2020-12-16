@@ -58,6 +58,7 @@
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.talleresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reparacionVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaVentasHoyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaCuadresCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +78,8 @@
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.reparacionVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -345,11 +347,21 @@
             this.talleresToolStripMenuItem.Text = "Talleres";
             this.talleresToolStripMenuItem.Click += new System.EventHandler(this.talleresToolStripMenuItem_Click);
             // 
+            // reparacionVehiculosToolStripMenuItem
+            // 
+            this.reparacionVehiculosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.reparacionVehiculosToolStripMenuItem.Name = "reparacionVehiculosToolStripMenuItem";
+            this.reparacionVehiculosToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.reparacionVehiculosToolStripMenuItem.Text = "Reparacion vehiculos";
+            this.reparacionVehiculosToolStripMenuItem.Click += new System.EventHandler(this.reparacionVehiculosToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultaVentasHoyToolStripMenuItem1,
-            this.consultaCuadresCajaToolStripMenuItem});
+            this.consultaCuadresCajaToolStripMenuItem,
+            this.ventasToolStripMenuItem,
+            this.comprasToolStripMenuItem});
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem2.Image = global::SGF.Properties.Resources.lapa;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -360,7 +372,7 @@
             // 
             this.consultaVentasHoyToolStripMenuItem1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultaVentasHoyToolStripMenuItem1.Name = "consultaVentasHoyToolStripMenuItem1";
-            this.consultaVentasHoyToolStripMenuItem1.Size = new System.Drawing.Size(199, 26);
+            this.consultaVentasHoyToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.consultaVentasHoyToolStripMenuItem1.Text = "Ventas de hoy";
             this.consultaVentasHoyToolStripMenuItem1.Click += new System.EventHandler(this.consultaVentasHoyToolStripMenuItem1_Click);
             // 
@@ -368,7 +380,7 @@
             // 
             this.consultaCuadresCajaToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultaCuadresCajaToolStripMenuItem.Name = "consultaCuadresCajaToolStripMenuItem";
-            this.consultaCuadresCajaToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.consultaCuadresCajaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.consultaCuadresCajaToolStripMenuItem.Text = "Cuadres de caja";
             this.consultaCuadresCajaToolStripMenuItem.Click += new System.EventHandler(this.consultaCuadresCajaToolStripMenuItem_Click);
             // 
@@ -390,7 +402,7 @@
             this.compraToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compraToolStripMenuItem.Image = global::SGF.Properties.Resources.Truck_Yellow_icon_icons_com_54884;
             this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
-            this.compraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.compraToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.compraToolStripMenuItem.Text = "Compra";
             this.compraToolStripMenuItem.Click += new System.EventHandler(this.compraToolStripMenuItem_Click);
             // 
@@ -399,7 +411,7 @@
             this.ventaToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ventaToolStripMenuItem.Image = global::SGF.Properties.Resources.diagram_61_24456;
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.ventaToolStripMenuItem.Text = "Venta";
             this.ventaToolStripMenuItem.Click += new System.EventHandler(this.ventaToolStripMenuItem_Click);
             // 
@@ -409,14 +421,14 @@
             this.confirmarLlegadaToolStripMenuItem});
             this.transporteToolStripMenuItem1.Font = new System.Drawing.Font("Arial", 9F);
             this.transporteToolStripMenuItem1.Name = "transporteToolStripMenuItem1";
-            this.transporteToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.transporteToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.transporteToolStripMenuItem1.Text = "Transporte";
             this.transporteToolStripMenuItem1.Click += new System.EventHandler(this.transporteToolStripMenuItem1_Click);
             // 
             // confirmarLlegadaToolStripMenuItem
             // 
             this.confirmarLlegadaToolStripMenuItem.Name = "confirmarLlegadaToolStripMenuItem";
-            this.confirmarLlegadaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.confirmarLlegadaToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.confirmarLlegadaToolStripMenuItem.Text = "Confirmar llegada";
             this.confirmarLlegadaToolStripMenuItem.Click += new System.EventHandler(this.confirmarLlegadaToolStripMenuItem_Click);
             // 
@@ -516,13 +528,21 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // reparacionVehiculosToolStripMenuItem
+            // ventasToolStripMenuItem
             // 
-            this.reparacionVehiculosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.reparacionVehiculosToolStripMenuItem.Name = "reparacionVehiculosToolStripMenuItem";
-            this.reparacionVehiculosToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
-            this.reparacionVehiculosToolStripMenuItem.Text = "Reparacion vehiculos";
-            this.reparacionVehiculosToolStripMenuItem.Click += new System.EventHandler(this.reparacionVehiculosToolStripMenuItem_Click);
+            this.ventasToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F);
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
+            // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F);
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.comprasToolStripMenuItem.Text = "Compras";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -534,7 +554,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu";
             this.Text = "Menú Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -599,6 +619,8 @@
         private System.Windows.Forms.ToolStripMenuItem empresaDelSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem talleresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reparacionVehiculosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
     }
 }
 

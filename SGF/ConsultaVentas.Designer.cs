@@ -1,6 +1,6 @@
 ﻿namespace SGF
 {
-    partial class Mantenimiento_transporte
+    partial class ConsultaVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -48,16 +48,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Enabled = false;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            // 
-            // cbxBuscar
-            // 
-            this.cbxBuscar.Items.AddRange(new object[] {
-            "numero_factura",
-            "idcliente",
-            "NCF",
-            "fecha"});
             // 
             // btnSeleccionar
             // 
@@ -65,17 +56,16 @@
             // 
             // panel1
             // 
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(941, 82);
+            this.panel1.Size = new System.Drawing.Size(1022, 82);
             // 
-            // Mantenimiento_transporte
+            // ConsultaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 450);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Mantenimiento_transporte";
-            this.Text = "Mantenimiento Transporte";
+            this.ClientSize = new System.Drawing.Size(1022, 450);
+            this.Name = "ConsultaVentas";
+            this.Text = "ConsultaVentas";
+            this.Load += new System.EventHandler(this.ConsultaVentas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();

@@ -101,21 +101,25 @@ namespace SGF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RegistroReparacionVehiculo rc = new RegistroReparacionVehiculo();
-            rc.tbxCodigo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            rc.tbxTaller.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.tbxMatricula.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            //rc.rtbxParrafo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            rc.btnSeleccionarMatricula.Enabled = false;
-            rc.btnSeleccionarTaller.Enabled = false;
-            rc.lbTituloParrafo.Text = "Reseña Reparacion";
-            rc.Text = "Confirmacion reparacion";
-            rc.confirmacion = true;
-            //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
-            rc.ShowDialog();
+            if (dgvPadre.Rows.Count>0)
+            {
+                RegistroReparacionVehiculo rc = new RegistroReparacionVehiculo();
+                rc.tbxCodigo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                rc.tbxTaller.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                rc.tbxMatricula.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString();
+                //rc.rtbxParrafo.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+                rc.btnSeleccionarMatricula.Enabled = false;
+                rc.btnSeleccionarTaller.Enabled = false;
+                rc.lbTituloParrafo.Text = "Reseña Reparacion";
+                rc.Text = "Confirmacion reparacion";
+                rc.confirmacion = true;
+                //rc.chxEstado.Checked = Convert.ToBoolean(dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString());
+                rc.ShowDialog();
 
 
-            refrescarDatos(BuscarDatos);
+                refrescarDatos(BuscarDatos);
+            }
+            
         }
     }
 }

@@ -93,11 +93,23 @@
     <Compile Include="ConfirmacionTransporte.Designer.cs">
       <DependentUpon>ConfirmacionTransporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCompras.Designer.cs">
+      <DependentUpon>ConsultaCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaCuadresCaja.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaCuadresCaja.Designer.cs">
       <DependentUpon>ConsultaCuadresCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVentas.Designer.cs">
+      <DependentUpon>ConsultaVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaVentasHoy.cs">
       <SubType>Form</SubType>
@@ -116,6 +128,12 @@
     </Compile>
     <Compile Include="ControlVacasiones.Designer.cs">
       <DependentUpon>ControlVacasiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleReparacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleReparacion.Designer.cs">
+      <DependentUpon>DetalleReparacion.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpresaSistema.cs">
       <SubType>Form</SubType>
@@ -479,6 +497,9 @@
     <EmbeddedResource Include="ConsultaCuadresCaja.resx">
       <DependentUpon>ConsultaCuadresCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVentas.resx">
+      <DependentUpon>ConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaVentasHoy.resx">
       <DependentUpon>ConsultaVentasHoy.cs</DependentUpon>
     </EmbeddedResource>
@@ -490,6 +511,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlVacasiones.resx">
       <DependentUpon>ControlVacasiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleReparacion.resx">
+      <DependentUpon>DetalleReparacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaSistema.resx">
       <DependentUpon>EmpresaSistema.cs</DependentUpon>

@@ -22,13 +22,18 @@ namespace SGF
         }
         public override void Nuevo()
         {
-            RegistroTransporte rc = new RegistroTransporte();
-            rc.txtcliente.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString()+" "+ dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            rc.numeroFactura = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            rc.codigoCliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            rc.ShowDialog();
 
-            refrescarDatos(BuscarDatos);
+            if (dgvPadre.Rows.Count > 0)
+            {
+                RegistroTransporte rc = new RegistroTransporte();
+                rc.txtcliente.Text = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[2].Value.ToString() + " " + dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[3].Value.ToString();
+                rc.numeroFactura = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                rc.codigoCliente = dgvPadre.Rows[dgvPadre.CurrentCell.RowIndex].Cells[1].Value.ToString();
+                rc.ShowDialog();
+
+                refrescarDatos(BuscarDatos);
+            }
+            
         }
         
     }

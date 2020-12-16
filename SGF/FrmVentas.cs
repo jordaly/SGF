@@ -362,8 +362,12 @@ namespace SGF
                     //form.crvVisor.ReportSource = oRep;
                     //form.Show();
                     MessageBox.Show("Facturado Exitosamente.");
+                    Calculadora_de_Devueltas rc = new Calculadora_de_Devueltas();
+                    rc.tbxTotalCobrar.Text = total.ToString();
+                    this.ShowDialog();
                     this.Close();
 
+                    //Calculadora_de_Devueltas rc = new Calculadora_de_Devueltas();
                     //oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Usuario\Documents\(" + idfactura + ") Factura.pdf");
                 }
             }

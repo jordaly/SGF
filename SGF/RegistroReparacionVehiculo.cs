@@ -27,6 +27,9 @@ namespace SGF
                     cmd = "update reparacion set fecha_fin=getdate(),reseña='"+rtbxParrafo.Text.Trim()+"',estado='0' where id='" + tbxCodigo.Text + "'";
 
                     ds = Utilidades.EjecutarDS(cmd);
+                    //DetalleReparacion rc = new DetalleReparacion();
+                    //rc.idReparacion = tbxCodigo.Text;
+                    //rc.ShowDialog();
                     MessageBox.Show("Confirmado exitosamente.");
                     //Limpiar();
                     this.Close();

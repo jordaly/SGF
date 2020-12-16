@@ -325,10 +325,12 @@ namespace SGF
             if (Convert.ToBoolean(ds.Tables[0].Rows[0]["consulta_ventas"].ToString()))
             {
                 consultaVentasHoyToolStripMenuItem1.Visible = true;
+                ventasToolStripMenuItem.Visible = true;
             }
             else
             {
                 consultaVentasHoyToolStripMenuItem1.Visible = false;
+                ventasToolStripMenuItem.Visible = false;
             }
 
 
@@ -628,6 +630,21 @@ namespace SGF
         private void reparacionVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoReparacionVehiculo rc = new MantenimientoReparacionVehiculo();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaVentas rc = new ConsultaVentas();
+            rc.MdiParent = this;
+            rc.Show();
+
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCompras rc = new ConsultaCompras();
             rc.MdiParent = this;
             rc.Show();
         }
